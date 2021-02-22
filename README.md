@@ -19,11 +19,17 @@ La partie suivante expliquera les prérequis pour la création du front-end de n
 -	Dépendance : @angular/cli, Primeng.
 
 Visual studio code : Environnement de développement.
+
 NodeJS : Logiciel permettant d'executer un server front.
+
 Git : Outils de versionning de code et gestion de fichier.
+
 Trello : Outis de gestion de projets.
+
 Angular : Framework sous typescript.
+
 @angular/cli : Interface de ligne de commande angular.
+
 Primeng : Librairie de composants.
 
 Nous allons donc procéder à la mise en place du projet, détaillé dans la partie ci-dessous.
