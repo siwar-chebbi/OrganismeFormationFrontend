@@ -34,13 +34,13 @@ Pour utiliser correctement ce projet veuillez suivre ces étapes attentivement.
 
 ### Étape 1: Installation prérequis
 
-- a) Dans un premier temps :
+- Dans un premier temps :
 Installer [VisualStudioCode](https://code.visualstudio.com/download)
 
-- b) Ensuite vous devez 
+- Ensuite vous devez 
 Installer [nodeJS](https://nodejs.org/en/download/)
 
-- c) Enfin vous devez
+- Enfin vous devez
 Installer [Git](https://git-scm.com/downloads)
 
 ### Étape 2: Récupération du projet 
