@@ -79,5 +79,5 @@ Le projet a été réalisé par :
 
 Nous avons travaillé le plus agile possible, cela passe par l'utilisation d'outils tels que : 
 - [Figma](https://www.figma.com/file/lmdw53SAv52CaZoLFndwQ4/Wireframe_Projet_ib?node-id=33%3A7) pour la mise en place du wireframe de notre application.
-- [Git](https://github.com/siwar-chebbi/OrganismeFormationFrontend) le repository de notre application front end.
+- [Git](https://github.com/siwar-chebbi/OrganismeFormationFrontend) le repertoire de notre application front end sur le github.
 - [Trello](https://trello.com/b/djHUEcbo/projet-fil-rouge) pour la répartition des tâches. 
