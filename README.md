@@ -68,7 +68,7 @@ ng serve -o
 
 Veillez à bien avoir fermer toutes autres applications angular sur le port d'écoute 4200, pour ne pas avoir de problème lors de l'execution de cette commande.
 
-## Équipes
+## Équipe
 
 Le projet a été réalisé par : 
 
