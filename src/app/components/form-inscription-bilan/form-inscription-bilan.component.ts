@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Bilan } from 'src/app/models/Bilan';
+import { Formation } from 'src/app/models/Formation';
 import { Session } from 'src/app/models/Session';
 import { HttpBilanService } from 'src/app/services/http-bilan.service';
 import { SessionService } from 'src/app/services/session.service';
@@ -14,6 +15,15 @@ export class FormInscriptionBilanComponent implements OnInit {
 
   session:Session;
   bilans:Bilan [];
+  formation:Formation = {
+    id:1,
+    numero: 1,
+    titre: "Java débutant",
+    contenu:"Les bases du développement avec le langage Java",
+    logiciel:"LogicielBouchon",
+    support:"SupportBouchon",
+  }
+  
   formInscriptionBilan: FormGroup;
   constructor(
     private sessionService: SessionService,
