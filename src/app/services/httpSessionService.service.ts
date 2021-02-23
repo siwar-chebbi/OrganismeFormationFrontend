@@ -12,6 +12,9 @@ export class HttpSessionService {
   findAll(){
     return this.httpClient.get<Session[]>('http://localhost:3000/sessions');
   }
+  findAllBack(){
+    return this.httpClient.get<Session[]>('http://localhost:8080/sessions');
+  }
   save(session: Session) {
     return this.httpClient.post<Session>('http://localhost:3000/sessions', session);
   }

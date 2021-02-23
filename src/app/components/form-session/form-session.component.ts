@@ -26,8 +26,9 @@ export class FormSessionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.httpSession.findAll()
+    this.httpSession.findAllBack()
     .subscribe(response => this.sessions = response)
+    console.log(this.sessions)
   }
 
   onSubmit(){
@@ -41,7 +42,7 @@ export class FormSessionComponent implements OnInit {
   alimSession() {
     this.session = this.formSession.value
     console.log(this.session.dateDebut);
-    console.log(this.session.personnalisee);
-    console.log(this.session.prix);
+    console.log(this.session.personalisee);
+    console.log(this.session.prixHT);
   }
 }

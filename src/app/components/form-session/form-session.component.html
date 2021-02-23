@@ -32,10 +32,14 @@
     <button pButton type="submit" label="Ajouter la session"></button>
 </form>
 
+<!-- Récupération de toutes les sessions existantes en base -->
 <div *ngFor="let session of sessions">
     <p> Date de début : {{ session.dateDebut }}</p>
     <p> Date de fin : {{ session.dateFin }}</p>
     <p> Duree : {{ session.duree }}</p>
     <p> Numero : {{ session.numero }}</p>
-    <p> Prix : {{ session.prix }}</p>
+    <p> Prix : {{ session.prixHT }}</p>
+    <p> formationId : {{ session.formation.id }}</p>
+    
+
 </div>
