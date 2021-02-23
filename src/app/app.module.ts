@@ -9,6 +9,10 @@ import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { CardFormationComponent } from './components/card-formation/card-formation.component';
 import { ListFormationComponent } from './components/list-formation/list-formation.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AccueilComponent } from './pages/accueil/accueil.component';
+import { Erreur404Component } from './pages/erreur404/erreur404.component';
 
 
 @NgModule({
@@ -17,6 +21,10 @@ import { ListFormationComponent } from './components/list-formation/list-formati
     FormSessionComponent,
     CardFormationComponent,
     ListFormationComponent,
+    HeaderComponent,
+    FooterComponent,
+    AccueilComponent,
+    Erreur404Component,
     
   ],
   imports: [
