@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Bilan } from 'src/app/models/Bilan';
+import { Session } from 'src/app/models/Session';
+import { HttpBilanService } from 'src/app/services/http-bilan.service';
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-form-inscription-bilan',
@@ -8,8 +12,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class FormInscriptionBilanComponent implements OnInit {
 
+  session:Session;
+  bilans:Bilan [];
   formInscriptionBilan: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private sessionService: SessionService,
+    private httpBilanService: HttpBilanService,
+    private fb: FormBuilder) {
     this.formInscriptionBilan = this.fb.group({
       numeroVoie: [""],
       typeVoie: [""],
@@ -19,9 +28,13 @@ export class FormInscriptionBilanComponent implements OnInit {
       mail: [""],
       telephone: [""]
     }) 
+    this.session = this.sessionService.session;
   }
 
   ngOnInit(): void {
+    this.httpBilanService.findAll()
+    .subscribe(response => this.bilans = response)
+    console.log(this.bilans)
   }
 
   onSubmit(){

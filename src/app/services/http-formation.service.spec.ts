@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HttpSessionService } from './httpSessionService.service';
+import { HttpFormationService } from './http-formation.service';
 
-describe('HttpSessionServiceService', () => {
-  let service: HttpSessionService;
+describe('HttpFormationService', () => {
+  let service: HttpFormationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(HttpSessionService);
+    service = TestBed.inject(HttpFormationService);
   });
 
   it('should be created', () => {

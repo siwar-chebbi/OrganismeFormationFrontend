@@ -1,0 +1,14 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.logo {
+    width: 50%;
+}
+.logo:hover {
+    cursor: pointer;
+}

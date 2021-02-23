@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Session } from 'src/app/models/Session';
-import { HttpSessionService } from 'src/app/services/httpSessionService.service';
+import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
   selector: 'app-form-session',
@@ -32,8 +32,8 @@ export class FormSessionComponent implements OnInit {
 
   onSubmit(){
     this.session = this.formSession.value;
-    this.session.formation = {id:1};
-    console.log(this.session.formation.id)
+    // this.session.formation = {id:1};
+    // console.log(this.session.formation.id)
     this.httpSession.save(this.session).subscribe();
     console.log(this.formSession.value);
 

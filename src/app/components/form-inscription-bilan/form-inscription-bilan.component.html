@@ -1,3 +1,4 @@
+<h2>Inscription à la formation FORMATION.NOM sur la session {{ session.numero }}</h2>
 <form [formGroup]="formInscriptionBilan" (ngSubmit)="onSubmit()">
     <div class="p-field p-grid">
         <label for="float-input" class="p-col-fixed" style="width:100px">Numero de voie</label>
@@ -43,3 +44,9 @@
     </div>
     <button pButton type="submit" label="Ajouter la session"></button>
 </form>
+<!-- Récupération de toutes les sessions existantes en base -->
+<div *ngFor="let bilan of bilans">
+    <p> Numero de session : {{ bilan.numeroSessionEval }}</p>
+    <p> Id participant : {{ bilan.participant.id }}</p>
+    <p> Id session : {{ bilan.session.id }}</p>
+</div>  
