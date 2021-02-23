@@ -1,0 +1,20 @@
+{
+  "sessions": [
+    {
+      "id": 1,
+      "dateDebut": "2021-01-01",
+      "dateFin": "2021-01-01",
+      "duree": 15,
+      "numero": 1,
+      "prix": 350
+    },
+    {
+      "dateDebut": "2021-02-05",
+      "dateFin": "2021-02-12",
+      "duree": 15,
+      "numero": 2,
+      "prix": 1423,
+      "id": 2
+    }
+  ]
+}
