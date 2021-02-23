@@ -13,6 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
+import { CardSessionComponent } from './components/card-session/card-session.component';
+import { ListSessionComponent } from './pages/list-session/list-session.component';
+import { SessionComponent } from './pages/session/session.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { Erreur404Component } from './pages/erreur404/erreur404.component';
     FooterComponent,
     AccueilComponent,
     Erreur404Component,
+    CardSessionComponent,
+    ListSessionComponent,
+    SessionComponent,
     
   ],
   imports: [
