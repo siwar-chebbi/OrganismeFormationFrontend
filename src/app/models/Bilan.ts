@@ -1,3 +1,5 @@
+import { Lieu } from "./lieu";
+
 export interface Bilan {
         id: number;
         absence: number;
@@ -62,12 +64,6 @@ export interface Bilan {
         //         themes: [];
         //         hibernateLazyInitializer: {};
         //     },
-        //     lieu: {
-        //         id: 1;
-        //         nom: string;
-        //         salle: string;
-        //         disponibilite: number;
-        //         hibernateLazyInitializer: {};
-        //     }
+            // lieu:Lieu;
         // }
 }

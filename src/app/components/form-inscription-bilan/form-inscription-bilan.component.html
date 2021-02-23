@@ -1,52 +1,60 @@
-<h2>Inscription à la formation {{ formation.titre }} sur la session {{ session.numero }} qui aura lieu le {{ session.dateDebut | date}}</h2>
-<form [formGroup]="formInscriptionBilan" (ngSubmit)="onSubmit()">
-    <div class="p-field p-grid">
-        <label for="float-input" class="p-col-fixed" style="width:100px">Numero de voie</label>
-        <div class="p-col">
-            <input id="float-input" type="text" pInputText formControlName="numeroVoie"> 
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Rue" class="p-col-fixed" style="width:100px">Rue</label>
-        <div class="p-col">
-            <input id="Rue" type="text" pInputText formControlName="typeVoie"> 
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Ville" class="p-col-fixed" style="width:100px">Ville</label>
-        <div class="p-col">
-            <input id="Ville" type="text" pInputText formControlName="ville"> 
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="CodePostal" class="p-col-fixed" style="width:100px">Code postale</label>
-        <div class="p-col">
-            <input id="CodePostal" type="text" pInputText formControlName="codePostal"> 
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Pays" class="p-col-fixed" style="width:100px">Pays</label>
-        <div class="p-col">
-            <input id="Pays" type="text" pInputText formControlName="pays">   
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Mail" class="p-col-fixed" style="width:100px">Mail</label>
-        <div class="p-col">
-            <input id="Mail" type="mail" pInputText formControlName="mail">   
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Telephone" class="p-col-fixed" style="width:100px">Telephone</label>
-        <div class="p-col">
-            <input id="Telephone" type="number" pInputText formControlName="telephone">   
-        </div>
-    </div>
-    <button pButton type="submit" label="Ajouter la session"></button>
-</form>
-<!-- Récupération de toutes les sessions existantes en base -->
-<div *ngFor="let bilan of bilans">
-    <p> Numero de session : {{ bilan.numeroSessionEval }}</p>
-    <p> Id participant : {{ bilan.participant.id }}</p>
-    <p> Id session : {{ bilan.session.id }}</p>
-</div>  
+<div class="formulaire-inscription-container">
+    <p-card class="formulaire-inscription-carte">
+        <ng-template pTemplate="header" class="formulaire-header">
+            <h2>Inscription à la formation {{ formation.titre }} sur la session {{ session.numero }} qui aura lieu le {{ session.dateDebut | date}}</h2>
+        </ng-template>
+            <form [formGroup]="formInscriptionBilan" (ngSubmit)="onSubmit()">
+                <div class="p-field p-grid">
+                    <label for="numeroVoie" class="p-col-fixed" style="width:100px">Numero de voie</label>
+                    <div class="p-col">
+                        <input id="numeroVoie" type="text" pInputText formControlName="numeroVoie"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="Rue" class="p-col-fixed" style="width:100px">Rue</label>
+                    <div class="p-col">
+                        <input id="Rue" type="text" pInputText formControlName="typeVoie"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="Ville" class="p-col-fixed" style="width:100px">Ville</label>
+                    <div class="p-col">
+                        <input id="Ville" type="text" pInputText formControlName="ville"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="CodePostal" class="p-col-fixed" style="width:100px">Code postale</label>
+                    <div class="p-col">
+                        <input id="CodePostal" type="text" pInputText formControlName="codePostal"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="Pays" class="p-col-fixed" style="width:100px">Pays</label>
+                    <div class="p-col">
+                        <input id="Pays" type="text" pInputText formControlName="pays">   
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="Mail" class="p-col-fixed" style="width:100px">Mail</label>
+                    <div class="p-col">
+                        <input id="Mail" type="mail" pInputText formControlName="mail">   
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="Telephone" class="p-col-fixed" style="width:100px">Telephone</label>
+                    <div class="p-col">
+                        <input id="Telephone" type="number" pInputText formControlName="telephone">   
+                    </div>
+                </div>
+                <div class="mt-20">
+                    <button pButton type="submit" label="Ajouter la session"></button>
+                </div>
+            </form>
+            <!-- Récupération de toutes les sessions existantes en base -->
+            <!-- <div *ngFor="let bilan of bilans">
+                <p> Numero de session : {{ bilan.numeroSessionEval }}</p>
+                <p> Id participant : {{ bilan.participant.id }}</p>
+                <p> Id session : {{ bilan.session.id }}</p>
+            </div>   -->
+    </p-card>
+</div>

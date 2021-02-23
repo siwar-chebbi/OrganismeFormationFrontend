@@ -16,7 +16,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
-
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { PageInscriptionSessionComponent } from './pages/page-inscription-sessio
     ReactiveFormsModule,
     FormsModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
