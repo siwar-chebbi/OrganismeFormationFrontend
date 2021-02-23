@@ -22,28 +22,28 @@ export interface Session {
     dateFin: Date;
     formation: {
         id: number;
-        numero: number;
-        titre: string;
-        contenu: string;
-        logiciel: string;
-        support: string;
-        responsable: {
-            id: number;
-            nom: string;
-            prenom: string;
-            role: string;
-            mail: string;
-            telephone: string;
-            hibernateLazyInitializer: {};
-        },
-        themes: [];
-        hibernateLazyInitializer: {};
+        // numero: number;
+        // titre: string;
+        // contenu: string;
+        // logiciel: string;
+        // support: string;
+        // responsable: {
+        //     id: number;
+        //     nom: string;
+        //     prenom: string;
+        //     role: string;
+        //     mail: string;
+        //     telephone: string;
+        //     hibernateLazyInitializer: {};
+        // },
+        // themes: [];
+        // hibernateLazyInitializer: {};
     },
     lieu: {
         id: number;
-        nom: string;
-        salle: number;
-        disponibilite: false;
-        hibernateLazyInitializer: {};
+        // nom: string;
+        // salle: number;
+        // disponibilite: false;
+        // hibernateLazyInitializer: {};
     }
 }

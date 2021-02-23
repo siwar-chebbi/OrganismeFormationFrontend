@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
+import { FormInscriptionBilanComponent } from './components/form-inscription-bilan/form-inscription-bilan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormSessionComponent
+    FormSessionComponent,
+    FormInscriptionBilanComponent
   ],
   imports: [
     BrowserModule,
