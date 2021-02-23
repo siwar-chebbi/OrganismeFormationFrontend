@@ -7,11 +7,17 @@ import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
+import { CardFormationComponent } from './components/card-formation/card-formation.component';
+import { ListFormationComponent } from './components/list-formation/list-formation.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormSessionComponent
+    FormSessionComponent,
+    CardFormationComponent,
+    ListFormationComponent,
+    
   ],
   imports: [
     BrowserModule,
