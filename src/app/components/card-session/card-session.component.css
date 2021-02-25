@@ -1,0 +1,13 @@
+.card-header {   
+    color:#1b9cd9;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: fit-content;
+}
+.card-header:hover {
+    color:#f5a11d;
+    cursor: pointer;
+}
+.meta-donnee {
+    font-weight: bold;
+}

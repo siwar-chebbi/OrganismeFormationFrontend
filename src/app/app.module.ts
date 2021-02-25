@@ -16,6 +16,8 @@ import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
 import { ListSessionComponent } from './pages/list-session/list-session.component';
 import { SessionComponent } from './pages/session/session.component';
+import {CardModule} from 'primeng/card';
+
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { SessionComponent } from './pages/session/session.component';
     ReactiveFormsModule,
     FormsModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

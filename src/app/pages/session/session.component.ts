@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Session } from 'src/app/models/session';
+import { HttpSessionService } from 'src/app/services/httpSessionService.service';
 
 @Component({
   selector: 'app-session',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SessionComponent implements OnInit {
 
-  constructor() { }
+  session:Session;
+  id:number;
+
+  constructor(private httpSession:HttpSessionService, private router:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.router.snapshot.params.id;
+    this.httpSession.findById(this.id).subscribe(sessions => {
+      this.session = sessions
+    });
   }
 
 }

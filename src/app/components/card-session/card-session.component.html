@@ -1,7 +1,11 @@
-<div>
-    <h3>Session {{session.numero}}: </h3>
-    <p>Date de début: {{session.dateDebut}}</p> 
-    <p>Date de fin: {{session.datefin}}</p> 
-    <p>Durée la session: {{session.duree}}</p> 
-    <p>Le prix de la session: {{session.prix}}</p> 
+<div class="p-ml-4 p-mb-4 p-mr-4">
+    <p-card>
+        <ng-template pTemplate="header">
+            <h3 class="card-header">Session {{session.numero}} </h3>
+        </ng-template>
+        <p><span class="meta-donnee">Date de début: </span> {{session.dateDebut}}</p> 
+        <p><span class="meta-donnee">Date de fin: </span>{{session.datefin}}</p> 
+        <p><span class="meta-donnee">Durée la session: </span>{{session.duree}}</p> 
+        <p><span class="meta-donnee">Le prix de la session: </span>{{session.prix}}€</p> 
+    </p-card>
 </div>

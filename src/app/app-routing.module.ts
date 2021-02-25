@@ -8,8 +8,8 @@ import { SessionComponent } from './pages/session/session.component';
 const routes: Routes = [
   {path:"", component:AccueilComponent},
   {path:"accueil", component:AccueilComponent},
-  // {path:"formations/:id/sessions", component:ListSessionComponent},
   {path:"sessions", component:ListSessionComponent},
+  {path:"sessions/:id", component:SessionComponent},
   // {path:"formations/:id/sessions/:id", component:SessionComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
