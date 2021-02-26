@@ -11,6 +11,7 @@ import { HttpSessionService } from 'src/app/services/httpSessionService.service'
 export class SessionComponent implements OnInit {
 
   session:Session;
+  voirSession:boolean = true;
   id:number;
 
   constructor(private httpSession:HttpSessionService, private router:ActivatedRoute) { }
@@ -19,6 +20,7 @@ export class SessionComponent implements OnInit {
     this.id = this.router.snapshot.params.id;
     this.httpSession.findById(this.id).subscribe(sessions => {
       this.session = sessions
+      this.voirSession = false
     });
   }
 

@@ -4,8 +4,16 @@
             <h3 class="card-header">Session {{session.numero}} </h3>
         </ng-template>
         <p><span class="meta-donnee">Date de début: </span> {{session.dateDebut}}</p> 
-        <p><span class="meta-donnee">Date de fin: </span>{{session.datefin}}</p> 
+        <p><span class="meta-donnee">Date de fin: </span>{{session.dateFin}}</p> 
         <p><span class="meta-donnee">Durée la session: </span>{{session.duree}}</p> 
         <p><span class="meta-donnee">Le prix de la session: </span>{{session.prix}}€</p> 
+        <ng-template pTemplate="footer">
+                <div *ngIf="voirSession">
+                    <button pButton type="button"(click)="consulterSession()" label="Consulter la session"></button>
+                </div>
+                <div *ngIf="!voirSession">
+                    <button pButton type="button" label="S'inscrire à la session"></button>
+                </div>
+        </ng-template>
     </p-card>
 </div>

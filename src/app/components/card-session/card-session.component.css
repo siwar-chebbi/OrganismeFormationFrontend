@@ -4,10 +4,6 @@
     padding-left: 20px;
     width: fit-content;
 }
-.card-header:hover {
-    color:#f5a11d;
-    cursor: pointer;
-}
 .meta-donnee {
     font-weight: bold;
 }

@@ -1,7 +1,7 @@
 export interface Session {
     id:number;
     dateDebut:Date;
-    datefin:Date;
+    dateFin:Date;
     duree:number;
     numero:number;
     personnalisee:number;

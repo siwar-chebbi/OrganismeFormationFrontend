@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
-import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { CardFormationComponent } from './components/card-formation/card-formation.component';
 import { ListFormationComponent } from './components/list-formation/list-formation.component';
@@ -16,7 +15,8 @@ import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
 import { ListSessionComponent } from './pages/list-session/list-session.component';
 import { SessionComponent } from './pages/session/session.component';
-import {CardModule} from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 
 
@@ -42,7 +42,8 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     ButtonModule,
     HttpClientModule,
-    CardModule
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

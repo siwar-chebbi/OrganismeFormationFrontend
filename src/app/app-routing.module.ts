@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormSessionComponent } from './components/form-session/form-session.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { ListSessionComponent } from './pages/list-session/list-session.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path:"accueil", component:AccueilComponent},
   {path:"sessions", component:ListSessionComponent},
   {path:"sessions/:id", component:SessionComponent},
+  {path:"formSession", component:FormSessionComponent},
   // {path:"formations/:id/sessions/:id", component:SessionComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}

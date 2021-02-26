@@ -3,3 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+button {
+    background-color: #1b9cd9 !important;
+    border: #1b9cd9 2px solid !important;
+}
+button:hover {
+    background-color: #f5a11d !important;
+    border: #f5a11d 2px solid !important;
+
+}
