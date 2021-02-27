@@ -9,12 +9,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenubarModule} from 'primeng/menubar';
 import { MenuModule} from 'primeng/menu';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
+import { FormFormationComponent } from './components/form-formation/form-formation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    FormFormationComponent
   ],
   imports: [
     BrowserModule,

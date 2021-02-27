@@ -10,23 +10,23 @@ export class ThemeHttpService {
   constructor(private httpClient: HttpClient) { }
 
   findAll(){
-    return this.httpClient.get<Theme[]>('http://localhost:3000/themes') 
+    return this.httpClient.get<Theme[]>('http://localhost:8080/themes') 
   }
 
   findById(id:number){
-    return this.httpClient.get<Theme>(`http://localhost:3000/themes/${id}`) 
+    return this.httpClient.get<Theme>(`http://localhost:8080/themes/${id}`) 
   }
 
   save(theme:Theme){
-    return this.httpClient.post<Theme>(`http://localhost:3000/themes`, theme);
+    return this.httpClient.post<Theme>(`http://localhost:8080/themes`, theme);
   }
 
   update(theme:Theme){
-    return this.httpClient.put<Theme>(`http://localhost:3000/themes`, theme);
+    return this.httpClient.put<Theme>(`http://localhost:8080/themes`, theme);
   }
 
   delete(id:number){
-    return this.httpClient.delete(`http://localhost:3000/themes/${id}`);
+    return this.httpClient.delete(`http://localhost:8080/themes/${id}`);
   }
 
 

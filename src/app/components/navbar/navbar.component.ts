@@ -1,12 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { MenuItemContent } from 'primeng/menu';
-import { element } from 'protractor';
 import { Domaine } from 'src/app/models/Domaine';
 import { Theme } from 'src/app/models/Theme';
 import { DomaineHttpService } from 'src/app/services/domaine-http.service';
 import { ThemeHttpService } from 'src/app/services/theme-http.service';
-import { formatWithOptions } from 'util';
 
 @Component({
     selector: 'app-navbar',
@@ -31,7 +28,11 @@ export class NavbarComponent implements OnInit {
             this.themes = response;
 
             this.themes.forEach(element =>
-                this.sousMenuTheme.push({ label: element.nom }));
+                this.sousMenuTheme.push({ 
+                    label: element.nom, 
+                    id: "element.id",
+                    url: `https://www.google.com/?id=${element.id}`
+                    }));
         })
 
 
@@ -50,14 +51,16 @@ export class NavbarComponent implements OnInit {
 
         this.items = [
             {
-                label: 'Accueil'
+                label: 'Accueil',
+                url: `https://www.google.com/`
             },
             {
                 label: 'Formations',
                 items: this.sousMenuDomaine
             },
             {
-                label: 'Inscription'
+                label: 'Inscription',
+                url: `https://www.google.com/`
             }
         ];
 
