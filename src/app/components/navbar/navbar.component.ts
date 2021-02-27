@@ -28,11 +28,11 @@ export class NavbarComponent implements OnInit {
             this.themes = response;
 
             this.themes.forEach(element =>
-                this.sousMenuTheme.push({ 
-                    label: element.nom, 
+                this.sousMenuTheme.push({
+                    label: element.nom,
                     id: "element.id",
                     url: `https://www.google.com/?id=${element.id}`
-                    }));
+                }));
         })
 
 
@@ -61,6 +61,19 @@ export class NavbarComponent implements OnInit {
             {
                 label: 'Inscription',
                 url: `https://www.google.com/`
+            },
+            {
+                label: 'Tests Temporaires',
+                items: [
+                    {label: 'Jamal',
+                     items: [{label:'Formulaire Formation', url:`/formFormation`}]},
+                     {label: 'Alber',
+                     items: [{label:'Nom de votre test', url:`/formFormation`}]},
+                     {label: 'Gauthier',
+                     items: [{label:'Nom de votre test', url:`/formFormation`}]},
+                     {label: 'Siwar',
+                     items: [{label:'Nom de votre test', url:`/formFormation`}]}
+                ]
             }
         ];
 

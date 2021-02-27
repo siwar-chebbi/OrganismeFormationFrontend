@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormationHttpService } from 'src/app/services/formation-http.service';
 
 @Component({
   selector: 'app-form-formation',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormFormationComponent implements OnInit {
 
-  constructor() { }
+  formFormation: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private formationHttpService: FormationHttpService
+  ) { 
+    this.formFormation = this.formBuilder.group({
+      numero:[''],
+      titre:[''],
+      contenu:[''],
+      logiciel:[''],
+      support:[''],
+      themeID:[],
+      responsableID:[]
+    })
+  }
 
   ngOnInit(): void {
+  }
+  
+  onSubmit(){
+    this.formationHttpService
+     .create(this.formFormation.value)
+     .subscribe();
+
+    console.log(this.formFormation.value)
   }
 
 }

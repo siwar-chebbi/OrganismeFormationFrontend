@@ -9,6 +9,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenubarModule} from 'primeng/menubar';
 import { MenuModule} from 'primeng/menu';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {InputNumber, InputNumberModule} from 'primeng/inputnumber';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {DropdownModule} from 'primeng/dropdown';
+
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
 
 
@@ -26,7 +32,12 @@ import { FormFormationComponent } from './components/form-formation/form-formati
     HttpClientModule,
     MenubarModule,
     MenuModule,
-    CascadeSelectModule
+    CascadeSelectModule,
+    InputTextModule,
+    ButtonModule,
+    InputNumberModule,
+    InputTextareaModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
