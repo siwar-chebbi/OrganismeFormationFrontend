@@ -1,5 +1,5 @@
-.container-choix-inscription-session {
+.container-inscription-session {
     display: flex;
     justify-content: center;
-    margin: auto;
+    /* margin: auto; */
 }

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class HttpBilanParticipantSessionService {
 
   constructor(private httpClient: HttpClient) { }
-  save(session: any) {
-    return this.httpClient.post<any>('http://localhost:8080/sessions', session);
+  save(inscription: any) {
+    return this.httpClient.post<any>('http://localhost:8080/bilanParticipantSessions/inscriptionSessionParticulier', inscription);
   }
 }
