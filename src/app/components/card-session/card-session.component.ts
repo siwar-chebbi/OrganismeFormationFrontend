@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Session } from 'src/app/models/session';
+import { Session } from 'src/app/models/Session';
 
 @Component({
   selector: 'app-card-session',
@@ -17,7 +17,7 @@ export class CardSessionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  consulterSession () {
+  consulterSession() {
     this.router.navigate([`/sessions/`, this.session.id])
   }
 

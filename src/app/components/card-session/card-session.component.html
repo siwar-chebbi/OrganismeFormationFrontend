@@ -6,7 +6,7 @@
         <p><span class="meta-donnee">Date de début: </span> {{session.dateDebut}}</p> 
         <p><span class="meta-donnee">Date de fin: </span>{{session.dateFin}}</p> 
         <p><span class="meta-donnee">Durée la session: </span>{{session.duree}}</p> 
-        <p><span class="meta-donnee">Le prix de la session: </span>{{session.prix}}€</p> 
+        <p><span class="meta-donnee">Le prix de la session: </span>{{session.prixHT}}€</p> 
         <ng-template pTemplate="footer">
                 <div *ngIf="voirSession">
                     <button pButton type="button"(click)="consulterSession()" label="Consulter la session"></button>

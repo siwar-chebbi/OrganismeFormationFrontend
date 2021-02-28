@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Lieu } from '../models/lieu';
+import { Lieu } from '../models/Lieu';
 
 @Injectable({
   providedIn: 'root'
