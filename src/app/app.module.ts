@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-import { FormInscriptionBilanComponent } from './components/form-inscription-bilan/form-inscription-bilan.component';
 import { CardFormationComponent } from './components/card-formation/card-formation.component';
 import { ListFormationComponent } from './components/list-formation/list-formation.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,12 +16,12 @@ import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import {CardModule} from 'primeng/card';
+import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormSessionComponent,
-    FormInscriptionBilanComponent,
     CardFormationComponent,
     ListFormationComponent,
     HeaderComponent,
@@ -30,7 +29,8 @@ import {CardModule} from 'primeng/card';
     AccueilComponent,
     Erreur404Component,
     PageSessionComponent,
-    PageInscriptionSessionComponent
+    PageInscriptionSessionComponent,
+    InscriptionSessionComponent,
   ],
   imports: [
     BrowserModule,

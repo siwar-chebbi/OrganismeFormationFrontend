@@ -1,15 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Bilan } from '../models/Bilan';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HttpBilanService {
+export class HttpBilanParticipantSessionService {
 
   constructor(private httpClient: HttpClient) { }
-
-  findAll(){
-    return this.httpClient.get<Bilan[]>('http://localhost:8080/bilanParticipantSessions');
+  save(session: any) {
+    return this.httpClient.post<any>('http://localhost:8080/sessions', session);
   }
 }

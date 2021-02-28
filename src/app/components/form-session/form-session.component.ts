@@ -20,7 +20,9 @@ export class FormSessionComponent implements OnInit {
       dateFin: [""],
       duree: [""],
       numero: [""],
-      prix: [""]
+      prixHT: [""],
+      idFormation: [1],
+      idLieu: [1]
     })
    }
 
@@ -32,10 +34,10 @@ export class FormSessionComponent implements OnInit {
 
   onSubmit(){
     this.session = this.formSession.value;
-    // this.session.formation = {id:1};
-    // console.log(this.session.formation.id)
-    this.httpSession.save(this.session).subscribe();
-    console.log(this.formSession.value);
-
+    // this.session.idFormation = 1;
+    // this.session.idLieu = 1;
+    this.httpSession.save(this.formSession.value).subscribe( ()=> {
+      console.log(this.formSession.value)
+    });
   }
 }
