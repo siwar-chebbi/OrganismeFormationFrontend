@@ -3,11 +3,11 @@ import { Session } from 'src/app/models/Session';
 import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
-  selector: 'app-list-session',
-  templateUrl: './list-session.component.html',
-  styleUrls: ['./list-session.component.css']
+  selector: 'app-liste-session',
+  templateUrl: './liste-session.component.html',
+  styleUrls: ['./liste-session.component.css']
 })
-export class ListSessionComponent implements OnInit {
+export class ListeSessionComponent implements OnInit {
 
   sessions :Session [] = [];
   

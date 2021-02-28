@@ -6,27 +6,28 @@ import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardFormationComponent } from './components/card-formation/card-formation.component';
-import { ListFormationComponent } from './components/list-formation/list-formation.component';
+import { ListeFormationComponent } from './components/liste-formation/liste-formation.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
-import { ListSessionComponent } from './pages/list-session/list-session.component';
+import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
 import { SessionComponent } from './pages/session/session.component';
 import { CardModule } from 'primeng/card';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MenubarModule} from 'primeng/menubar';
-import { MenuModule} from 'primeng/menu';
-import {CascadeSelectModule} from 'primeng/cascadeselect';
-import {InputTextModule} from 'primeng/inputtext';
-import {InputNumber, InputNumberModule} from 'primeng/inputnumber';
-import {InputTextareaModule} from 'primeng/inputtextarea';
-import {DropdownModule} from 'primeng/dropdown';
+import { MenubarModule } from 'primeng/menubar';
+import { MenuModule } from 'primeng/menu';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DropdownModule } from 'primeng/dropdown';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
+import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { FormFormationComponent } from './components/form-formation/form-formati
     AppComponent,
     FormSessionComponent,
     CardFormationComponent,
-    ListFormationComponent,
+    ListeFormationComponent,
     HeaderComponent,
     FooterComponent,
     AccueilComponent,
@@ -43,10 +44,11 @@ import { FormFormationComponent } from './components/form-formation/form-formati
     PageSessionComponent,
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
-    ListSessionComponent,
+    ListeSessionComponent,
     SessionComponent,
     NavbarComponent,
-    FormFormationComponent
+    FormFormationComponent,
+    PageFormationComponent
   ],
   imports: [
     BrowserModule,

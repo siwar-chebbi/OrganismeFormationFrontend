@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
                 this.sousMenuTheme.push({
                     label: element.nom,
                     id: "element.id",
-                    url: `https://www.google.com/${element.id}`
+                    url: `http://localhost:4200/formations/${element.id}`
                 }));
         })
 

@@ -34,8 +34,6 @@ export class FormSessionComponent implements OnInit {
 
   onSubmit(){
     this.session = this.formSession.value;
-    // this.session.idFormation = 1;
-    // this.session.idLieu = 1;
     this.httpSession.save(this.formSession.value).subscribe( ()=> {
       console.log(this.formSession.value)
     });

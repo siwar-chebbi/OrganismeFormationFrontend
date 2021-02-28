@@ -10,17 +10,8 @@ export class HttpFormationService {
 
   constructor(private httpClient: HttpClient) { }
 
-  findAll() {
-    return this.httpClient.get<Formation[]>("http://localhost:3000/formations");
-  }
-  findById(id:number) {
-    return this.httpClient.get<Formation[]>(`http://localhost:3000/formations/${id}`);
-  }
-  create(formation: Formation) {
-    return this.httpClient.post<Formation>(`http://localhost:3000/formations`, formation);
-  }
-  update(formation: Formation) {
-    return this.httpClient.put<Formation>(`http://localhost:3000/formations`, formation);
+  findAllById(id:Number) {
+    return this.httpClient.get<Formation[]>(`http://localhost:8080/formations/themes/${id}`);
   }
 
   delete(id: number) {
