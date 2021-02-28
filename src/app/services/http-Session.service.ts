@@ -12,8 +12,11 @@ export class HttpSessionService {
   findAll(){
     return this.httpClient.get<Session[]>('http://localhost:8080/sessions');
   }
+  findAllByFormationId(id:Number){
+    return this.httpClient.get<Session[]>(`http://localhost:8080/sessions/formations/${id}`);
+  }
   findById(id:number){
-    return this.httpClient.get<Session>(`http://localhost:3000/sessions/${id}`);
+    return this.httpClient.get<Session>(`http://localhost:8080/sessions/${id}`);
   }
   save(session: Session) {
     return this.httpClient.post<Session>('http://localhost:8080/sessions', session);

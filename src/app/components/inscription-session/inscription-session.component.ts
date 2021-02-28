@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Session } from 'src/app/models/Session';
 import { HttpBilanParticipantSessionService } from 'src/app/services/http-bilan-participant-session.service';
 
 @Component({
@@ -9,10 +10,13 @@ import { HttpBilanParticipantSessionService } from 'src/app/services/http-bilan-
 })
 export class InscriptionSessionComponent implements OnInit {
 
+  @Input() session:Session;
   formInscriptionSession: FormGroup;
+
   constructor(
     private httpBilanService: HttpBilanParticipantSessionService,
     private fb: FormBuilder) { 
+      console.log(this.session.id);
     this.formInscriptionSession = this.fb.group({
       idParticipant: [],
       idSession: [],

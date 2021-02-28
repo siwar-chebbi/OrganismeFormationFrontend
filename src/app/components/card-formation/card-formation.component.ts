@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Formation } from 'src/app/models/Formation';
 
 @Component({
@@ -10,7 +11,7 @@ export class CardFormationComponent implements OnInit {
   @Input() formation:Formation;
   @Output() delete = new EventEmitter();
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -18,5 +19,12 @@ export class CardFormationComponent implements OnInit {
   onDelete(){
     this.delete.emit(this.formation.id);
   }
+
+  onAccesSession(){
+    console.log(this.formation)
+    this.router.navigate([`formations/${this.formation.id}/sessions`])
+
+  }
+    
 
 }

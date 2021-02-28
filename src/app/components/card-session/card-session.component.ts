@@ -21,4 +21,10 @@ export class CardSessionComponent implements OnInit {
     this.router.navigate([`/sessions/`, this.session.id])
   }
 
+  onInscriptionSession(){
+    this.router.navigate([`/inscription-session/`, this.session.id])
+
+  }
+
+  
 }

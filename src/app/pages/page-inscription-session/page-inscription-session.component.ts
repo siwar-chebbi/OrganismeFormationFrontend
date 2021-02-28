@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Session } from 'src/app/models/Session';
 
 @Component({
   selector: 'app-page-inscription-session',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageInscriptionSessionComponent implements OnInit {
 
-  constructor() { }
+  session:Session;
+  constructor(private route:ActivatedRoute) { 
+    this.session.id = route.snapshot.params.id;
+    console.log(this.session.id)
+  }
 
   ngOnInit(): void {
   }

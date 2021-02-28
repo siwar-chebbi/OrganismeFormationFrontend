@@ -18,7 +18,6 @@ export class ListeFormationComponent implements OnInit {
     this.formationService.findAllById(this.idFormation)
     .subscribe(
       reponse=> this.formations = reponse);
-      console.log(this.formations);
     
   }
   onDeleteFormation(formation:Formation){
