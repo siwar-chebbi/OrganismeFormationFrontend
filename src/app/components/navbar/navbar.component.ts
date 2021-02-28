@@ -31,10 +31,9 @@ export class NavbarComponent implements OnInit {
                 this.sousMenuTheme.push({
                     label: element.nom,
                     id: "element.id",
-                    url: `https://www.google.com/?id=${element.id}`
+                    url: `https://www.google.com/${element.id}`
                 }));
         })
-
 
         /*** Sous Menu Domaine ***/
         this.domaineHttp.findAll().subscribe(response => {
@@ -46,9 +45,8 @@ export class NavbarComponent implements OnInit {
                     items: element.id == 1 ? this.sousMenuTheme : null
                 }));
         })
-
+        
         /**** Menu en Cascade ***/
-
         this.items = [
             {
                 label: 'Accueil',
@@ -76,10 +74,5 @@ export class NavbarComponent implements OnInit {
                 ]
             }
         ];
-
-
-
-
     }
-
 }

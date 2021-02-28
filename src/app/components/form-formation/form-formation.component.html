@@ -2,7 +2,7 @@
   
 <form [formGroup]="formFormation" (ngSubmit)="onSubmit()">
     <div class="p-field p-grid">
-        <label for="titre" >Titre</label>
+        <label for="titre">Titre</label>
         <div class="p-col">            
             <input id="titre" type="text" pInputText formControlName="titre"> 
         </div>
@@ -14,33 +14,33 @@
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="theme" >Theme</label>
+        <label for="idTheme">Theme</label>
         <div class="p-col">            
-            <input id="theme" type="number" pInputText formControlName="themeID"> 
+            <input id="idTheme" type="number" pInputText formControlName="idTheme"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="responsable" >Responsable</label>
+        <label for="idResponsable">Responsable</label>
         <div class="p-col">            
-            <input id="responsable" type="number" pInputText formControlName="responsableID"> 
+            <input id="idResponsable" type="number" pInputText formControlName="idResponsable"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="logiciel" >Logiciel</label>
+        <label for="logiciel">Logiciel</label>
         <div class="p-col">            
             <input id="logiciel" type="text" pInputText formControlName="logiciel"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="support" >Support</label>
+        <label for="support">Support</label>
         <div class="p-col">            
             <input id="support" type="text" pInputText formControlName="support"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="numero" >Numero</label>
+        <label for="numero">Numero</label>
         <div class="p-col">            
-            <input id="numero" type="text" pInputText formControlName="numero"> 
+            <input id="numero" type="number" pInputText formControlName="numero"> 
         </div>
     </div>
     <button pButton pRipple type="submit" label="Ajouter la formation" class="p-button-rounded"></button>

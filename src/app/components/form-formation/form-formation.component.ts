@@ -21,8 +21,8 @@ export class FormFormationComponent implements OnInit {
       contenu:[''],
       logiciel:[''],
       support:[''],
-      themeID:[],
-      responsableID:[]
+      idTheme:[],
+      idResponsable:[]
     })
   }
 
@@ -33,8 +33,7 @@ export class FormFormationComponent implements OnInit {
     this.formationHttpService
      .create(this.formFormation.value)
      .subscribe();
-
-    console.log(this.formFormation.value)
+    this.formFormation.reset();
   }
 
 }

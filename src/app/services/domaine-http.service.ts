@@ -10,11 +10,11 @@ export class DomaineHttpService {
   constructor(private httpClient: HttpClient) { }
 
   findAll(){
-    return this.httpClient.get<Domaine[]>('http://localhost:8080/domaines') 
+    return this.httpClient.get<Domaine[]>('http://localhost:8080/domaines'); 
   }
 
   findById(id:number){
-    return this.httpClient.get<Domaine>(`http://localhost:8080/domaines/${id}`) 
+    return this.httpClient.get<Domaine>(`http://localhost:8080/domaines/${id}`); 
   }
 
   save(domaine:Domaine){
