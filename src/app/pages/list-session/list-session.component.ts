@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Session } from 'src/app/models/session';
-import { HttpSessionService } from 'src/app/services/httpSessionService.service';
+import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
   selector: 'app-list-session',

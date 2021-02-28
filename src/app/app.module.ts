@@ -17,8 +17,9 @@ import { ListSessionComponent } from './pages/list-session/list-session.componen
 import { SessionComponent } from './pages/session/session.component';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-
-
+import { PageSessionComponent } from './pages/page-session/page-session.component';
+import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
+import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,11 @@ import { CardModule } from 'primeng/card';
     AccueilComponent,
     Erreur404Component,
     CardSessionComponent,
+    PageSessionComponent,
+    PageInscriptionSessionComponent,
+    InscriptionSessionComponent,
     ListSessionComponent,
-    SessionComponent,
-    
+    SessionComponent
   ],
   imports: [
     BrowserModule,

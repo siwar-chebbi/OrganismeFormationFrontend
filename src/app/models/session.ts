@@ -5,9 +5,9 @@ export interface Session {
     duree:number;
     numero:number;
     personnalisee:number;
-    prix:number;
+    prixHT:number;
     type:number;
     validation:number;
-    formationId:number;
-    lieuId:number;
+    idFormation:number;
+    idLieu:number;
 }

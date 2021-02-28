@@ -6,12 +6,6 @@
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="dateFin" class="p-col-fixed" style="width:100px">Date de fin</label>
-        <div class="p-col">
-            <input id="dateFin" type="date" pInputText formControlName="dateFin"> 
-        </div>
-    </div>
-    <div class="p-field p-grid">
         <label for="Duree" class="p-col-fixed" style="width:100px">Duree</label>
         <div class="p-col">
             <input id="Duree" type="number" pInputText formControlName="duree"> 
@@ -24,18 +18,34 @@
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prix" class="p-col-fixed" style="width:100px">prix</label>
+        <label for="prixHT" class="p-col-fixed" style="width:100px">prixHT</label>
         <div class="p-col">
-            <input id="prix" type="number" pInputText formControlName="prix" placeholder="€">   
+            <input id="prixHT" type="number" pInputText formControlName="prixHT" placeholder="€">   
+        </div>
+    </div>    
+    <!-- <div class="p-field p-grid">
+        <label for="idFormation" class="p-col-fixed" style="width:100px">ID de la formation (a remplacer par le nom de la formation)</label>
+        <div class="p-col">
+            <input id="idFormation" type="number" pInputText formControlName="idFormation">   
         </div>
     </div>
+    <div class="p-field p-grid">
+        <label for="idLieu" class="p-col-fixed" style="width:100px">ID du lieu (a remplacer par le lieu)</label>
+        <div class="p-col">
+            <input id="idLieu" type="number" pInputText formControlName="idLieu">   
+        </div>
+    </div> -->
     <button pButton type="submit" label="Ajouter la session"></button>
 </form>
 
+<!-- Récupération de toutes les sessions existantes en base -->
 <div *ngFor="let session of sessions">
-    <p> Date de début : {{ session.dateDebut }}</p>
-    <p> Date de fin : {{ session.dateFin }}</p>
-    <p> Duree : {{ session.duree }}</p>
     <p> Numero : {{ session.numero }}</p>
-    <p> Prix : {{ session.prix }}</p>
-</div>
+    <p> Type : {{ session.type }}</p>
+    <p> Prix : {{ session.prixHT }}</p>
+    <p> Duree : {{ session.duree }}</p>
+    <p> Date de début : {{ session.dateDebut }}</p>
+    <p> formationId : {{ session.idFormation }}</p>
+    <p> lieuId : {{ session.idLieu }}</p>
+</div>    
+
