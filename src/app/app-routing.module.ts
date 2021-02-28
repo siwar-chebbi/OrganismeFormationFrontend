@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { FormSessionComponent } from './components/form-session/form-session.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
@@ -18,6 +19,12 @@ const routes: Routes = [
   {path:"inscription-session", component:PageInscriptionSessionComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
+=======
+import { FormFormationComponent } from './components/form-formation/form-formation.component';
+
+const routes: Routes = [
+  {path:"formFormation", component: FormFormationComponent}
+>>>>>>> Jamal
 ];
 
 @NgModule({

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormSessionComponent } from './components/form-session/form-session.component';
@@ -15,11 +14,20 @@ import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
 import { ListSessionComponent } from './pages/list-session/list-session.component';
 import { SessionComponent } from './pages/session/session.component';
-import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MenubarModule} from 'primeng/menubar';
+import { MenuModule} from 'primeng/menu';
+import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputNumber, InputNumberModule} from 'primeng/inputnumber';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {DropdownModule} from 'primeng/dropdown';
+import { FormFormationComponent } from './components/form-formation/form-formation.component';
+
 
 @NgModule({
   declarations: [
@@ -36,17 +44,24 @@ import { InscriptionSessionComponent } from './components/inscription-session/in
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
     ListSessionComponent,
-    SessionComponent
+    SessionComponent,
+    NavbarComponent,
+    FormFormationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    ButtonModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    MenubarModule,
+    MenuModule,
+    CascadeSelectModule,
+    InputTextModule,
+    InputNumberModule,
+    InputTextareaModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

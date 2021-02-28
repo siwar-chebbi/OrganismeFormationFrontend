@@ -5,4 +5,6 @@ export interface Formation{
     contenu:string;
     logiciel:string;
     support:string;
+    idTheme: number;
+    idResponsable:number;
 }
