@@ -1,6 +1,8 @@
 ::ng-deep .nav-bar{
     background-color: #1b9cd9 !important;
     color: #f5a11d !important;
+    border: none;
+    border-radius: 0px;
 }
 
 ::ng-deep .p-menuitem-text{
