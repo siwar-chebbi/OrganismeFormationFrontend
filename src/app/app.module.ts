@@ -13,7 +13,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
 import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
-import { SessionComponent } from './pages/session/session.component';
+import { SessionComponent } from './pages/Session/Session.component';
 import { CardModule } from 'primeng/card';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
@@ -30,8 +30,8 @@ import { FormFormationComponent } from './components/form-formation/form-formati
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { ButtonModule } from 'primeng/button';
-import { FormParticipantComponent } from './components/form-participant/form-participant.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormParticipantComponent } from './components/form-participant/form-participant.component';
 
 
 
