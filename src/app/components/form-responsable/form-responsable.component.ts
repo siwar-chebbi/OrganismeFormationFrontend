@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { FormationHttpService } from 'src/app/services/formation-http.service';
+import { ResponsableHttpServiceService } from 'src/app/services/responsable-http-service.service';
 
 @Component({
   selector: 'app-form-responsable',
@@ -13,7 +13,7 @@ export class FormResponsableComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private formationHttpService: FormationHttpService
+    private responsableHttpServiceService: ResponsableHttpServiceService,
   ) { 
     this.formResponsable = this.formBuilder.group({
       nom:[''],
@@ -29,7 +29,7 @@ export class FormResponsableComponent implements OnInit {
   }
 
   onSubmit(){
-    this.formationHttpService
+    this.responsableHttpServiceService
      .create(this.formResponsable.value)
      .subscribe();
     this.formResponsable.reset();
