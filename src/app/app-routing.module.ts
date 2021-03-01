@@ -7,7 +7,7 @@ import { ListeSessionComponent } from './pages/liste-session/liste-session.compo
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
-import { SessionComponent } from './pages/Session/Session.component';
+import { SessionComponent } from './pages/session/session.component';
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
