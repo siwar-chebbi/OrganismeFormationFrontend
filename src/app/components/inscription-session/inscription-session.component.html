@@ -1,60 +1,129 @@
 <form [formGroup]="formInscriptionSession" (ngSubmit)="onSubmit()">
-    <div class="p-field p-grid">
-        <label for="idParticipant" class="p-col-fixed" style="width:100px">Participant </label>
-        <div class="p-col">
-            <input id="idParticipant" type="text" pInputText formControlName="idParticipant"> 
+    <div class="form-container">
+        <div class="form-input">
+            <div class="participant-session-id">
+                <h3>Ids</h3>
+                <div class="p-field p-grid">
+                    <label for="idParticipant" class="p-col-fixed" style="width:100px">Participant </label>
+                    <div class="p-col">
+                        <input id="idParticipant" type="text" pInputText formControlName="idParticipant"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="idSession" class="p-col-fixed" style="width:100px">Session </label>
+                    <div class="p-col">
+                        <input id="idSession" type="text" pInputText formControlName="idSession"> 
+                    </div>
+                </div>
+            </div>
+            <div class ="coordonnee-participant" formGroupName=coordonneeParticipant>
+                <h3>Vos coordonnées</h3>
+                <div class="p-field p-grid">
+                    <label for="numeroVoie" class="p-col-fixed" style="width:100px">Numero</label>
+                    <div class="p-col">
+                        <input id="numeroVoie" type="number" pInputText formControlName="numeroVoie">   
+                    </div>
+                </div>   
+                <div class="p-field p-grid">
+                    <label for="typeVoie" class="p-col-fixed" style="width:100px">Type et nom de voie</label>
+                    <div class="p-col">
+                        <input id="typeVoie" type="text" pInputText formControlName="typeVoie">   
+                    </div>
+                </div>    
+                <div class="p-field p-grid">
+                    <label for="codePostal" class="p-col-fixed" style="width:100px">Code poste</label>
+                    <div class="p-col">
+                        <input id="codePostal" type="number" pInputText formControlName="codePostal"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="ville" class="p-col-fixed" style="width:100px">Ville</label>
+                    <div class="p-col">
+                        <input id="ville" type="text" pInputText formControlName="ville">   
+                    </div>
+                </div>   
+                <div class="p-field p-grid">
+                    <label for="pays" class="p-col-fixed" style="width:100px">Pays</label>
+                    <div class="p-col">
+                        <input id="pays" type="text" pInputText formControlName="pays">   
+                    </div>
+                </div> 
+                <div class="p-field p-grid">
+                    <label for="telephone" class="p-col-fixed" style="width:100px">Telephone</label>
+                    <div class="p-col">
+                        <input id="telephone" type="number" pInputText formControlName="telephone"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="mail" class="p-col-fixed" style="width:100px">Mail</label>
+                    <div class="p-col">
+                        <input id="mail" type="email" pInputText formControlName="mail"> 
+                    </div>
+                </div>
+            </div>
+            <div class ="entreprise" formGroupName=entreprise>
+                <span><h3>Votre enreprise (facultatif)</h3></span>
+                <div class="p-field p-grid">
+                    <label for="siret" class="p-col-fixed" style="width:100px">Siret</label>
+                    <div class="p-col">
+                        <input id="siret" type="text" pInputText formControlName="siret">   
+                    </div>
+                </div>   
+                <div class="p-field p-grid">
+                    <label for="nom" class="p-col-fixed" style="width:100px">Nom</label>
+                    <div class="p-col">
+                        <input id="nom" type="text" pInputText formControlName="nom">   
+                    </div>
+                </div>   
+            </div>
+            <div class ="coordonnee-entreprise" formGroupName=coordonneeEntreprise>
+                <span><h3>Coordonnees de votre entreprise (facultatif)</h3></span>   
+                <div class="p-field p-grid">
+                    <label for="numeroVoie" class="p-col-fixed" style="width:100px">Numero</label>
+                    <div class="p-col">
+                        <input id="numeroVoie" type="number" pInputText formControlName="numeroVoie">   
+                    </div>
+                </div>   
+                <div class="p-field p-grid">
+                    <label for="typeVoie" class="p-col-fixed" style="width:100px">Type et nom de voie</label>
+                    <div class="p-col">
+                        <input id="typeVoie" type="text" pInputText formControlName="typeVoie">   
+                    </div>
+                </div>    
+                <div class="p-field p-grid">
+                    <label for="codePostal" class="p-col-fixed" style="width:100px">Code poste</label>
+                    <div class="p-col">
+                        <input id="codePostal" type="number" pInputText formControlName="codePostal"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="ville" class="p-col-fixed" style="width:100px">Ville</label>
+                    <div class="p-col">
+                        <input id="ville" type="text" pInputText formControlName="ville">   
+                    </div>
+                </div>   
+                <div class="p-field p-grid">
+                    <label for="pays" class="p-col-fixed" style="width:100px">Pays</label>
+                    <div class="p-col">
+                        <input id="pays" type="text" pInputText formControlName="pays">   
+                    </div>
+                </div> 
+                <div class="p-field p-grid">
+                    <label for="telephone" class="p-col-fixed" style="width:100px">Telephone</label>
+                    <div class="p-col">
+                        <input id="telephone" type="number" pInputText formControlName="telephone"> 
+                    </div>
+                </div>
+                <div class="p-field p-grid">
+                    <label for="mail" class="p-col-fixed" style="width:100px">Mail</label>
+                    <div class="p-col">
+                        <input id="mail" type="email" pInputText formControlName="mail"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-button">
+            <button pButton type="submit" label="Ajouter la session"></button>
         </div>
     </div>
-    <div class="p-field p-grid">
-        <label for="idSession" class="p-col-fixed" style="width:100px">Session </label>
-        <div class="p-col">
-            <input id="idSession" type="text" pInputText formControlName="idSession"> 
-        </div>
-    </div>
-    <div formGroupName=coordonnee>
-        <div class="p-field p-grid">
-            <label for="numeroVoie" class="p-col-fixed" style="width:100px">Numero</label>
-            <div class="p-col">
-                <input id="numeroVoie" type="number" pInputText formControlName="numeroVoie">   
-            </div>
-        </div>   
-        <div class="p-field p-grid">
-            <label for="typeVoie" class="p-col-fixed" style="width:100px">Type et nom de voie</label>
-            <div class="p-col">
-                <input id="typeVoie" type="text" pInputText formControlName="typeVoie">   
-            </div>
-        </div>    
-        <div class="p-field p-grid">
-            <label for="codePostal" class="p-col-fixed" style="width:100px">Code poste</label>
-            <div class="p-col">
-                <input id="codePostal" type="number" pInputText formControlName="codePostal"> 
-            </div>
-        </div>
-        <div class="p-field p-grid">
-            <label for="ville" class="p-col-fixed" style="width:100px">Ville</label>
-            <div class="p-col">
-                <input id="ville" type="text" pInputText formControlName="ville">   
-            </div>
-        </div>   
-        <div class="p-field p-grid">
-            <label for="pays" class="p-col-fixed" style="width:100px">Pays</label>
-            <div class="p-col">
-                <input id="pays" type="text" pInputText formControlName="pays">   
-            </div>
-        </div> 
-        <div class="p-field p-grid">
-            <label for="telephone" class="p-col-fixed" style="width:100px">Telephone</label>
-            <div class="p-col">
-                <input id="telephone" type="number" pInputText formControlName="telephone"> 
-            </div>
-        </div>
-        <div class="p-field p-grid">
-            <label for="mail" class="p-col-fixed" style="width:100px">Mail</label>
-            <div class="p-col">
-                <input id="mail" type="email" pInputText formControlName="mail"> 
-            </div>
-        </div>
-    </div>
-
-    <button pButton type="submit" label="Ajouter la session"></button>
 </form>
