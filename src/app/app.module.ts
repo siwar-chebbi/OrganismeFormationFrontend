@@ -28,6 +28,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
+import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { PageFormationComponent } from './pages/page-formation/page-formation.co
     SessionComponent,
     NavbarComponent,
     FormFormationComponent,
-    PageFormationComponent
+    PageFormationComponent,
+    FormResponsableComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { PageFormationComponent } from './pages/page-formation/page-formation.co
     InputTextModule,
     InputNumberModule,
     InputTextareaModule,
-    DropdownModule
+    DropdownModule, 
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

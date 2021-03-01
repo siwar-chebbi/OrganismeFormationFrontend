@@ -1,27 +1,9 @@
-
-p {
-    margin: 0px;
+.card-header {   
+    color:#1b9cd9;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: fit-content;
 }
-
-.card{ 
-border-style: solid;
-border-radius: 5px;
-width: fit-content;
-width: 750px;
-height: 80px;
-border: solid 1px;
-padding: 10px;
-margin: 10px;
-
-}
-.card1{
-
-text-align: center;
-padding: 5px;
-
-}
-.buttdelete{
-background-color: red;
-display: flex;
-width:fit-content;
+.meta-donnee {
+    font-weight: bold;
 }
