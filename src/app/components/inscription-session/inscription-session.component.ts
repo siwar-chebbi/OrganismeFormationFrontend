@@ -12,12 +12,13 @@ export class InscriptionSessionComponent implements OnInit {
 
   @Input() session:Session;
   formInscriptionSession: FormGroup;
+  isInscrit: Boolean = false;
+  valeurInscription: any;
   valueForm: any;
 
   constructor(
     private httpBilanService: HttpBilanParticipantSessionService,
     private fb: FormBuilder) { 
-      // console.log(this.session.id);
     this.formInscriptionSession = this.fb.group({
       idParticipant: [],
       idSession: [],
@@ -53,14 +54,22 @@ export class InscriptionSessionComponent implements OnInit {
     this.valueForm = this.formInscriptionSession.value;
     console.log(this.valueForm);
     if(this.valueForm.coordonneeEntreprise == null){
-      this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( ()=> {
-        console.log(this.formInscriptionSession.value)
+      this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
+        this.valeurInscription = reponse;
       });
+      console.log(this.valeurInscription);
+      if (this.valeurInscription != null){
+        this.isInscrit = true;
+      }
     } else{
       console.log(this.valueForm);
-      this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe( ()=> {
-        console.log(this.formInscriptionSession.value)
+      this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe( reponse => {
+        this.valeurInscription = reponse;
       });
+      console.log(this.valeurInscription);
+      if (this.valeurInscription != null){
+        this.isInscrit = true;
+      }
     }
   }
 }

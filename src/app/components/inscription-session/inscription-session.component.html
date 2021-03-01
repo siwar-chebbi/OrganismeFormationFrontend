@@ -125,5 +125,9 @@
         <div class="form-button">
             <button pButton type="submit" label="Ajouter la session"></button>
         </div>
+        <div class="retour-inscription" *ngIf="isInscrit">
+            <p> {{valeurInscription.nomParticipant}} {{valeurInscription.prenomParticipant}} votre inscription 
+                à la session est prise en compte, votre code d'evaluation est : {{valeurInscription.numeroSessionEval}}</p>
+        </div>
     </div>
 </form>
