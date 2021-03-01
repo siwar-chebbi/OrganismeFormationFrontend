@@ -17,6 +17,8 @@ export class NavbarComponent implements OnInit {
     sousMenuDomaine: MenuItem[] = [];
     themes: Theme[] = [];
     sousMenuTheme: MenuItem[] = [];
+    menuGestionnaire: MenuItem[] = [];
+    isAdmin: boolean;
 
     constructor(private domaineHttp: DomaineHttpService, private themeHttp: ThemeHttpService) { }
 
@@ -50,7 +52,7 @@ export class NavbarComponent implements OnInit {
         this.items = [
             {
                 label: 'Accueil',
-                url: `https://www.google.com/`
+                url: `accueil`
             },
             {
                 label: 'Formations',
@@ -65,7 +67,7 @@ export class NavbarComponent implements OnInit {
                 items: [
                     {label: 'Jamal',
                      items: [{label:'Formulaire Formation', url:`/formFormation`}]},
-                     {label: 'Alber',
+                     {label: 'Albert',
                      items: [{label:'Nom de votre test', url:`/formFormation`}]},
                      {label: 'Gauthier',
                      items: [{label:'Nom de votre test', url:`/formFormation`}]},
@@ -74,5 +76,15 @@ export class NavbarComponent implements OnInit {
                 ]
             }
         ];
+
+        /*** Menu Gestionnaire ***/
+        this.isAdmin = true;
+        if (this.isAdmin){
+            this.items.push({label: 'Gestionnaire',
+                             items: [ {label: 'Ajouter une formation', url:`/formFormation`},
+                                      {label: 'Ajouter un responsable', url:`/formResponsable`},
+                                      {label: 'Ajouter une session', url:`/formSession`}]
+            })
+        }               
     }
 }
