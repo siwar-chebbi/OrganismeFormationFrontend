@@ -7,3 +7,7 @@
 .meta-donnee {
     font-weight: bold;
 }
+.card-session {
+    width: 50vh;
+    text-align: center;
+}
