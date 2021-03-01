@@ -1,0 +1,32 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
+.form-input {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 15px;
+}
+
+.participant-session-id{
+    margin: 15px;
+}
+
+.coordonnee-participant{
+    margin: 15px;
+}
+.entreprise{
+    margin: 15px;
+}
+.coordonnee-entreprise{
+    margin: 15px;;
+}
+
+.form-button{
+    margin: auto;
+    padding: auto;
+}
+.retour-inscription{
+    text-align: center;
+}
