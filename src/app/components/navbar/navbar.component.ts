@@ -66,7 +66,8 @@ export class NavbarComponent implements OnInit {
                 label: 'Tests Temporaires',
                 items: [
                     {label: 'Jamal',
-                     items: [{label:'Formulaire Formation', url:`/formFormation`}]},
+                     items: [{label:'Formulaire Formation', url:`/formFormation`},
+                             {label:'Formulaire Formateur', url: '/formFormateur'}]},
                      {label: 'Albert',
                      items: [{label:'Nom de votre test', url:`/formFormation`}]},
                      {label: 'Gauthier',

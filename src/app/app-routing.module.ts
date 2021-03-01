@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
+import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path:"inscription-session/:id", component:PageInscriptionSessionComponent},
   {path:"formSession", component:PageSessionComponent},
   {path:"formFormation", component: FormFormationComponent},
+  {path:"formResponsable", component: FormResponsableComponent},
+  {path:"formFormateur", component: FormFormateurComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

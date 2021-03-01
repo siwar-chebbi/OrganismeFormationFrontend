@@ -30,6 +30,7 @@ import { FormFormationComponent } from './components/form-formation/form-formati
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { ButtonModule } from 'primeng/button';
+import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ButtonModule } from 'primeng/button';
     NavbarComponent,
     FormFormationComponent,
     PageFormationComponent,
-    FormResponsableComponent
+    FormResponsableComponent,
+    FormFormateurComponent
   ],
   imports: [
     BrowserModule,
