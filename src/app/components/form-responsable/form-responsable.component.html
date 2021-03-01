@@ -1,0 +1,37 @@
+<p>form-responsable works!</p>
+<h1>Formulaire responsable</h1>
+  
+<form [formGroup]="formResponsable" (ngSubmit)="onSubmit()">
+    <div class="p-field p-grid">
+        <label for="nom">Nom</label>
+        <div class="p-col">            
+            <input id="nom" type="text" pInputText formControlName="nom"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="prenom">Prenom</label>
+        <div class="p-col">            
+            <input id="prenom" type="text" pInputText formControlName="prenom"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="role">Role</label>
+        <div class="p-col">            
+            <input id="role" type="text" pInputText formControlName="role"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="mail">Mail</label>
+        <div class="p-col">            
+            <input id="mail" type="number" pInputText formControlName="mail"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="telephone">Telephone</label>
+        <div class="p-col">            
+            <input id="telephone" type="text" pInputText formControlName="telephone"> 
+        </div>
+    </div>
+    
+    <button pButton pRipple type="submit" label="Ajouter un responsable" class="p-button-rounded"></button>
+</form>

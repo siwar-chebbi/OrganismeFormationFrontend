@@ -28,6 +28,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
+import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PageFormationComponent } from './pages/page-formation/page-formation.co
     SessionComponent,
     NavbarComponent,
     FormFormationComponent,
-    PageFormationComponent
+    PageFormationComponent,
+    FormResponsableComponent
   ],
   imports: [
     BrowserModule,
