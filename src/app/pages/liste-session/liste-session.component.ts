@@ -10,13 +10,13 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
 })
 export class ListeSessionComponent implements OnInit {
 
-  idFormation:number = 0;
-  sessions :Session [] = [];
+  idFormation:number;
+  sessions:Session [] = [];
   
   constructor(
     private route:ActivatedRoute,
     private httpSession:HttpSessionService) { 
-      this.idFormation = route.snapshot.params.id;
+      this.idFormation = this.route.snapshot.params.idFormation;
   }
 
   ngOnInit(): void {

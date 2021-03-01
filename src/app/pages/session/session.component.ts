@@ -12,13 +12,13 @@ export class SessionComponent implements OnInit {
 
   session:Session;
   voirSession:boolean = true;
-  id:number;
+  idSession:number;
 
   constructor(private httpSession:HttpSessionService, private router:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = this.router.snapshot.params.id;
-    this.httpSession.findById(this.id).subscribe(sessions => {
+    this.idSession = this.router.snapshot.params.idSession;
+    this.httpSession.findById(this.idSession).subscribe(sessions => {
       this.session = sessions
       this.voirSession = false
     });
