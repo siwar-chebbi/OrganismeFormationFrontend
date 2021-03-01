@@ -29,6 +29,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { FormResponsableComponent } from './components/form-responsable/form-res
     InputTextModule,
     InputNumberModule,
     InputTextareaModule,
-    DropdownModule
+    DropdownModule, 
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
