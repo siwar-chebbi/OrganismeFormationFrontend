@@ -1,14 +1,20 @@
 <div class="card">
-    <div class="card1">
-        <span>Numero: {{formation.numero}}</span>
-        <span>Titre: {{formation.titre}}</span>
-        <span>Contenu: {{formation.contenu}}</span>
-        <span>Logiciel: {{formation.logiciel}}</span>
-        <span>Support: {{formation.support}}</span>
-    <div>
-        <button claas="bouton-session" (click)="onAccesSession()" > Acceder aux sessions</button>
-        <button  class= "buttdelete" (click) = "onDelete()">Supprimer</button>
+    <div class="p-ml-4 p-mb-4 p-mr-4">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h3 class="card-header">Formation {{formation.numero}} </h3>
+            </ng-template>
+            <p><span class="meta-donnee">Titre: </span> {{formation.titre}}</p>
+            <p><span class="meta-donnee">Contenu: </span> {{formation.contenu}}</p>
+            <p><span class="meta-donnee">Logiciel: </span> {{formation.logiciel}}</p>
+            <p><span class="meta-donnee">Support: </span> {{formation.support}}</p>
+            <ng-template pTemplate="footer">
+                <div>
+                    <button pButton type="button" label="Supprimer" (click) = "onDelete()"></button>
+                </div>
+        </ng-template>
+        </p-card>
     </div>
-    </div>
+
 
 </div>

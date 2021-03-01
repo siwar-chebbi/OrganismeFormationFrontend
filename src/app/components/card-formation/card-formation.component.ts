@@ -14,6 +14,8 @@ export class CardFormationComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+   
+
   }
 
   onDelete(){
