@@ -30,6 +30,8 @@ import { FormFormationComponent } from './components/form-formation/form-formati
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -67,7 +69,8 @@ import { ButtonModule } from 'primeng/button';
     InputNumberModule,
     InputTextareaModule,
     DropdownModule, 
-    ButtonModule
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

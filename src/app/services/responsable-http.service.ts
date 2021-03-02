@@ -5,7 +5,7 @@ import { Responsable } from '../models/Responsable';
 @Injectable({
   providedIn: 'root'
 })
-export class ResponsableHttpServiceService {
+export class ResponsableHttpService {
 
 
   constructor(private httpClient: HttpClient) { }
