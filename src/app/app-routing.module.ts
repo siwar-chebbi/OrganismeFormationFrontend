@@ -14,15 +14,13 @@ import { SessionComponent } from './pages/session/session.component';
 const routes: Routes = [
   {path:"", component:AccueilComponent},
   {path:"accueil", component:AccueilComponent},
-  {path:"formations/:id/sessions", component:ListeSessionComponent},
-  {path:"sessions/:id", component:SessionComponent},
-  {path:"formations/:id", component:PageFormationComponent},
-  {path:"formations/:id/sessions/:id", component:SessionComponent},
+  {path:"formations/:idFormation", component:PageFormationComponent},
+  {path:"formations/:idFormation/sessions", component:ListeSessionComponent},
+  {path:"formations/:idFormation/sessions/:idSession", component:SessionComponent},
   {path:"inscription-session/:id", component:PageInscriptionSessionComponent},
   {path:"formSession", component:PageSessionComponent},
   {path:"formFormation", component: FormFormationComponent},
   {path:"formResponsable", component: FormResponsableComponent},
-  {path:"formFormateur", component: FormFormateurComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

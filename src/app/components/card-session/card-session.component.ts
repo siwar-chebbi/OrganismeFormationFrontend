@@ -11,6 +11,7 @@ export class CardSessionComponent implements OnInit {
 
   @Input() session :Session;
   @Input() voirSession:boolean = true;
+  @Input() idFormation:number;
 
   constructor( private router:Router) { }
 
@@ -18,7 +19,7 @@ export class CardSessionComponent implements OnInit {
   }
 
   consulterSession() {
-    this.router.navigate([`/sessions/`, this.session.id])
+    this.router.navigate([`formations/${this.idFormation}/sessions/`, this.session.id])
   }
 
   onInscriptionSession(){

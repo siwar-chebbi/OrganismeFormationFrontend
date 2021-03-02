@@ -19,11 +19,14 @@
             <input id="idTheme" type="number" pInputText formControlName="idTheme"> 
         </div>
     </div>
+
     <div class="p-field p-grid">
-        <label for="idResponsable">Responsable</label>
-        <div class="p-col">            
-            <input id="idResponsable" type="number" pInputText formControlName="idResponsable"> 
-        </div>
+        <label for="selectedResponsable">Responsable</label>
+    
+        <p-dropdown [options]="responsables" [(ngModel)]="selectedResponsable"   scrollHeight="400px" optionLabel="nom"
+            [ngModelOptions]="{standalone: true}" [filter]="true" filterBy="value,label" resetFilterOnHide="true">
+        </p-dropdown>
+    
     </div>
     <div class="p-field p-grid">
         <label for="logiciel">Logiciel</label>

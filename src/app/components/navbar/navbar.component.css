@@ -1,0 +1,26 @@
+::ng-deep .nav-bar{
+    background-color: #1b9cd9 !important;
+    color: #f5a11d !important;
+    border: none;
+    border-radius: 0px;
+}
+
+::ng-deep .p-menuitem-text{
+    color: white !important;
+}
+
+::ng-deep .menu-button {
+    background-color: #1b9cd9 !important;  
+}
+::ng-deep .menu-button:hover{
+    background-color: #f5a11d !important;
+}
+
+::ng-deep .p-menubar .p-submenu-list {
+    padding: 0 !important;
+}
+
+::ng-deep .pi-angle-down, 
+::ng-deep .pi-angle-right {
+    color: white !important;
+}

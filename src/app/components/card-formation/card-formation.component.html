@@ -1,4 +1,4 @@
-<div class="p-ml-4 p-mb-4 p-mr-4">
+<div class="p-ml-4 p-mb-4 p-mr-4 card-session">
     <p-card>
         <ng-template pTemplate="header">
             <h3 class="card-header">Formation {{formation.numero}} </h3>
@@ -8,12 +8,8 @@
         <p><span class="meta-donnee">Logiciel: </span>{{formation.logiciel}}</p> 
         <p><span class="meta-donnee">Support: </span>{{formation.support}}</p> 
         <ng-template pTemplate="footer">
-                
-                    <button pButton type="button"(click)="onAccesSession()" label="Acceder aux sessions"></button>
-                
-                
-                    <button pButton type="button" (click)="onDelete()" label="Supprimer"></button>
-                
+            <button class="p-mr-4" pButton type="button"(click)="onAccesSession()" label="Acceder aux sessions"></button>
+            <button pButton type="button" (click)="onDelete()" label="Supprimer"></button>
         </ng-template>
     </p-card>
 </div>
