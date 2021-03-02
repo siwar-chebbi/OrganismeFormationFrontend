@@ -13,9 +13,7 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
 import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
-import { SessionComponent } from './pages/session/session.component';
 import { CardModule } from 'primeng/card';
-import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -30,11 +28,13 @@ import { FormFormationComponent } from './components/form-formation/form-formati
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
-
-
+import { PageSessionComponent } from './pages/page-session/page-session.component';
+import { PageFormSessionComponent } from './pages/page-form-session/page-form-session.component';
+import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
 
 @NgModule({
   declarations: [
@@ -47,17 +47,20 @@ import { FormParticipantComponent } from './components/form-participant/form-par
     AccueilComponent,
     Erreur404Component,
     CardSessionComponent,
-    PageSessionComponent,
+    PageFormationComponent,
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
     ListeSessionComponent,
-    SessionComponent,
+    PageSessionComponent,
+    FormSessionComponent,
+    PageFormSessionComponent,
     NavbarComponent,
     FormFormationComponent,
     PageFormationComponent,
     FormResponsableComponent,
     HeaderNavbarComponent,
-    FormParticipantComponent
+    FormParticipantComponent,
+    FormEvaluationComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +77,7 @@ import { FormParticipantComponent } from './components/form-participant/form-par
     InputTextareaModule,
     DropdownModule, 
     ButtonModule,
+    BrowserAnimationsModule,
     RadioButtonModule
   ],
   providers: [],
