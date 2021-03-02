@@ -34,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
+import { EvaluationComponent } from './components/evaluation/evaluation.component';
 
 
 
@@ -58,7 +59,8 @@ import { FormParticipantComponent } from './components/form-participant/form-par
     PageFormationComponent,
     FormResponsableComponent,
     HeaderNavbarComponent,
-    FormParticipantComponent
+    FormParticipantComponent,
+    EvaluationComponent
   ],
   imports: [
     BrowserModule,

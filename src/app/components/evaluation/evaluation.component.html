@@ -1,0 +1,9 @@
+<form [formGroup]="formEvaluation" (ngSubmit)="onSubmit(mail)">
+    <div class="p-field p-grid">
+        <label for="mail" class="p-col-fixed">Mail</label>
+        <div class="p-col">
+            <input id="float-input" type="email" pInputText formControlName="mail"> 
+        </div>
+    </div>
+    <button pButton type="submit" label="Recuperer mail"></button>
+</form>

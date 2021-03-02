@@ -1,24 +1,24 @@
 <form [formGroup]="formSession" (ngSubmit)="onSubmit()">
     <div class="p-field p-grid">
-        <label for="float-input" class="p-col-fixed" style="width:100px">Date de début</label>
+        <label for="float-input" class="p-col-fixed">Date de début</label>
         <div class="p-col">
             <input id="float-input" type="date" pInputText formControlName="dateDebut"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="Duree" class="p-col-fixed" style="width:100px">Duree</label>
+        <label for="Duree" class="p-col-fixed">Duree</label>
         <div class="p-col">
             <input id="Duree" type="number" pInputText formControlName="duree"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="numero" class="p-col-fixed" style="width:100px">Numero</label>
+        <label for="numero" class="p-col-fixed">Numero</label>
         <div class="p-col">
             <input id="numero" type="number" pInputText formControlName="numero"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prixHT" class="p-col-fixed" style="width:100px">prixHT</label>
+        <label for="prixHT" class="p-col-fixed">prixHT</label>
         <div class="p-col">
             <input id="prixHT" type="number" pInputText formControlName="prixHT" placeholder="€">   
         </div>
@@ -37,15 +37,3 @@
     </div> -->
     <button pButton type="submit" label="Ajouter la session"></button>
 </form>
-
-<!-- Récupération de toutes les sessions existantes en base -->
-<div *ngFor="let session of sessions">
-    <p> Numero : {{ session.numero }}</p>
-    <p> Type : {{ session.type }}</p>
-    <p> Prix : {{ session.prixHT }}</p>
-    <p> Duree : {{ session.duree }}</p>
-    <p> Date de début : {{ session.dateDebut }}</p>
-    <p> formationId : {{ session.idFormation }}</p>
-    <p> lieuId : {{ session.idLieu }}</p>
-</div>    
-

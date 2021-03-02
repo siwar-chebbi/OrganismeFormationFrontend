@@ -27,9 +27,6 @@ export class FormSessionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.httpSession.findAll()
-    .subscribe(response => this.sessions = response)
-    console.log(this.sessions)
   }
 
   onSubmit(){
