@@ -10,7 +10,7 @@ import { Formation } from 'src/app/models/Formation';
 export class PageFormationComponent implements OnInit {
   id:number=0;
   constructor(private route:ActivatedRoute) { 
-    this.id = this.route.snapshot.params.id;
+    this.id = this.route.snapshot.params.idFormation;
     console.log(this.id);
   }
 

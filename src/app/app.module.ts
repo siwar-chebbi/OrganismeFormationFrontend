@@ -31,6 +31,9 @@ import { PageFormationComponent } from './pages/page-formation/page-formation.co
 import { FormResponsableComponent } from './components/form-responsable/form-responsable.component';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.component';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormParticipantComponent } from './components/form-participant/form-participant.component';
 
 
 
@@ -53,7 +56,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     FormFormationComponent,
     PageFormationComponent,
-    FormResponsableComponent
+    FormResponsableComponent,
+    HeaderNavbarComponent,
+    FormParticipantComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputTextareaModule,
     DropdownModule, 
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RadioButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

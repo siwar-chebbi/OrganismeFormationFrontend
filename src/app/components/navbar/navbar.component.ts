@@ -33,7 +33,8 @@ export class NavbarComponent implements OnInit {
                 this.sousMenuTheme.push({
                     label: element.nom,
                     id: "element.id",
-                    url: `http://localhost:4200/formations/${element.id}`
+                    url: `http://localhost:4200/formations/${element.id}`,
+                    styleClass: 'menu-button'
                 }));
         })
 
@@ -44,7 +45,8 @@ export class NavbarComponent implements OnInit {
             this.domaines.forEach(element =>
                 this.sousMenuDomaine.push({
                     label: element.nom,
-                    items: element.id == 1 ? this.sousMenuTheme : null
+                    items: element.id == 1 ? this.sousMenuTheme : null,
+                    styleClass: 'menu-button'
                 }));
         })
         
@@ -52,27 +54,35 @@ export class NavbarComponent implements OnInit {
         this.items = [
             {
                 label: 'Accueil',
-                url: `accueil`
+                url: `accueil`,
+                styleClass: 'menu-button'
             },
             {
                 label: 'Formations',
-                items: this.sousMenuDomaine
+                items: this.sousMenuDomaine,
+                styleClass: 'menu-button'
             },
             {
                 label: 'Inscription',
-                url: `https://www.google.com/`
+                url: `https://www.google.com/`,
+                styleClass: 'menu-button'
             },
             {
                 label: 'Tests Temporaires',
+                styleClass: 'menu-button',
                 items: [
                     {label: 'Jamal',
-                     items: [{label:'Formulaire Formation', url:`/formFormation`}]},
+                     styleClass: 'menu-button',
+                     items: [{label:'Formulaire Formation', url:`/formFormation`, styleClass: 'menu-button'}]},
                      {label: 'Albert',
-                     items: [{label:'Nom de votre test', url:`/formFormation`}]},
+                     styleClass: 'menu-button',
+                     items: [{label:'Nom de votre test', url:`/formFormation` , styleClass: 'menu-button'}]},
                      {label: 'Gauthier',
-                     items: [{label:'Nom de votre test', url:`/formFormation`}]},
+                     styleClass: 'menu-button',
+                     items: [{label:'Nom de votre test', url:`/formFormation`, styleClass: 'menu-button'}]},
                      {label: 'Siwar',
-                     items: [{label:'Nom de votre test', url:`/formFormation`}]}
+                     styleClass: 'menu-button',
+                     items: [{label:'Nom de votre test', url:`/formFormation`, styleClass: 'menu-button'}]}
                 ]
             }
         ];
@@ -81,9 +91,10 @@ export class NavbarComponent implements OnInit {
         this.isAdmin = true;
         if (this.isAdmin){
             this.items.push({label: 'Gestionnaire',
-                             items: [ {label: 'Ajouter une formation', url:`/formFormation`},
-                                      {label: 'Ajouter un responsable', url:`/formResponsable`},
-                                      {label: 'Ajouter une session', url:`/formSession`}]
+                             styleClass: 'menu-button',
+                             items: [ {label: 'Ajouter une formation', url:`/formFormation`, styleClass: 'menu-button'},
+                                      {label: 'Ajouter un responsable', url:`/formResponsable`, styleClass: 'menu-button'},
+                                      {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'}]
             })
         }               
     }
