@@ -1,5 +1,11 @@
 <form [formGroup]="formulaireEvaluation" (ngSubmit)="evaluer()">
     <div>
+        <label for="numero">Liste de vos sessions:</label>
+        <div>
+            <p-dropdown [options]="listNumSession" [(ngModel)]="numero" optionLabel="numero" formControlName="listeNumSession"></p-dropdown> 
+        </div>
+    </div>
+    <div>
         <label for="accueil">Accueil:</label>
         <div>
             <input id="accueil" type="number" pInputText formControlName="accueil"> 

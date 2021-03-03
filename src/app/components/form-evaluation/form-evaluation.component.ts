@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpEvaluationService } from 'src/app/services/http-evaluation.service';
 
@@ -10,9 +10,12 @@ import { HttpEvaluationService } from 'src/app/services/http-evaluation.service'
 export class FormEvaluationComponent implements OnInit {
 
   formulaireEvaluation:FormGroup;
+  listNumSession:any [] = [];
+  numero:String;
 
   constructor(private formulaire:FormBuilder, private evaluationService:HttpEvaluationService) {
     this.formulaireEvaluation = this.formulaire.group({
+      listeNumSession:[],
       accueil: [],
       annimation: [],
       contenu: [],
@@ -26,12 +29,19 @@ export class FormEvaluationComponent implements OnInit {
       satisfaction: [],
       souhait: []
     }) 
+    this.listNumSession = [
+      {numero:'12'},
+      {numero:'122'},
+      {numero:'41'},
+      {numero:'48'},
+      {numero:'2132'}
+    ]
   }
 
   ngOnInit(): void {
   }
 
   evaluer() {
-
+    console.log(this.formulaireEvaluation.value);
   }
 }
