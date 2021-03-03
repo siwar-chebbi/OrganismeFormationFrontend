@@ -21,6 +21,7 @@ const routes: Routes = [
   {path:"formSession", component:PageSessionComponent},
   {path:"formFormation", component: FormFormationComponent},
   {path:"formResponsable", component: FormResponsableComponent},
+  {path:"formFormateur", component: FormFormateurComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];
