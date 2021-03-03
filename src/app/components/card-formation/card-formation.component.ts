@@ -27,6 +27,4 @@ export class CardFormationComponent implements OnInit {
     this.router.navigate([`formations/${this.formation.id}/sessions`])
 
   }
-    
-
 }
