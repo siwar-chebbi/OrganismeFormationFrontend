@@ -10,7 +10,7 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
 export class EvaluationComponent implements OnInit {
 
   idSession: number;
-  idParticipant: number;
+  sessionsParticipant: any;
   
   formEvaluation  : FormGroup;
   constructor(
@@ -25,10 +25,10 @@ export class EvaluationComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.formEvaluation.value);
     this.httpSessionService.findSessionsByMailParticipant(this.formEvaluation.value)
-      .subscribe( response => {
-      this.idSession = response;
+    .subscribe( response => {
+      this.sessionsParticipant = response;
+      console.log(this.sessionsParticipant);
     })
   }
 
