@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
-import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
+import { PageListeSessionComponent } from './pages/page-liste-session/page-liste-session.component';
 import { CardModule } from 'primeng/card';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
@@ -35,6 +35,9 @@ import { FormParticipantComponent } from './components/form-participant/form-par
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageFormSessionComponent } from './pages/page-form-session/page-form-session.component';
 import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
+import { ListeSessionComponent } from './components/liste-session/liste-session.component';
+import { StepsModule } from 'primeng/steps';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,7 @@ import { FormEvaluationComponent } from './components/form-evaluation/form-evalu
     PageFormationComponent,
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
-    ListeSessionComponent,
+    PageListeSessionComponent,
     PageSessionComponent,
     FormSessionComponent,
     PageFormSessionComponent,
@@ -60,10 +63,13 @@ import { FormEvaluationComponent } from './components/form-evaluation/form-evalu
     FormResponsableComponent,
     HeaderNavbarComponent,
     FormParticipantComponent,
-    FormEvaluationComponent
+    FormEvaluationComponent,
+    ListeSessionComponent
   ],
   imports: [
     BrowserModule,
+    StepsModule,
+    MenuModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

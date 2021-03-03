@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Session } from 'src/app/models/Session';
+import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
   selector: 'app-page-inscription-session',
@@ -10,9 +11,13 @@ import { Session } from 'src/app/models/Session';
 export class PageInscriptionSessionComponent implements OnInit {
 
   session:Session;
-  constructor(private route:ActivatedRoute) { 
-    this.session.id = route.snapshot.params.id;
-    console.log(this.session.id)
+  idSession:number;
+  constructor(private route:ActivatedRoute, private httpSession:HttpSessionService ) { 
+    this.idSession = this.route.snapshot.params.id;
+    this.httpSession.findById(this.idSession).subscribe(session => {
+      this.session = session
+    });
+
   }
 
   ngOnInit(): void {

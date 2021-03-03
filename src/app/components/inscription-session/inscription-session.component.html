@@ -2,7 +2,7 @@
     <div class="form-container">
         <div class="form-input">
             <div class="participant-session-id">
-                <h3>Ids</h3>
+                <!-- <h3>Ids</h3>
                 <div class="p-field p-grid">
                     <label for="idParticipant" class="p-col-fixed" style="width:100px">Participant </label>
                     <div class="p-col">
@@ -14,7 +14,7 @@
                     <div class="p-col">
                         <input id="idSession" type="text" pInputText formControlName="idSession"> 
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class ="coordonnee-participant" formGroupName=coordonneeParticipant>
                 <h3>Vos coordonnées</h3>
@@ -123,7 +123,7 @@
             </div>
         </div>
         <div class="form-button">
-            <button pButton type="submit" label="Ajouter la session"></button>
+            <button pButton type="submit" label="S'inscrire"></button>
         </div>
         <div class="retour-inscription" *ngIf="isInscrit">
             <p> {{valeurInscription.nomParticipant}} {{valeurInscription.prenomParticipant}} votre inscription 

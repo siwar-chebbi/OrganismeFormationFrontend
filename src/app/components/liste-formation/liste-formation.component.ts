@@ -10,15 +10,11 @@ import { HttpFormationService } from 'src/app/services/http-formation.service';
 export class ListeFormationComponent implements OnInit {
   
   @Input() idFormation:Number;
-  formations: Formation[] = [];
+  @Input() formations: Formation[] = [];
 
   constructor(private formationService: HttpFormationService) { }
 
   ngOnInit(): void {
-    this.formationService.findAllById(this.idFormation)
-    .subscribe(
-      reponse=> this.formations = reponse);
-    
   }
   onDeleteFormation(formation:Formation){
     this.formationService.delete(formation.id).subscribe();
