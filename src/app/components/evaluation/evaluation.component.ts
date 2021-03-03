@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
@@ -9,7 +9,6 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
 })
 export class EvaluationComponent implements OnInit {
 
-  mail: string;
   idSession: number;
   idParticipant: number;
   
@@ -18,16 +17,16 @@ export class EvaluationComponent implements OnInit {
     private httpSessionService: HttpSessionService,
     private fb:FormBuilder) {
     this.formEvaluation = this.fb.group({
-      mail: [this.idSession]
+      mail: []
     })
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(pMail: string){
-    this.mail = pMail;
-    this.httpSessionService.findSessionsByMailParticipant(this.mail)
+  onSubmit(){
+    console.log(this.formEvaluation.value);
+    this.httpSessionService.findSessionsByMailParticipant(this.formEvaluation.value)
       .subscribe( response => {
       this.idSession = response;
     })
