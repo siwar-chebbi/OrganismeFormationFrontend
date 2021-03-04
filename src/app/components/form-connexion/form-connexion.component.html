@@ -1,0 +1,20 @@
+<form [formGroup]="formConnexion" (ngSubmit)="connexion()" *ngIf="isAuth()==false">
+    <div class="p-field p-grid">
+        <label for="identifiant" class="p-col-fixed" style="width:100px">Identifiant :</label>
+        <div class="p-col">
+            <input id="identifiant" type="text" pInputText formControlName="identifiant"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="mdp" class="p-col-fixed" style="width:100px">Mot de passe : </label>
+        <div class="p-col">
+            <input id="mdp" type="password" pInputText formControlName="mdp"> 
+        </div>
+    </div>
+    <button pButton type="submit" label="Se connecter"></button>
+</form>
+
+<!-- Ci-dessous uniquement pour tests -->
+
+<h2 *ngIf="isAuth()">Bonjour Monsieur {{participant.nom}}</h2>
+<p-button *ngIf="isAuth()" (click)="deconnexion()">Deconnexion</p-button>

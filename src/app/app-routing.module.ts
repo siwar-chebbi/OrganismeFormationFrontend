@@ -6,6 +6,7 @@ import { FormResponsableComponent } from './components/form-responsable/form-res
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
+import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:"formFormation", component: FormFormationComponent},
   {path:"formResponsable", component: FormResponsableComponent},
   {path:"formFormateur", component: FormFormateurComponent},
+  {path:"connexion", component: PageConnexionComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

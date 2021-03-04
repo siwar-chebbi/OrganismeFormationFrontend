@@ -35,6 +35,8 @@ import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.compo
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
 import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
+import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
+import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
 
 
 
@@ -60,7 +62,9 @@ import { FormFormateurComponent } from './components/form-formateur/form-formate
     FormResponsableComponent,
     HeaderNavbarComponent,
     FormParticipantComponent,
-    FormFormateurComponent
+    FormFormateurComponent,
+    PageConnexionComponent,
+    FormConnexionComponent
   ],
   imports: [
     BrowserModule,
