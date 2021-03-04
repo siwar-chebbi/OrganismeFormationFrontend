@@ -39,6 +39,7 @@ import { FormEvaluationComponent } from './components/form-evaluation/form-evalu
 import { ListeSessionComponent } from './components/liste-session/liste-session.component';
 import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-f
     DropdownModule, 
     ButtonModule,
     BrowserAnimationsModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ListboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

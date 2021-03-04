@@ -16,6 +16,7 @@ export class FormationHttpService {
     return this.httpClient.get<Formation[]>(`http://localhost:8080/formations/${id}`);
   }
   create(formation: Formation) {
+
     return this.httpClient.post<Formation>(`http://localhost:8080/formations`, formation);
   }
   update(formation: Formation) {
