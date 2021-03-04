@@ -38,6 +38,7 @@ import { PageFormSessionComponent } from './pages/page-form-session/page-form-se
 import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
 import { ListeSessionComponent } from './components/liste-session/liste-session.component';
 import { StepsModule } from 'primeng/steps';
+import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { StepsModule } from 'primeng/steps';
     FormParticipantComponent,
     FormFormateurComponent,
     FormEvaluationComponent,
-    ListeSessionComponent
+    ListeSessionComponent,
+    PageFormEvaluationComponent
   ],
   imports: [
     BrowserModule,
