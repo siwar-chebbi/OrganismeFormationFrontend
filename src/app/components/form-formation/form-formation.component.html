@@ -16,14 +16,10 @@
     </div>
     <div class="p-field p-grid">
         <label for="idTheme">Theme</label>
-        <div class="p-col" >
-            <p-listbox id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" [metaKeySelection]="false" [checkbox]="true"
-                [filter]="true" [multiple]="true" [listStyle]="{'max-height':'200px'}" optionLabel="nom" 
-                [style]="{'width':'15rem'}" formControlName="idTheme" >
-                <ng-template let-theme pTemplate="themes">
-                        {{theme.nom}}
-                </ng-template>
-            </p-listbox>
+        <div class="p-col">
+
+            <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="sélectionner un thème"
+                optionLabel="nom" display="chip"formControlName="idTheme"></p-multiSelect>
         </div>
 
     </div>
@@ -32,8 +28,8 @@
         <label for="selectedResponsable">Responsable</label>
         <div class="p-col">
             <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
-                optionLabel="nom"  [filter]="true" filterBy="value,label"
-                resetFilterOnHide="true" formControlName="idResponsable">
+                optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
+                formControlName="idResponsable">
 
                 <ng-template let-responsable pTemplate="responsables">
                     {{responsable.nom}} {{responsable.prenom}}

@@ -40,6 +40,7 @@ import { ListeSessionComponent } from './components/liste-session/liste-session.
 import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 import {ListboxModule} from 'primeng/listbox';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import {ListboxModule} from 'primeng/listbox';
     ButtonModule,
     BrowserAnimationsModule,
     RadioButtonModule,
-    ListboxModule
+    ListboxModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import {ListboxModule} from 'primeng/listbox';
 import { Theme } from 'src/app/models/Theme';
 import { ThemeHttpService } from 'src/app/services/theme-http.service';
 import { PrimeNGConfig } from 'primeng/api';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @Component({
   selector: 'app-form-formation',
