@@ -1,7 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { cpuUsage } from 'process';
-import { element } from 'protractor';
+import { Router } from '@angular/router';
 import { Participant } from 'src/app/models/Participant';
 import { ConnexionHttpService } from 'src/app/services/connexion-http.service';
 
@@ -16,11 +15,13 @@ export class FormConnexionComponent implements OnInit {
   connexionHtpp: ConnexionHttpService;
   participant: Participant;
   listeParticipants: Participant[];
-  isValid:Boolean=false;  
+  isValid:Boolean=false;
+  erreurCnx:Boolean=false;
 
   constructor(
     private httpConnexion: ConnexionHttpService,
-    private formBuilder: FormBuilder) {
+    private formBuilder: FormBuilder,
+    private router: Router) {
     this.formConnexion = this.formBuilder.group({
       identifiant: [""],
       mdp: [""]
@@ -28,7 +29,6 @@ export class FormConnexionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.httpConnexion.findAll().subscribe(response => 
       this.listeParticipants = response);
   }
@@ -42,17 +42,22 @@ export class FormConnexionComponent implements OnInit {
       }
     });
     if(this.isValid==true){
-      console.log("Bienvenu Monsieur " + this.participant.nom);
       localStorage.setItem("connexion", "true");
+      localStorage.setItem("civilite", this.participant.civilite);
+      localStorage.setItem("nom", this.participant.nom);
+      this.formConnexion.reset();
+      this.router.navigate(['accueil']);
     }
-    else console.log("Echec d'authentification")
+    else {
+      this.erreurCnx=true;
+    }
   }
 
   isAuth(){
     return localStorage.getItem("connexion") == "true";
   }
 
-  deconnexion(){
-    localStorage.removeItem("connexion")
+  erreurConnexion(){
+    return this.erreurCnx;
   }
 }
