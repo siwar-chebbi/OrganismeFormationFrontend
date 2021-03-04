@@ -1,9 +1,5 @@
 .header-container {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     padding: 10px;
 }
 .logo {
@@ -11,4 +7,12 @@
 }
 .logo:hover {
     cursor: pointer;
+}
+.lien-authentification {
+    text-decoration: none;
+    color: #1b9cd9;  
+    font-size: large;
+}
+.lien-authentification:hover {
+    color: #f5a11d;
 }

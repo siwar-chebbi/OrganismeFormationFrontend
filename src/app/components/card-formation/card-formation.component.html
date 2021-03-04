@@ -1,7 +1,9 @@
 <div class="p-ml-4 p-mb-4 p-mr-4 card-session">
     <p-card>
         <ng-template pTemplate="header">
-            <h3 class="card-header">Formation {{formation.numero}} </h3>
+            <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
+                <h3 class="card-header p-pl-4">Formation {{formation.numero}}</h3>
+            </div>
         </ng-template>
         <p><span class="meta-donnee">Titre: </span> {{formation.titre}}</p> 
         <p><span class="meta-donnee">Contenu: </span>{{formation.contenu}}</p> 

@@ -12,15 +12,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
-import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
-import { SessionComponent } from './pages/session/session.component';
+import { PageListeSessionComponent } from './pages/page-liste-session/page-liste-session.component';
 import { CardModule } from 'primeng/card';
-import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenubarModule } from 'primeng/menubar';
-import { MenuModule } from 'primeng/menu';
+import { MenuItemContent, MenuModule } from 'primeng/menu';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -37,13 +35,15 @@ import { FormParticipantComponent } from './components/form-participant/form-par
 import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
 import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
-
-
+import { PageSessionComponent } from './pages/page-session/page-session.component';
+import { PageFormSessionComponent } from './pages/page-form-session/page-form-session.component';
+import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
+import { ListeSessionComponent } from './components/liste-session/liste-session.component';
+import { StepsModule } from 'primeng/steps';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormSessionComponent,
     CardFormationComponent,
     ListeFormationComponent,
     HeaderComponent,
@@ -51,11 +51,12 @@ import { FormConnexionComponent } from './components/form-connexion/form-connexi
     AccueilComponent,
     Erreur404Component,
     CardSessionComponent,
-    PageSessionComponent,
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
-    ListeSessionComponent,
-    SessionComponent,
+    PageListeSessionComponent,
+    PageSessionComponent,
+    FormSessionComponent,
+    PageFormSessionComponent,
     NavbarComponent,
     FormFormationComponent,
     PageFormationComponent,
@@ -64,10 +65,13 @@ import { FormConnexionComponent } from './components/form-connexion/form-connexi
     FormParticipantComponent,
     FormFormateurComponent,
     PageConnexionComponent,
-    FormConnexionComponent
+    FormConnexionComponent,
+    FormEvaluationComponent,
+    ListeSessionComponent
   ],
   imports: [
     BrowserModule,
+    StepsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
