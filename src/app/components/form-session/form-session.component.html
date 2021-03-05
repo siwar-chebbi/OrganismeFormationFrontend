@@ -1,24 +1,27 @@
 <form [formGroup]="formSession" (ngSubmit)="onSubmit()">
+    <div class="p-d-flex p-jc-center p-p-4">
+       <span class="header-form">Créer une session</span>
+    </div>
     <div class="p-field p-grid">
-        <label for="float-input" class="p-col-fixed" style="width:100px">Date de début</label>
+        <label for="float-input" class="p-col-fixed">Date de début</label>
         <div class="p-col">
             <input id="float-input" type="date" pInputText formControlName="dateDebut"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="Duree" class="p-col-fixed" style="width:100px">Duree</label>
+        <label for="Duree" class="p-col-fixed">Duree</label>
         <div class="p-col">
             <input id="Duree" type="number" pInputText formControlName="duree"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="numero" class="p-col-fixed" style="width:100px">Numero</label>
+        <label for="numero" class="p-col-fixed">Numero</label>
         <div class="p-col">
             <input id="numero" type="number" pInputText formControlName="numero"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prixHT" class="p-col-fixed" style="width:100px">prixHT</label>
+        <label for="prixHT" class="p-col-fixed">prixHT</label>
         <div class="p-col">
             <input id="prixHT" type="number" pInputText formControlName="prixHT" placeholder="€">   
         </div>
@@ -35,7 +38,9 @@
             <input id="idLieu" type="number" pInputText formControlName="idLieu">   
         </div>
     </div> -->
-    <button pButton type="submit" label="Ajouter la session"></button>
+    <div class="p-d-flex p-jc-center">
+        <button pButton type="submit" label="Ajouter la session"></button>
+    </div>
 </form>
 
 <!-- Récupération de toutes les sessions existantes en base -->

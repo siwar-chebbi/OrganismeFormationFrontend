@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 import { FormFormationComponent } from './components/form-formation/form-formation.component';
@@ -11,6 +11,7 @@ import { PageFormSessionComponent } from './pages/page-form-session/page-form-se
 import { PageFormationComponent } from './pages/page-formation/page-formation.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
+import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"formResponsable", component: FormResponsableComponent},
   {path:"formFormateur", component: FormFormateurComponent},
   {path:"connexion", component: PageConnexionComponent},
+  {path:"formEvaluation", component: PageFormEvaluationComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

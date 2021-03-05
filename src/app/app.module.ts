@@ -40,6 +40,9 @@ import { PageFormSessionComponent } from './pages/page-form-session/page-form-se
 import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
 import { ListeSessionComponent } from './components/liste-session/liste-session.component';
 import { StepsModule } from 'primeng/steps';
+import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
+import {ListboxModule} from 'primeng/listbox';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,8 @@ import { StepsModule } from 'primeng/steps';
     PageConnexionComponent,
     FormConnexionComponent,
     FormEvaluationComponent,
-    ListeSessionComponent
+    ListeSessionComponent,
+    PageFormEvaluationComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,9 @@ import { StepsModule } from 'primeng/steps';
     DropdownModule, 
     ButtonModule,
     BrowserAnimationsModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ListboxModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

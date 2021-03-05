@@ -12,3 +12,13 @@ button:hover {
     background-color: #f5a11d !important;
     border: #f5a11d 2px solid !important;
 }
+.p-dropdown {
+    width: 100% !important;
+}
+label{
+    width: 20vh;
+}
+.header-form {
+    font-size: 24px;
+    font-weight: bold;
+}

@@ -1,75 +1,86 @@
 <form [formGroup]="formulaireEvaluation" (ngSubmit)="evaluer()">
-    <div>
-        <label for="accueil">Accueil:</label>
-        <div>
+    <div class="p-d-flex p-jc-center p-p-4">
+        <span class="header-form">Evaluer une session</span>
+     </div>
+    <div class="p-field p-grid">
+        <label for="numero" class="p-col-fixed" >Liste de vos sessions:</label>
+        <div class="p-col">
+            <p-dropdown [options]="listNumSession" [(ngModel)]="numero" optionLabel="numero" formControlName="listeNumSession"></p-dropdown> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="accueil" class="p-col-fixed">Accueil:</label>
+        <div class="p-col">
             <input id="accueil" type="number" pInputText formControlName="accueil"> 
         </div>
     </div>
-    <div>
-        <label for="annimation">Annimation:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="annimation" class="p-col-fixed">Annimation:</label>
+        <div class="p-col">
             <input id="annimation" type="number" pInputText formControlName="annimation"> 
         </div>
     </div>
-    <div>
-        <label for="contenu">Contenu:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="contenu" class="p-col-fixed">Contenu:</label>
+        <div class="p-col">
             <input id="contenu" type="number" pInputText formControlName="contenu"> 
         </div>
     </div>
-    <div>
-        <label for="disponibilite">Disponibilité:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="disponibilite" class="p-col-fixed">Disponibilité:</label>
+        <div class="p-col">
             <input id="disponibilite" type="number" pInputText formControlName="disponibilite"> 
         </div>
     </div>
-    <div>
-        <label for="environnement">Environnement:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="environnement" class="p-col-fixed">Environnement:</label>
+        <div class="p-col">
             <input id="environnement" type="number" pInputText formControlName="environnement"> 
         </div>
     </div>
-    <div>
-        <label for="maitrise">Maitrise:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="maitrise" class="p-col-fixed">Maitrise:</label>
+        <div class="p-col">
             <input id="maitrise" type="number" pInputText formControlName="maitrise"> 
         </div>
     </div>
-    <div>
-        <label for="pedagogie">Pédagogie:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="pedagogie" class="p-col-fixed">Pédagogie:</label>
+        <div class="p-col">
             <input id="pedagogie" type="number" pInputText formControlName="pedagogie"> 
         </div>
     </div>
-    <div>
-        <label for="prerequis">Prérequis:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="prerequis" class="p-col-fixed">Prérequis:</label>
+        <div class="p-col">
             <input id="prerequis" type="number" pInputText formControlName="prerequis"> 
         </div>
     </div>
-    <div>
-        <label for="recommandation">Récommandation:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="recommandation" class="p-col-fixed" style="width: 20vh;">Récommandation:</label>
+        <div class="p-col">
             <input id="recommandation" type="number" pInputText formControlName="recommandation"> 
         </div>
     </div>
-    <div>
-        <label for="reponse">Réponse:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="reponse" class="p-col-fixed">Réponse:</label>
+        <div class="p-col">
             <input id="reponse" type="number" pInputText formControlName="reponse"> 
         </div>
     </div>
-    <div>
-        <label for="satisfaction">Satisfaction:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="satisfaction" class="p-col-fixed">Satisfaction:</label>
+        <div class="p-col">
             <input id="satisfaction" type="number" pInputText formControlName="satisfaction"> 
         </div>
     </div>
-    <div>
-        <label for="souhait">Souhait de formation:</label>
-        <div>
+    <div class="p-field p-grid">
+        <label for="souhait" class="p-col-fixed">Souhait de formation:</label>
+        <div class="p-col">
             <input id="souhait" type="number" pInputText formControlName="souhait"> 
         </div>
     </div>
-    <button pButton type="submit" label="Valider"></button>
+    <div class="p-d-flex p-jc-center">
+        <button pButton type="submit" label="Valider"></button>
+    </div>
 </form>

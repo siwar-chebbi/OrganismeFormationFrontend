@@ -1,51 +1,61 @@
 <h1>Formulaire de formation</h1>
-  
+
 <form [formGroup]="formFormation" (ngSubmit)="onSubmit()">
     <div class="p-field p-grid">
         <label for="titre">Titre</label>
-        <div class="p-col">            
-            <input id="titre" type="text" pInputText formControlName="titre"> 
+        <div class="p-col">
+            <input id="titre" type="text" pInputText formControlName="titre">
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="contenu">Contenu</label>
-        <div class="p-col">            
-            <textarea id="contenu" rows="3" cols="50" pInputTextarea autoResize="autoResize" formControlName="contenu"></textarea> 
+        <div class="p-col">
+            <textarea id="contenu" rows="3" cols="50" pInputTextarea autoResize="autoResize"
+                formControlName="contenu"></textarea>
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="idTheme">Theme</label>
-        <div class="p-col">            
-            <input id="idTheme" type="number" pInputText formControlName="idTheme"> 
+        <div class="p-col">
+
+            <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="sélectionner un thème"
+                optionLabel="nom" display="chip"formControlName="idTheme"></p-multiSelect>
         </div>
+
     </div>
 
     <div class="p-field p-grid">
         <label for="selectedResponsable">Responsable</label>
-    
-        <p-dropdown [options]="responsables" [(ngModel)]="selectedResponsable"   scrollHeight="400px" optionLabel="nom"
-            [ngModelOptions]="{standalone: true}" [filter]="true" filterBy="value,label" resetFilterOnHide="true">
-        </p-dropdown>
-    
+        <div class="p-col">
+            <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
+                optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
+                formControlName="idResponsable">
+
+                <ng-template let-responsable pTemplate="responsables">
+                    {{responsable.nom}} {{responsable.prenom}}
+                </ng-template>
+            </p-dropdown>
+
+        </div>
+
     </div>
     <div class="p-field p-grid">
         <label for="logiciel">Logiciel</label>
-        <div class="p-col">            
-            <input id="logiciel" type="text" pInputText formControlName="logiciel"> 
+        <div class="p-col">
+            <input id="logiciel" type="text" pInputText formControlName="logiciel">
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="support">Support</label>
-        <div class="p-col">            
-            <input id="support" type="text" pInputText formControlName="support"> 
+        <div class="p-col">
+            <input id="support" type="text" pInputText formControlName="support">
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="numero">Numero</label>
-        <div class="p-col">            
-            <input id="numero" type="number" pInputText formControlName="numero"> 
+        <div class="p-col">
+            <input id="numero" type="number" pInputText formControlName="numero">
         </div>
     </div>
     <button pButton type="submit" label="Ajouter la formation" class="p-button-rounded"></button>
 </form>
-
