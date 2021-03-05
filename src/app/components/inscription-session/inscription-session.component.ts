@@ -54,21 +54,17 @@ export class InscriptionSessionComponent implements OnInit {
 
   onSubmit(){
     this.valueForm = this.formInscriptionSession.value;
-    console.log(this.valueForm);
     if(this.valueForm.coordonneeEntreprise == null){
       this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
-      console.log(this.valeurInscription);
       if (this.valeurInscription != null){
         this.isInscrit = true;
       }
     } else{
-      console.log(this.valueForm);
       this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
-      console.log(this.valeurInscription);
       if (this.valeurInscription != null){
         this.isInscrit = true;
       }

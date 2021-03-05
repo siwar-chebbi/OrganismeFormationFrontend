@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormationHttpService } from 'src/app/services/formation-http.service';
-import { DropdownModule } from 'primeng/dropdown';
 import { ResponsableHttpService } from 'src/app/services/responsable-http.service';
 import { Responsable } from 'src/app/models/Responsable';
 import { Formation } from 'src/app/models/Formation';
-import {ListboxModule} from 'primeng/listbox';
 import { Theme } from 'src/app/models/Theme';
 import { ThemeHttpService } from 'src/app/services/theme-http.service';
-import { PrimeNGConfig } from 'primeng/api';
-import {MultiSelectModule} from 'primeng/multiselect';
 
 @Component({
   selector: 'app-form-formation',
@@ -24,14 +20,11 @@ export class FormFormationComponent implements OnInit {
   themes: Theme[] = [];
   selectedThemes: any[] ;
 
-
   constructor(
     private formBuilder: FormBuilder,
     private formationHttpService: FormationHttpService,
     private responsableHttpService: ResponsableHttpService,
-    private themeHttpService: ThemeHttpService, private primengConfig: PrimeNGConfig
-  ) {
-
+    private themeHttpService: ThemeHttpService) {
 
     this.formFormation = this.formBuilder.group({
       numero: [''],
@@ -40,7 +33,7 @@ export class FormFormationComponent implements OnInit {
       logiciel: [''],
       support: [''],
       idTheme: [],
-      idResponsable:[]
+      idResponsable:[,Validators.required]
     })
 
   }
@@ -56,21 +49,12 @@ export class FormFormationComponent implements OnInit {
       .subscribe(response => {
         this.themes = response;
       } );
-
-
-
-  }
-
-  updateSelectedItems(e){
-    console.log(e)
-    this.selectedThemes=e
   }
 
   onSubmit() {
-    console.log(this.formFormation)
     let formation : Formation = {
       id : null,
-      idResponsable :  this.formFormation.value.idResponsable.id,
+      idResponsable : this.formFormation.value.idResponsable.id,
       numero : this.formFormation.value.numero,
       titre : this.formFormation.value.titre,
       contenu : this.formFormation.value.contenu,

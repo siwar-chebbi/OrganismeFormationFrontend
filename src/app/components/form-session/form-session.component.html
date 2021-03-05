@@ -43,14 +43,3 @@
     </div>
 </form>
 
-<!-- Récupération de toutes les sessions existantes en base -->
-<div *ngFor="let session of sessions">
-    <p> Numero : {{ session.numero }}</p>
-    <p> Type : {{ session.type }}</p>
-    <p> Prix : {{ session.prixHT }}</p>
-    <p> Duree : {{ session.duree }}</p>
-    <p> Date de début : {{ session.dateDebut }}</p>
-    <p> formationId : {{ session.idFormation }}</p>
-    <p> lieuId : {{ session.idLieu }}</p>
-</div>    
-

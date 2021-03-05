@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Formation } from 'src/app/models/Formation';
-import { HttpFormationService } from 'src/app/services/http-formation.service';
+import { FormationHttpService } from 'src/app/services/formation-http.service';
 
 @Component({
   selector: 'app-page-formation',
@@ -12,7 +12,7 @@ export class PageFormationComponent implements OnInit {
   id:number=0;
   formations:Formation[] = [];
 
-  constructor(private route:ActivatedRoute, private formationService: HttpFormationService) { 
+  constructor(private route:ActivatedRoute, private formationService: FormationHttpService) { 
     this.id = this.route.snapshot.params.idFormation;
     this.formationService.findAllById(this.id).subscribe(reponse => 
       this.formations = reponse

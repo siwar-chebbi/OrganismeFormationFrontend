@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
-import { HttpFormationService } from 'src/app/services/http-formation.service';
+import { FormationHttpService } from 'src/app/services/formation-http.service';
 
 @Component({
   selector: 'app-liste-formation',
@@ -12,7 +12,7 @@ export class ListeFormationComponent implements OnInit {
   @Input() idFormation:Number;
   @Input() formations: Formation[] = [];
 
-  constructor(private formationService: HttpFormationService) { }
+  constructor(private formationService: FormationHttpService) { }
 
   ngOnInit(): void {
   }

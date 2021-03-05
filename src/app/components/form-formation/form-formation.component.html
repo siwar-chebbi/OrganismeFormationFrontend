@@ -4,7 +4,8 @@
     <div class="p-field p-grid">
         <label for="titre">Titre</label>
         <div class="p-col">
-            <input id="titre" type="text" pInputText formControlName="titre">
+            <input id="titre" type="text" pInputText required formControlName="titre" 
+            placeholder="Renseignez un titre">
         </div>
     </div>
     <div class="p-field p-grid">
@@ -18,8 +19,8 @@
         <label for="idTheme">Theme</label>
         <div class="p-col">
 
-            <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="sélectionner un thème"
-                optionLabel="nom" display="chip"formControlName="idTheme"></p-multiSelect>
+            <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
+                optionLabel="nom" display="chip" required formControlName="idTheme"></p-multiSelect>
         </div>
 
     </div>
@@ -29,7 +30,7 @@
         <div class="p-col">
             <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
                 optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
-                formControlName="idResponsable">
+                placeholder="Sélectionnez un responsable" required formControlName="idResponsable">
 
                 <ng-template let-responsable pTemplate="responsables">
                     {{responsable.nom}} {{responsable.prenom}}
@@ -57,5 +58,6 @@
             <input id="numero" type="number" pInputText formControlName="numero">
         </div>
     </div>
-    <button pButton type="submit" label="Ajouter la formation" class="p-button-rounded"></button>
+    <button pButton type="submit" label="Ajouter la formation" class="p-button-rounded" 
+    [disabled]="formFormation.invalid"></button>
 </form>

@@ -29,13 +29,11 @@ export class FormSessionComponent implements OnInit {
   ngOnInit(): void {
     this.httpSession.findAll()
     .subscribe(response => this.sessions = response)
-    console.log(this.sessions)
   }
 
   onSubmit(){
     this.session = this.formSession.value;
-    this.httpSession.save(this.formSession.value).subscribe( ()=> {
-      console.log(this.formSession.value)
-    });
+    this.httpSession.save(this.formSession.value).subscribe();
+    this.formSession.reset();
   }
 }
