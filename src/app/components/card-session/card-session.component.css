@@ -1,8 +1,5 @@
 .card-header {   
     color:#1b9cd9;
-    padding-top: 10px;
-    padding-left: 20px;
-    width: fit-content;
 }
 .meta-donnee {
     font-weight: bold;
@@ -11,4 +8,16 @@
 .card-session {
     width: 50vh;
     text-align: center;
+}
+
+.button-back{
+    color: grey !important;
+    font-size: 14px;
+}
+.button-back:hover {
+    color: #1b9cd9 !important;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 5px;
+    transition: 0.1s;
 }

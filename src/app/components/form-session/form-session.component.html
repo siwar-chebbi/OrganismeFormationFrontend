@@ -1,4 +1,7 @@
 <form [formGroup]="formSession" (ngSubmit)="onSubmit()">
+    <div class="p-d-flex p-jc-center p-p-4">
+       <span class="header-form">Créer une session</span>
+    </div>
     <div class="p-field p-grid">
         <label for="float-input" class="p-col-fixed">Date de début</label>
         <div class="p-col">
@@ -35,5 +38,7 @@
             <input id="idLieu" type="number" pInputText formControlName="idLieu">   
         </div>
     </div> -->
-    <button pButton type="submit" label="Ajouter la session"></button>
+    <div class="p-d-flex p-jc-center">
+        <button pButton type="submit" label="Ajouter la session"></button>
+    </div>
 </form>

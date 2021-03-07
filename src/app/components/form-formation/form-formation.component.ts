@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormationHttpService } from 'src/app/services/formation-http.service';
-import { DropdownModule } from 'primeng/dropdown';
 import { ResponsableHttpService } from 'src/app/services/responsable-http.service';
 import { Responsable } from 'src/app/models/Responsable';
+import { Formation } from 'src/app/models/Formation';
+import { Theme } from 'src/app/models/Theme';
+import { ThemeHttpService } from 'src/app/services/theme-http.service';
+
 @Component({
   selector: 'app-form-formation',
   templateUrl: './form-formation.component.html',
@@ -14,13 +17,14 @@ export class FormFormationComponent implements OnInit {
   formFormation: FormGroup;
   responsables: Responsable[] = [];
   selectedResponsable: Responsable;
+  themes: Theme[] = [];
+  selectedThemes: any[] ;
 
   constructor(
     private formBuilder: FormBuilder,
     private formationHttpService: FormationHttpService,
-    private responsableHttpService: ResponsableHttpService
-  ) {
-
+    private responsableHttpService: ResponsableHttpService,
+    private themeHttpService: ThemeHttpService) {
 
     this.formFormation = this.formBuilder.group({
       numero: [''],
@@ -29,7 +33,7 @@ export class FormFormationComponent implements OnInit {
       logiciel: [''],
       support: [''],
       idTheme: [],
-      selectedResponsable: []
+      idResponsable:[,Validators.required]
     })
 
   }
@@ -38,14 +42,28 @@ export class FormFormationComponent implements OnInit {
     this.responsableHttpService
       .findAll()
       .subscribe(response => {
-        this.responsables = response; 
-        console.log(this.responsables)
+        this.responsables = response;
+      } );
+      this.themeHttpService
+      .findAll()
+      .subscribe(response => {
+        this.themes = response;
       } );
   }
 
   onSubmit() {
+    let formation : Formation = {
+      id : null,
+      idResponsable : this.formFormation.value.idResponsable.id,
+      numero : this.formFormation.value.numero,
+      titre : this.formFormation.value.titre,
+      contenu : this.formFormation.value.contenu,
+      logiciel : this.formFormation.value.logiciel,
+      support : this.formFormation.value.support,
+      idTheme : this.formFormation.value.idTheme?.map((theme: { id: any; })=>theme.id)
+    }
     this.formationHttpService
-      .create(this.formFormation.value)
+      .create(formation)
       .subscribe();
     this.formFormation.reset();
   }

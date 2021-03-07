@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HttpFormationService } from './http-formation.service';
+import { FormateurHttpService } from './formateur-http.service';
 
-describe('HttpFormationService', () => {
-  let service: HttpFormationService;
+describe('FormateurHttpService', () => {
+  let service: FormateurHttpService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(HttpFormationService);
+    service = TestBed.inject(FormateurHttpService);
   });
 
   it('should be created', () => {

@@ -1,76 +1,22 @@
 {
-<<<<<<< HEAD
-  "sessions": [
+  "participants": [
     {
       "id": 1,
-      "dateDebut": "2021-01-01",
-      "dateFin": "2021-01-01",
-      "duree": 15,
-      "numero": 1,
-      "prix": 350
+      "civilite":"Monsieur",
+      "nom": "AIT ALI",
+      "prenom": "Jamal",
+      "dateNaissance": "13/03/1987",
+      "identifiant": "BG59",
+      "mdp": "123456"
     },
     {
-      "dateDebut": "2021-02-05",
-      "dateFin": "2021-02-12",
-      "duree": 15,
-      "numero": 2,
-      "prix": 1423,
-      "id": 2
+      "id": 2,
+      "civilite":"Heros",
+      "nom": "Kent",
+      "prenom": "Clark",
+      "dateNaissance": "01/04/1938",
+      "identifiant": "Superman",
+      "mdp": "Kryptonite"
     }
   ]
 }
-=======
-    "domaines": [
-      {
-        "id": 1,
-        "nom": "Informatique"        
-      },
-      {
-        "id": 2,
-        "nom": "Finance"        
-      },
-      {
-        "id": 3,
-        "nom": "Ressources humaines"        
-      },
-      {
-        "id": 4,
-        "nom": "Management"        
-      }
-    ],
-    "themes": [
-      {
-        "id": 1,
-        "nom": "Java",
-        "domaine": 1,
-        "themeParent":null      
-      },
-      {
-        "id": 2,
-        "nom": "C#",
-        "domaine": 1,
-        "themeParent":null        
-      },
-      {
-        "id": 3,
-        "nom": "PHP",
-        "domaine": 1,
-        "themeParent":null       
-      },
-      {
-        "id": 4,
-        "nom": "JavaScript",
-        "domaine": 1,
-        "themeParent":null        
-      },
-      {
-        "id": 5,
-        "nom": "Java Débutant",
-        "domaine": 1,
-        "themeParent":1
-      }
-    ]     
-  }
-
-  
->>>>>>> Jamal

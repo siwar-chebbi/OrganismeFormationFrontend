@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Formation } from 'src/app/models/Formation';
-import { HttpFormationService } from 'src/app/services/http-formation.service';
+import { FormationHttpService } from 'src/app/services/formation-http.service';
 
 @Component({
   selector: 'app-liste-formation',
@@ -10,15 +10,11 @@ import { HttpFormationService } from 'src/app/services/http-formation.service';
 export class ListeFormationComponent implements OnInit {
   
   @Input() idFormation:Number;
-  formations: Formation[] = [];
+  @Input() formations: Formation[] = [];
 
-  constructor(private formationService: HttpFormationService) { }
+  constructor(private formationService: FormationHttpService) { }
 
   ngOnInit(): void {
-    this.formationService.findAllById(this.idFormation)
-    .subscribe(
-      reponse=> this.formations = reponse);
-    
   }
   onDeleteFormation(formation:Formation){
     this.formationService.delete(formation.id).subscribe();

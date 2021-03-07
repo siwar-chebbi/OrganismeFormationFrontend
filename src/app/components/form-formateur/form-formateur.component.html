@@ -1,0 +1,21 @@
+<form [formGroup]="formFormateur" (ngSubmit)="onSubmit()">
+    <div class="p-field p-grid">
+        <label for="nom" class="p-col-fixed" style="width:100px">Nom</label>
+        <div class="p-col">
+            <input id="nom" type="text" pInputText formControlName="nom"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="prenom" class="p-col-fixed" style="width:100px">Prenom</label>
+        <div class="p-col">
+            <input id="prenom" type="text" pInputText formControlName="prenom"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="mail" class="p-col-fixed" style="width:100px">Mail</label>
+        <div class="p-col">
+            <input id="mail" type="mail" pInputText formControlName="mail"> 
+        </div>
+    </div>
+    <button pButton type="submit" label="Ajouter ce formateur"></button>
+</form>

@@ -24,10 +24,7 @@ export class FormParticipantComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    console.log(this.formParticipant.value);
-      this.httpParticipantService.saveParticulier(this.formParticipant.value).subscribe( ()=> {
-        console.log(this.formParticipant.value)
-      });
-  
+      this.httpParticipantService.saveParticulier(this.formParticipant.value).subscribe();
+      this.formParticipant.reset();  
   }
 }

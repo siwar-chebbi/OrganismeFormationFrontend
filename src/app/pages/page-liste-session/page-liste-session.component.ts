@@ -4,11 +4,11 @@ import { Session } from 'src/app/models/Session';
 import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
-  selector: 'app-liste-session',
-  templateUrl: './liste-session.component.html',
-  styleUrls: ['./liste-session.component.css']
+  selector: 'app-page-liste-session',
+  templateUrl: './page-liste-session.component.html',
+  styleUrls: ['./page-liste-session.component.css']
 })
-export class ListeSessionComponent implements OnInit {
+export class PageListeSessionComponent implements OnInit {
 
   idFormation:number;
   sessions:Session [] = [];

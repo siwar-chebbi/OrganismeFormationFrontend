@@ -1,8 +1,5 @@
 .card-header {   
     color:#1b9cd9;
-    padding-top: 10px;
-    padding-left: 20px;
-    width: fit-content;
 }
 .meta-donnee {
     font-weight: bold;
@@ -10,4 +7,11 @@
 .card-session {
     width: 50vh;
     text-align: center;
+} 
+::ng-deep .pi-angle-left {
+    color: grey !important;
+}
+::ng-deep .pi-angle-left:hover {
+    color: #1b9cd9 !important;
+    cursor: pointer;
 }

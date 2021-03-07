@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Session } from 'src/app/models/Session';
 import { HttpBilanParticipantSessionService } from 'src/app/services/http-bilan-participant-session.service';
 
@@ -18,10 +19,11 @@ export class InscriptionSessionComponent implements OnInit {
 
   constructor(
     private httpBilanService: HttpBilanParticipantSessionService,
-    private fb: FormBuilder) { 
+    private fb: FormBuilder,
+    private route:ActivatedRoute) { 
     this.formInscriptionSession = this.fb.group({
-      idParticipant: [],
-      idSession: [],
+      idParticipant: [1],
+      idSession: [this.route.snapshot.params.id],
       coordonneeParticipant: this.fb.group({
         codePostal: [""],
         mail: [""],
@@ -52,21 +54,17 @@ export class InscriptionSessionComponent implements OnInit {
 
   onSubmit(){
     this.valueForm = this.formInscriptionSession.value;
-    console.log(this.valueForm);
     if(this.valueForm.coordonneeEntreprise == null){
       this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
-      console.log(this.valeurInscription);
       if (this.valeurInscription != null){
         this.isInscrit = true;
       }
     } else{
-      console.log(this.valueForm);
       this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
-      console.log(this.valeurInscription);
       if (this.valeurInscription != null){
         this.isInscrit = true;
       }

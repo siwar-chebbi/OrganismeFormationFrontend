@@ -61,29 +61,6 @@ export class NavbarComponent implements OnInit {
                 label: 'Formations',
                 items: this.sousMenuDomaine,
                 styleClass: 'menu-button'
-            },
-            {
-                label: 'Inscription',
-                url: `https://www.google.com/`,
-                styleClass: 'menu-button'
-            },
-            {
-                label: 'Tests Temporaires',
-                styleClass: 'menu-button',
-                items: [
-                    {label: 'Jamal',
-                     styleClass: 'menu-button',
-                     items: [{label:'Formulaire Formation', url:`/formFormation`, styleClass: 'menu-button'}]},
-                     {label: 'Albert',
-                     styleClass: 'menu-button',
-                     items: [{label:'Nom de votre test', url:`/formFormation` , styleClass: 'menu-button'}]},
-                     {label: 'Gauthier',
-                     styleClass: 'menu-button',
-                     items: [{label:'Nom de votre test', url:`/formFormation`, styleClass: 'menu-button'}]},
-                     {label: 'Siwar',
-                     styleClass: 'menu-button',
-                     items: [{label:'Nom de votre test', url:`/formFormation`, styleClass: 'menu-button'}]}
-                ]
             }
         ];
 
@@ -94,7 +71,9 @@ export class NavbarComponent implements OnInit {
                              styleClass: 'menu-button',
                              items: [ {label: 'Ajouter une formation', url:`/formFormation`, styleClass: 'menu-button'},
                                       {label: 'Ajouter un responsable', url:`/formResponsable`, styleClass: 'menu-button'},
-                                      {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'}]
+                                      {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'},
+                                      {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'},
+                                      {label: 'Ajouter un participant', url:`/formParticipant`, styleClass: 'menu-button'}]
             })
         }               
     }

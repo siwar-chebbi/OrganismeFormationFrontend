@@ -12,10 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { Erreur404Component } from './pages/erreur404/erreur404.component';
 import { CardSessionComponent } from './components/card-session/card-session.component';
-import { ListeSessionComponent } from './pages/liste-session/liste-session.component';
-import { SessionComponent } from './pages/session/session.component';
+import { PageListeSessionComponent } from './pages/page-liste-session/page-liste-session.component';
 import { CardModule } from 'primeng/card';
-import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -35,13 +33,21 @@ import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.compo
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
-
-
+import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
+import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
+import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
+import { PageSessionComponent } from './pages/page-session/page-session.component';
+import { PageFormSessionComponent } from './pages/page-form-session/page-form-session.component';
+import { FormEvaluationComponent } from './components/form-evaluation/form-evaluation.component';
+import { ListeSessionComponent } from './components/liste-session/liste-session.component';
+import { StepsModule } from 'primeng/steps';
+import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
+import { ListboxModule } from 'primeng/listbox';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormSessionComponent,
     CardFormationComponent,
     ListeFormationComponent,
     HeaderComponent,
@@ -49,21 +55,29 @@ import { EvaluationComponent } from './components/evaluation/evaluation.componen
     AccueilComponent,
     Erreur404Component,
     CardSessionComponent,
-    PageSessionComponent,
     PageInscriptionSessionComponent,
     InscriptionSessionComponent,
-    ListeSessionComponent,
-    SessionComponent,
+    PageListeSessionComponent,
+    PageSessionComponent,
+    FormSessionComponent,
+    PageFormSessionComponent,
     NavbarComponent,
     FormFormationComponent,
     PageFormationComponent,
     FormResponsableComponent,
     HeaderNavbarComponent,
     FormParticipantComponent,
-    EvaluationComponent
+    EvaluationComponent,
+    FormFormateurComponent,
+    PageConnexionComponent,
+    FormConnexionComponent,
+    FormEvaluationComponent,
+    ListeSessionComponent,
+    PageFormEvaluationComponent
   ],
   imports: [
     BrowserModule,
+    StepsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
@@ -75,10 +89,12 @@ import { EvaluationComponent } from './components/evaluation/evaluation.componen
     InputTextModule,
     InputNumberModule,
     InputTextareaModule,
-    DropdownModule, 
+    DropdownModule,
     ButtonModule,
     BrowserAnimationsModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ListboxModule,
+    MultiSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
