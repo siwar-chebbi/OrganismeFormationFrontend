@@ -17,7 +17,7 @@ export class EvaluationComponent implements OnInit {
     private httpSessionService: HttpSessionService,
     private fb:FormBuilder) {
     this.formEvaluation = this.fb.group({
-      mail: []
+      mail: [""]
     })
   }
 
@@ -25,7 +25,7 @@ export class EvaluationComponent implements OnInit {
   }
 
   onSubmit(){
-    this.httpSessionService.findSessionsByMailParticipant(this.formEvaluation.value)
+    this.httpSessionService.findSessionsByMailParticipant(this.formEvaluation.value.mail)
     .subscribe( response => {
       this.sessionsParticipant = response;
       console.log(this.sessionsParticipant);
