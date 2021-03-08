@@ -16,6 +16,7 @@ export class FormResponsableComponent implements OnInit {
     private responsableHttpService: ResponsableHttpService,
   ) { 
     this.formResponsable = this.formBuilder.group({
+      civilite: [],
       nom:[''],
       prenom:[''],
       role:[''],

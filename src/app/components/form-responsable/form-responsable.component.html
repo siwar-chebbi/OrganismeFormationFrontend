@@ -15,6 +15,13 @@
         </div>
     </div>
     <div class="p-field p-grid">
+        <label for="civilite" class="p-col-fixed" style="width:100px">Civilite </label>
+        <div class="p-col">
+            <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
+            <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
+        </div>
+    </div>
+    <div class="p-field p-grid">
         <label for="role">Role</label>
         <div class="p-col">            
             <input id="role" type="text" pInputText formControlName="role"> 
