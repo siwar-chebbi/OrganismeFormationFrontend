@@ -1,32 +1,30 @@
-<h1>Formulaire de formation</h1>
-
 <form [formGroup]="formFormation" (ngSubmit)="onSubmit()">
+    <div class="p-d-flex p-jc-center p-p-4">
+        <span class="header-form">Créer une formation</span>
+     </div>
     <div class="p-field p-grid">
-        <label for="titre">Titre</label>
+        <label for="titre" class="p-col-fixed">Titre</label>
         <div class="p-col">
             <input id="titre" type="text" pInputText required formControlName="titre" 
             placeholder="Renseignez un titre">
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="contenu">Contenu</label>
+        <label for="contenu" class="p-col-fixed">Contenu</label>
         <div class="p-col">
-            <textarea id="contenu" rows="3" cols="50" pInputTextarea autoResize="autoResize"
-                formControlName="contenu"></textarea>
+            <textarea id="contenu" rows="3" pInputTextarea autoResize="autoResize" formControlName="contenu"></textarea>
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="idTheme">Theme</label>
+        <label for="idTheme" class="p-col-fixed">Theme</label>
         <div class="p-col">
-
             <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
                 optionLabel="nom" display="chip" required formControlName="idTheme"></p-multiSelect>
         </div>
-
     </div>
 
     <div class="p-field p-grid">
-        <label for="selectedResponsable">Responsable</label>
+        <label for="selectedResponsable" class="p-col-fixed">Responsable</label>
         <div class="p-col">
             <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
                 optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
@@ -41,23 +39,25 @@
 
     </div>
     <div class="p-field p-grid">
-        <label for="logiciel">Logiciel</label>
+        <label for="logiciel" class="p-col-fixed">Logiciel</label>
         <div class="p-col">
             <input id="logiciel" type="text" pInputText formControlName="logiciel">
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="support">Support</label>
+        <label for="support" class="p-col-fixed">Support</label>
         <div class="p-col">
             <input id="support" type="text" pInputText formControlName="support">
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="numero">Numero</label>
+        <label for="numero" class="p-col-fixed">Numero</label>
         <div class="p-col">
             <input id="numero" type="number" pInputText formControlName="numero">
         </div>
     </div>
-    <button pButton type="submit" label="Ajouter la formation" class="p-button-rounded" 
-    [disabled]="formFormation.invalid"></button>
+    <div class="p-d-flex p-jc-center">
+        <button pButton type="submit" label="Ajouter la formation"[disabled]="formFormation.invalid"></button>
+    </div>
+
 </form>

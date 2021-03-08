@@ -12,11 +12,14 @@ button:hover {
     background-color: #f5a11d !important;
     border: #f5a11d 2px solid !important;
 }
-.p-dropdown {
+.p-dropdown, .p-multiselect, .p-inputtext, .p-inputtextarea {
     width: 100% !important;
 }
 label{
     width: 20vh;
+}
+.p-radiobutton-label {
+    width: 10vh;
 }
 .header-form {
     font-size: 24px;
