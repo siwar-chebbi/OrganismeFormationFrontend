@@ -22,10 +22,17 @@ export class HeaderComponent implements OnInit {
   }
 
   deconnexion(){
+    this.supprimerLocalStorage();
+    this.router.navigate(['accueil']);
+  }
+
+  supprimerLocalStorage(){
     localStorage.removeItem("connexion");
     localStorage.removeItem("nom");
     localStorage.removeItem("civilite");
-    this.router.navigate(['accueil']);
+    localStorage.removeItem('idParticipant');
+    localStorage.removeItem('idResponsable');
+    localStorage.removeItem('prenom');
   }
 
 }
