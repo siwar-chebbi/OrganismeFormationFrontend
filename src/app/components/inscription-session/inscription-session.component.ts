@@ -22,7 +22,7 @@ export class InscriptionSessionComponent implements OnInit {
     private fb: FormBuilder,
     private route:ActivatedRoute) { 
     this.formInscriptionSession = this.fb.group({
-      idParticipant: [1],
+      idParticipant: [localStorage.getItem("id")],
       idSession: [this.route.snapshot.params.id],
       coordonneeParticipant: this.fb.group({
         codePostal: [""],
@@ -54,7 +54,8 @@ export class InscriptionSessionComponent implements OnInit {
 
   onSubmit(){
     this.valueForm = this.formInscriptionSession.value;
-    if(this.valueForm.coordonneeEntreprise == null){
+    console.log(this.formInscriptionSession.value)
+    if(this.valueForm.entreprise.siret == ""){
       this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
