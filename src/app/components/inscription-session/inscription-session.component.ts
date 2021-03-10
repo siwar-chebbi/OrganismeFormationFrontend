@@ -53,8 +53,9 @@ export class InscriptionSessionComponent implements OnInit {
   }
 
   onSubmit(){
+
     this.valueForm = this.formInscriptionSession.value;
-    if(this.valueForm.coordonneeEntreprise == null){
+    if(this.valueForm.entreprise.siret==="" && this.valueForm.entreprise.nom==="" ){
       this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
@@ -69,5 +70,6 @@ export class InscriptionSessionComponent implements OnInit {
         this.isInscrit = true;
       }
     }
+ 
   }
 }

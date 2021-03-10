@@ -123,7 +123,8 @@
             </div>
         </div>
         <div class="form-button">
-            <button pButton type="submit" label="S'inscrire"></button>
+            <app-test-prerequis (submitEvent)="onSubmit()"></app-test-prerequis>
+            <!-- <button pButton type="submit" label="S'inscrire" ></button> -->
         </div>
         <div class="retour-inscription" *ngIf="isInscrit">
             <p> {{valeurInscription.nomParticipant}} {{valeurInscription.prenomParticipant}} votre inscription 
@@ -131,3 +132,4 @@
         </div>
     </div>
 </form>
+
