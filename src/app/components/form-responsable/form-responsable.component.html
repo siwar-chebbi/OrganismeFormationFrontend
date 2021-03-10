@@ -1,37 +1,45 @@
-
-<h1>Formulaire responsable</h1>
-  
 <form [formGroup]="formResponsable" (ngSubmit)="onSubmit()">
+    <div class="p-d-flex p-jc-center p-p-4">
+        <span class="header-form">Ajouter un responsable</span>
+     </div>
     <div class="p-field p-grid">
-        <label for="nom">Nom</label>
+        <label for="nom" class="p-col-fixed">Nom</label>
         <div class="p-col">            
             <input id="nom" type="text" pInputText formControlName="nom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prenom">Prenom</label>
+        <label for="prenom" class="p-col-fixed">Prenom</label>
         <div class="p-col">            
             <input id="prenom" type="text" pInputText formControlName="prenom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="role">Role</label>
+        <label for="civilite" class="p-col-fixed" style="width:100px">Civilite </label>
+        <div class="p-col">
+            <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
+            <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="role" class="p-col-fixed">Role</label>
         <div class="p-col">            
             <input id="role" type="text" pInputText formControlName="role"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="mail">Mail</label>
+        <label for="mail" class="p-col-fixed">Mail</label>
         <div class="p-col">            
             <input id="mail" type="text" pInputText formControlName="mail"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="telephone">Telephone</label>
+        <label for="telephone" class="p-col-fixed">Telephone</label>
         <div class="p-col">            
             <input id="telephone" type="text" pInputText formControlName="telephone"> 
         </div>
     </div>
-    
-    <button pButton pRipple type="submit" label="Ajouter un responsable" class="p-button-rounded"></button>
+    <div class="p-d-flex p-jc-center">
+        <button pButton pRipple type="submit" label="Ajouter un responsable"></button>
+    </div>
 </form>

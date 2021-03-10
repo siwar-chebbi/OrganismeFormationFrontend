@@ -66,6 +66,7 @@ export class NavbarComponent implements OnInit {
 
         /*** Menu Gestionnaire ***/
         this.isAdmin = true;
+        //this.isAdmin = localStorage.getItem("idResponsable")!=null;
         if (this.isAdmin){
             this.items.push({label: 'Gestionnaire',
                              styleClass: 'menu-button',
