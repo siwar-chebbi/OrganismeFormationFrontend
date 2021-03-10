@@ -1,9 +1,9 @@
 .header-container {
     width: 100%;
-    padding: 10px;
+    padding-top: 2px;
 }
 .logo {
-    width: 50%;
+    width: 30%;
 }
 .logo:hover {
     cursor: pointer;
