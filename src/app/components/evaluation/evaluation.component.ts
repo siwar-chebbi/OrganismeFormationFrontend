@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
   selector: 'app-evaluation',
@@ -10,12 +9,10 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
 export class EvaluationComponent implements OnInit {
 
   idSession: number;
-  sessionsParticipant: any;
+  @Output() mail = new EventEmitter<string>();
   
   formEvaluation  : FormGroup;
-  constructor(
-    private httpSessionService: HttpSessionService,
-    private fb:FormBuilder) {
+  constructor(private fb:FormBuilder) {
     this.formEvaluation = this.fb.group({
       mail: [""]
     })
@@ -25,11 +22,6 @@ export class EvaluationComponent implements OnInit {
   }
 
   onSubmit(){
-    this.httpSessionService.findSessionsByMailParticipant(this.formEvaluation.value.mail)
-    .subscribe( response => {
-      this.sessionsParticipant = response;
-      console.log(this.sessionsParticipant);
-    })
+    this.mail.emit(this.formEvaluation.value.mail);
   }
-
 }

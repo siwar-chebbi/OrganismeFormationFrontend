@@ -1,5 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { SelectItem } from 'primeng/api';
 import { HttpEvaluationService } from 'src/app/services/http-evaluation.service';
 
 @Component({
@@ -10,8 +11,9 @@ import { HttpEvaluationService } from 'src/app/services/http-evaluation.service'
 export class FormEvaluationComponent implements OnInit {
 
   formulaireEvaluation:FormGroup;
-  listNumSession:any [] = [];
-  numero:String;
+  @Input() listNumSession:string [] = [];
+  EvalSessions: SelectItem[];
+  selectedEvalSession: string;
 
   constructor(private formulaire:FormBuilder, private evaluationService:HttpEvaluationService) {
     this.formulaireEvaluation = this.formulaire.group({
@@ -28,19 +30,14 @@ export class FormEvaluationComponent implements OnInit {
       reponse: [],
       satisfaction: [],
       souhait: []
-    }) 
-    this.listNumSession = [
-      {numero:'12'},
-      {numero:'122'},
-      {numero:'41'},
-      {numero:'48'},
-      {numero:'2132'}
-    ]
-  }
+    });
+    
 
+  }
+  
   ngOnInit(): void {
   }
-
+  
   evaluer() {
     console.log(this.formulaireEvaluation.value);
   }
