@@ -43,6 +43,7 @@ import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 import {ListboxModule} from 'primeng/listbox';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
   declarations: [
@@ -92,7 +93,8 @@ import {MultiSelectModule} from 'primeng/multiselect';
     BrowserAnimationsModule,
     RadioButtonModule,
     ListboxModule,
-    MultiSelectModule
+    MultiSelectModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

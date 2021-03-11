@@ -17,7 +17,9 @@ export class FormParticipantComponent implements OnInit {
       civilite: [],
       dateNaissance: [],
       nom: [""],
-      prenom: [""]
+      prenom: [""],
+      identifiant: [""],
+      mdp: [""]
     })
   }
 
