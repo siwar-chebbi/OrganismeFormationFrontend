@@ -1,0 +1,17 @@
+<div class="p-ml-4 p-mb-4 p-mr-4 card-session">
+    <p-card>
+        <ng-template pTemplate="header">
+            <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
+                <h3>Question {{testPrerequis.numero}}</h3>
+            </div>
+        </ng-template>
+        <div class= "p-mb-4"> {{testPrerequis.question}}  </div>
+
+        <div *ngFor="let reponse of testPrerequis.reponses" class="p-field-checkbox">
+            <p-radioButton [inputId]="reponse.key" name="reponse" [value]="reponse" [(ngModel)]="selectedreponse"
+                ></p-radioButton>
+            <label [for]="reponse.key">{{reponse.rep}}</label>
+        </div>
+
+    </p-card>
+</div>

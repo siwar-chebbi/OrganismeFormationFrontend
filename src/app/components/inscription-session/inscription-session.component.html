@@ -110,7 +110,7 @@
             </div>
         </div>
         <div class="form-button">
-            <button pButton type="submit" [disabled]="formInscriptionSession.invalid" label="S'inscrire"></button>
+            <app-test-prerequis (submitEvent)="onSubmit()"></app-test-prerequis>
         </div>
         <div class="retour-inscription" *ngIf="isInscrit">
             <p> {{valeurInscription.nomParticipant}} {{valeurInscription.prenomParticipant}} votre inscription 

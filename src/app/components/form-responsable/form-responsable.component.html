@@ -2,6 +2,13 @@
     <div class="p-d-flex p-jc-center p-p-4">
         <span class="header-form">Ajouter un responsable</span>
      </div>
+     <div class="p-field p-grid">
+        <label for="civilite" class="p-col-fixed" style="width:100px">Civilite </label>
+        <div class="p-col">
+            <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
+            <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
+        </div>
+    </div>
     <div class="p-field p-grid">
         <label for="nom" class="p-col-fixed">Nom</label>
         <div class="p-col">            
@@ -14,13 +21,7 @@
             <input id="prenom" type="text" pInputText formControlName="prenom"> 
         </div>
     </div>
-    <div class="p-field p-grid">
-        <label for="civilite" class="p-col-fixed" style="width:100px">Civilite </label>
-        <div class="p-col">
-            <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
-            <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
-        </div>
-    </div>
+
     <div class="p-field p-grid">
         <label for="role" class="p-col-fixed">Role</label>
         <div class="p-col">            

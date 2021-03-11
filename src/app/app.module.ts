@@ -42,8 +42,13 @@ import { FormEvaluationComponent } from './components/form-evaluation/form-evalu
 import { ListeSessionComponent } from './components/liste-session/liste-session.component';
 import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
-import { ListboxModule } from 'primeng/listbox';
-import { MultiSelectModule } from 'primeng/multiselect';
+import {ListboxModule} from 'primeng/listbox';
+import {MultiSelectModule} from 'primeng/multiselect';
+import { DialogModule } from 'primeng/dialog';
+import { TestPrerequisComponent } from './components/test-prerequis/test-prerequis.component';
+import { CardTestComponent } from './components/card-test/card-test.component';
+import { CalendarModule } from 'primeng/calendar';
+
 
 @NgModule({
   declarations: [
@@ -73,7 +78,10 @@ import { MultiSelectModule } from 'primeng/multiselect';
     FormConnexionComponent,
     FormEvaluationComponent,
     ListeSessionComponent,
-    PageFormEvaluationComponent
+    PageFormEvaluationComponent,
+    TestPrerequisComponent,
+    CardTestComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -94,7 +102,10 @@ import { MultiSelectModule } from 'primeng/multiselect';
     BrowserAnimationsModule,
     RadioButtonModule,
     ListboxModule,
-    MultiSelectModule
+    MultiSelectModule,
+    DialogModule,
+    RadioButtonModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

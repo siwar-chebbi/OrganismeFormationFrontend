@@ -1,43 +1,62 @@
 <form [formGroup]="formSession" (ngSubmit)="onSubmit()">
     <div class="p-d-flex p-jc-center p-p-4">
-       <span class="header-form">Créer une session</span>
+        <span class="header-form">Créer une session</span>
+
+    </div>
+    <div class="p-field p-grid">
+        <label for="numero" class="p-col-fixed">Numero</label>
+        <div class="p-col">
+            <input id="numero" type="number" pInputText formControlName="numero">
+        </div>
     </div>
     <div class="p-field p-grid">
         <label for="float-input" class="p-col-fixed">Date de début</label>
-        <div class="p-col">
-            <input id="float-input" type="date" pInputText formControlName="dateDebut"> 
+
+        <div class="p-field p-col-12 p-md-4">
+            <p-calendar [(ngModel)]="date4" [minDate]="minDate" [readonlyInput]="true" inputId="min-max" formControlName="dateDebut"></p-calendar>
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="Duree" class="p-col-fixed">Duree</label>
         <div class="p-col">
-            <input id="Duree" type="number" pInputText formControlName="duree"> 
+            <input id="Duree" type="number" pInputText formControlName="duree">
         </div>
     </div>
-    <div class="p-field p-grid">
-        <label for="numero" class="p-col-fixed">Numero</label>
-        <div class="p-col">
-            <input id="numero" type="number" pInputText formControlName="numero"> 
-        </div>
-    </div>
+
     <div class="p-field p-grid">
         <label for="prixHT" class="p-col-fixed">prixHT</label>
         <div class="p-col">
-            <input id="prixHT" type="number" pInputText formControlName="prixHT" placeholder="€">   
-        </div>
-    </div>    
-    <!-- <div class="p-field p-grid">
-        <label for="idFormation" class="p-col-fixed" style="width:100px">ID de la formation (a remplacer par le nom de la formation)</label>
-        <div class="p-col">
-            <input id="idFormation" type="number" pInputText formControlName="idFormation">   
+            <input id="prixHT" type="number" pInputText formControlName="prixHT" placeholder="€">
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="idLieu" class="p-col-fixed" style="width:100px">ID du lieu (a remplacer par le lieu)</label>
+        <label for="selectedFormation" class="p-col-fixed">Formation</label>
         <div class="p-col">
-            <input id="idLieu" type="number" pInputText formControlName="idLieu">   
+            <p-dropdown id="formation" [options]="formations" [(ngModel)]="selectedFormation" scrollHeight="400px"
+                optionLabel="titre" [filter]="true" filterBy="titre" resetFilterOnHide="true"
+                placeholder="Sélectionnez une formation" required formControlName="idFormation">
+
+                <ng-template let-formation pTemplate="formations">
+                    {{formation.titre}}
+                </ng-template>
+            </p-dropdown>
+
         </div>
-    </div> -->
+    </div>
+    <div class="p-field p-grid">
+        <label for="selectedLieu" class="p-col-fixed">Lieu</label>
+        <div class="p-col">
+            <p-dropdown id="lieu" [options]="lieux" [(ngModel)]="selectedLieu" scrollHeight="400px"
+                optionLabel="nom" [filter]="true" filterBy="nom" resetFilterOnHide="true"
+                placeholder="Sélectionnez un lieu" required formControlName="idLieu">
+
+                <ng-template let-lieu pTemplate="Lieux">
+                    {{lieu.nom}}
+                </ng-template>
+            </p-dropdown>
+
+        </div>
+    </div>
     <div class="p-d-flex p-jc-center">
         <button pButton type="submit" label="Ajouter la session"></button>
     </div>
