@@ -1,22 +1,3 @@
 {
-  "participants": [
-    {
-      "id": 1,
-      "civilite":"Monsieur",
-      "nom": "AIT ALI",
-      "prenom": "Jamal",
-      "dateNaissance": "13/03/1987",
-      "identifiant": "BG59",
-      "mdp": "123456"
-    },
-    {
-      "id": 2,
-      "civilite":"Heros",
-      "nom": "Kent",
-      "prenom": "Clark",
-      "dateNaissance": "01/04/1938",
-      "identifiant": "Superman",
-      "mdp": "Kryptonite"
-    }
-  ]
+
 }
