@@ -39,6 +39,9 @@
             <input id="telephone" type="text" pInputText formControlName="telephone"> 
         </div>
     </div>
+    <div *ngIf="doublon()">
+        <label id="doublon">Cet identifiant est déjà utilisé</label>
+    </div>
     <div class="p-field p-grid">
         <label for="identifiant" class="p-col-fixed">Identifiant </label>
         <div class="p-col">

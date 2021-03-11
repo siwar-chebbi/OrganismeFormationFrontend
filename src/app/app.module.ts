@@ -49,6 +49,7 @@ import { DialogModule } from 'primeng/dialog';
 import { TestPrerequisComponent } from './components/test-prerequis/test-prerequis.component';
 import { CardTestComponent } from './components/card-test/card-test.component';
 import { CalendarModule } from 'primeng/calendar';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 
 
 @NgModule({
@@ -82,6 +83,7 @@ import { CalendarModule } from 'primeng/calendar';
     PageFormEvaluationComponent,
     TestPrerequisComponent,
     CardTestComponent,
+    PageInscriptionComponent,
     
   ],
   imports: [

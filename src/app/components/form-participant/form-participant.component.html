@@ -1,7 +1,7 @@
 <form [formGroup]="formParticipant" (ngSubmit)="onSubmit()">
     <div class="participant-session-id">
         <div class="p-d-flex p-jc-center p-p-4">
-            <span class="header-form">Ajout d'un participant</span>
+            <span class="header-form">Inscription</span>
          </div>
          <div class="p-field p-grid">
             <label for="civilite" class="p-col-fixed">Civilite</label>
@@ -27,6 +27,9 @@
             <div class="p-col">
                 <input id="dateNaissance" type="date" pInputText formControlName="dateNaissance"> 
             </div>
+        </div>
+        <div *ngIf="doublon()">
+            <label id="doublon">Cet identifiant est déjà utilisé</label>
         </div>
         <div class="p-field p-grid">
             <label for="identifiant" class="p-col-fixed">Identifiant </label>
