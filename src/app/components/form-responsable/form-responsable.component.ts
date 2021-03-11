@@ -22,7 +22,8 @@ export class FormResponsableComponent implements OnInit {
       role:[''],
       mail:[''],
       telephone:[''],
-
+      identifiant: [""],
+      mdp: [""]
     })
   }
 
