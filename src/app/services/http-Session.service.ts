@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Session } from '../models/Session';
+import { SessionDetails } from '../models/SessionDetails';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,9 @@ export class HttpSessionService {
   }
   findAllByFormationId(id:Number){
     return this.httpClient.get<Session[]>(`http://localhost:8080/sessions/formations/${id}`);
+  }
+  findDetailsById(id:Number){
+    return this.httpClient.get<SessionDetails>(`http://localhost:8080/sessions/details/${id}`);
   }
   findById(id:number){
     return this.httpClient.get<Session>(`http://localhost:8080/sessions/${id}`);

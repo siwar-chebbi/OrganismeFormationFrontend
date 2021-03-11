@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Formation } from 'src/app/models/Formation';
-import { Lieu } from 'src/app/models/lieu';
+import { Lieu } from 'src/app/models/Lieu';
 import { Session } from 'src/app/models/Session';
 import { FormationHttpService } from 'src/app/services/formation-http.service';
 import { HttpSessionService } from 'src/app/services/http-Session.service';
