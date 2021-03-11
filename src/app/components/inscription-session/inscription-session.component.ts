@@ -64,19 +64,39 @@ export class InscriptionSessionComponent implements OnInit {
       if (this.valueForm.entreprise.siret === "" && this.valueForm.entreprise.nom === "") {
         this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe(reponse => {
           this.valeurInscription = reponse;
+          if(this.valeurInscription.existeDeja){
+            this.showWarn()
+          }else{
+            this.showSuccess()
+          }
         });
-        if (this.valeurInscription != null) {
-          this.isInscrit = true;
+        if (this.valeurInscription != null ) {
+          console.log(this.valeurInscription)
+          if(this.valeurInscription.existeDeja){
+            this.isInscrit=false
+          }else {
+            this.isInscrit = true;
+          }
+         
         }
       } else {
         this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe(reponse => {
           this.valeurInscription = reponse;
+          if(this.valeurInscription.existeDeja){
+            this.showWarn()
+          }else{
+            this.showSuccess()
+          }
         });
         if (this.valeurInscription != null) {
-          this.isInscrit = true;
+          if(this.valeurInscription.existeDeja){
+            this.isInscrit=false
+          }else {
+            this.isInscrit = true;
+          }
         }
       }
-      this.showSuccess()
+      
     }else {
       this.showError()
     }
@@ -98,6 +118,10 @@ showSuccess() {
 
 showError() {
   this.messageService.add({severity:'error', summary: 'Error', detail: 'Veuillez réessayer le test pour être admis'});
+}
+
+showWarn() {
+  this.messageService.add({severity:'warn', summary: 'Warn', detail: 'Vous êtes déjà inscrit'});
 }
 
 }
