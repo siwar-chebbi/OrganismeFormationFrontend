@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NumeroSessionParticipant } from 'src/app/models/NumeroSessionParticipant';
+import { IdentifiantEvaluation } from 'src/app/models/IdentitfiantEvaluation';
 import { HttpSessionService } from 'src/app/services/http-Session.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
 export class PageFormEvaluationComponent implements OnInit {
 
   mail:string ="";
-  listeSessions:NumeroSessionParticipant;
+  listeSessions:IdentifiantEvaluation;
   constructor(
     private httpSessionService: HttpSessionService) { }
 
@@ -21,7 +21,6 @@ export class PageFormEvaluationComponent implements OnInit {
     this.httpSessionService.findSessionsByMailParticipant(mail)
     .subscribe( reponse => {
       this.listeSessions = reponse;
-      console.log(this.listeSessions);
     })
   }
 }
