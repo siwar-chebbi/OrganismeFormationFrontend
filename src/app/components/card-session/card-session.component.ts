@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Session } from 'src/app/models/Session';
+import { SessionDetails } from 'src/app/models/SessionDetails';
 
 @Component({
   selector: 'app-card-session',
@@ -10,14 +11,16 @@ import { Session } from 'src/app/models/Session';
 export class CardSessionComponent implements OnInit {
 
   @Input() session :Session;
+  @Input() sessionDetails :SessionDetails;
   @Input() voirSession:boolean = true;
   @Input() idFormation:number;
 
   constructor(private router:Router, private routerParam:ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.sessionDetails);
   }
-
+  
   consulterSession() {
     this.router.navigate([`formations/${this.idFormation}/sessions/`, this.session.id]);
   }

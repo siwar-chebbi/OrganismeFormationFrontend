@@ -12,7 +12,7 @@ import { PageFormationComponent } from './pages/page-formation/page-formation.co
 import { PageInscriptionSessionComponent } from './pages/page-inscription-session/page-inscription-session.component';
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
-import { FormParticipantComponent } from './components/form-participant/form-participant.component';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:"formFormateur", component: FormFormateurComponent},
   {path:"connexion", component: PageConnexionComponent},
   {path:"formEvaluation", component: PageFormEvaluationComponent},
-  {path:"formParticipant", component: FormParticipantComponent},
+  {path:"inscription", component: PageInscriptionComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

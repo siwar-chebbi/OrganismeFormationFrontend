@@ -12,7 +12,16 @@
         <p><span class="meta-donnee">Date de début: </span> {{session?.dateDebut | date }}</p> 
         <p><span class="meta-donnee">Date de fin: </span>{{session?.dateFin | date }}</p> 
         <p><span class="meta-donnee">Durée la session: </span>{{session?.duree}} jours</p> 
-        <p><span class="meta-donnee">Le prix de la session: </span>{{session?.prixHT}}€</p> 
+        <div *ngIf="!voirSession">
+            <p><span class="meta-donnee">Le titre de la formation: </span>{{sessionDetails?.titreFormation}}</p> 
+            <p><span class="meta-donnee">Le contenu de la formation : </span>{{sessionDetails?.contenuFormation}}</p> 
+            <p><span class="meta-donnee">Themes de la session: </span></p>
+            <ul class="liste-themes">
+                <li *ngFor="let theme of sessionDetails.themes"> {{theme}} </li>
+            </ul>
+            <p><span class="meta-donnee">Le lieu de la session: </span>{{sessionDetails?.lieu}}</p> 
+            <p><span class="meta-donnee">Le prix de la session: </span>{{sessionDetails?.prix}}€</p> 
+        </div>
         <ng-template pTemplate="footer">
                 <div *ngIf="voirSession">
                     <button pButton type="button"(click)="consulterSession()" label="Consulter la session"></button>

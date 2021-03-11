@@ -5,6 +5,9 @@
     font-weight: bold;
 }
 
+.liste-themes{
+    list-style: none;
+}
 .card-session {
     width: 50vh;
     text-align: center;

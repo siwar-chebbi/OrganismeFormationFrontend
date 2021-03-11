@@ -73,8 +73,7 @@ export class NavbarComponent implements OnInit {
                              items: [ {label: 'Ajouter une formation', url:`/formFormation`, styleClass: 'menu-button'},
                                       {label: 'Ajouter un responsable', url:`/formResponsable`, styleClass: 'menu-button'},
                                       {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'},
-                                      {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'},
-                                      {label: 'Ajouter un participant', url:`/formParticipant`, styleClass: 'menu-button'}]
+                                      {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'}]
             })
         }               
     }

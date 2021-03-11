@@ -44,10 +44,12 @@ import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 import {ListboxModule} from 'primeng/listbox';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {PasswordModule} from 'primeng/password';
 import { DialogModule } from 'primeng/dialog';
 import { TestPrerequisComponent } from './components/test-prerequis/test-prerequis.component';
 import { CardTestComponent } from './components/card-test/card-test.component';
 import { CalendarModule } from 'primeng/calendar';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 
 
 @NgModule({
@@ -81,6 +83,7 @@ import { CalendarModule } from 'primeng/calendar';
     PageFormEvaluationComponent,
     TestPrerequisComponent,
     CardTestComponent,
+    PageInscriptionComponent,
     
   ],
   imports: [
@@ -103,6 +106,7 @@ import { CalendarModule } from 'primeng/calendar';
     RadioButtonModule,
     ListboxModule,
     MultiSelectModule,
+    PasswordModule,
     DialogModule,
     RadioButtonModule,
     CalendarModule

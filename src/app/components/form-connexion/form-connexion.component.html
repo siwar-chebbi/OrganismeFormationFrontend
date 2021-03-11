@@ -1,6 +1,9 @@
 <form [formGroup]="formConnexion" (ngSubmit)="connexion()" *ngIf="isAuth()==false">
+    <div class="p-d-flex p-jc-center p-p-4">
+        <span class="header-form">Connexion</span>
+     </div>
     <div *ngIf="erreurConnexion()">
-        <label id="erreurCnx">Identifiant ou mot de passe invalide.</label>
+        <label id="erreurCnx">Identifiant ou mot de passe invalide</label>
     </div>
     <div class="p-field p-grid">
         <label for="identifiant" class="p-col-fixed" style="width:100px">Identifiant :</label>

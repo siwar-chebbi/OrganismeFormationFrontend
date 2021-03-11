@@ -12,16 +12,15 @@
     <div class="p-field p-grid">
         <label for="nom" class="p-col-fixed">Nom</label>
         <div class="p-col">            
-            <input id="nom" type="text" pInputText formControlName="nom"> 
+            <input id="nom" type="text" pInputText required formControlName="nom"> 
         </div>
     </div>
     <div class="p-field p-grid">
         <label for="prenom" class="p-col-fixed">Prenom</label>
         <div class="p-col">            
-            <input id="prenom" type="text" pInputText formControlName="prenom"> 
+            <input id="prenom" type="text" pInputText required formControlName="prenom"> 
         </div>
     </div>
-
     <div class="p-field p-grid">
         <label for="role" class="p-col-fixed">Role</label>
         <div class="p-col">            
@@ -40,7 +39,23 @@
             <input id="telephone" type="text" pInputText formControlName="telephone"> 
         </div>
     </div>
+    <div *ngIf="doublon()">
+        <label id="doublon">Cet identifiant est déjà utilisé</label>
+    </div>
+    <div class="p-field p-grid">
+        <label for="identifiant" class="p-col-fixed">Identifiant </label>
+        <div class="p-col">
+            <input id="identifiant" type="text" pInputText required formControlName="identifiant"> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="mdp" class="p-col-fixed">Mot de passe </label>
+        <div class="p-col">
+            <input id="mdp" type="password" pInputText required formControlName="mdp">
+        </div>
+    </div>
+
     <div class="p-d-flex p-jc-center">
-        <button pButton pRipple type="submit" label="Ajouter un responsable"></button>
+        <button pButton pRipple type="submit" label="Ajouter un responsable" [disabled]="formResponsable.invalid"></button>
     </div>
 </form>
