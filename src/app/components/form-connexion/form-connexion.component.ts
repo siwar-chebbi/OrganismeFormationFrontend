@@ -41,11 +41,10 @@ export class FormConnexionComponent implements OnInit {
 
   connexion() {
     this.participant = this.formConnexion.value;
-    this.listeParticipants.forEach(element => {
-      if(this.participant.identifiant == element.identifiant &&  this.participant.mdp == element.mdp ) {
-        this.isParticipant=true;
-        this.participant = element;
-      }
+    this.listeParticipants.filter(element => this.participant.identifiant == element.identifiant &&  this.participant.mdp == element.mdp )
+    .map(e=>{
+      this.isParticipant=true;
+      this.participant = e;
     });
     if(this.isParticipant==false){
       this.responsable = this.formConnexion.value;

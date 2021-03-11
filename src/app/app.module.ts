@@ -50,6 +50,8 @@ import { TestPrerequisComponent } from './components/test-prerequis/test-prerequ
 import { CardTestComponent } from './components/card-test/card-test.component';
 import { CalendarModule } from 'primeng/calendar';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import {ToastModule} from 'primeng/toast';
+import { RippleModule } from 'primeng/ripple';
 
 
 @NgModule({
@@ -109,7 +111,15 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
     PasswordModule,
     DialogModule,
     RadioButtonModule,
-    CalendarModule
+    CalendarModule,
+    ToastModule,
+    RippleModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    ToastModule,
+    ButtonModule,
+    RippleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

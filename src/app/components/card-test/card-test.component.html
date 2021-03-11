@@ -8,7 +8,7 @@
         <div class= "p-mb-4"> {{testPrerequis.question}}  </div>
 
         <div *ngFor="let reponse of testPrerequis.reponses" class="p-field-checkbox">
-            <p-radioButton [inputId]="reponse.key" name="reponse" [value]="reponse" [(ngModel)]="selectedreponse"
+            <p-radioButton [inputId]="reponse.key" name="reponse" [value]="reponse" [(ngModel)]="selectedreponse" (click)="sendResult()"
                 ></p-radioButton>
             <label [for]="reponse.key">{{reponse.rep}}</label>
         </div>
