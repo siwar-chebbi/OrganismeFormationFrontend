@@ -5,7 +5,7 @@
     <div class="p-field p-grid">
         <label for="numero" class="p-col-fixed" >Liste de vos sessions:</label>
         <div class="p-col">
-            <p-dropdown [options]="listNumSession" [(ngModel)]="numero" optionLabel="numero" formControlName="listeNumSession"></p-dropdown> 
+            <p-dropdown [options]="EvalSessions" [(ngModel)]="selectedEvalSession" optionLabel="numero" optionValue="listNumSession" formControlName="listeNumSession"></p-dropdown> 
         </div>
     </div>
     <div class="p-field p-grid">

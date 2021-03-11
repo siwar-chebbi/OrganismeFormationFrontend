@@ -3,8 +3,6 @@
         <a routerLink="/accueil"><img class="logo" src="../../../assets/images/itTraining.png" alt="Logo"></a>
     </div>
     <h1>It Training</h1>
-</header>
-<div class="p-d-flex p-jc-end p-mb-4 p-mr-4">
     <div *ngIf="isAuth()==false">
         <a class="p-mr-2 lien-authentification" routerLink="/connexion" >Connexion</a>
         <a class="p-ml-2 lien-authentification" routerLink="/formParticipant">Inscription</a>
@@ -17,4 +15,4 @@
             <p-button class="p-mr-2 lien-authentification" (onClick)="deconnexion()">Déconnexion</p-button>
         </div>       
     </div>   
-</div>
+</header>

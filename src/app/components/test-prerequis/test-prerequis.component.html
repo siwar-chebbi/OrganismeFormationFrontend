@@ -1,0 +1,51 @@
+<p-button (click)="showBasicDialog2()" icon="pi pi-external-link" label="Valider votre inscription et passer votre test "></p-button>
+<p-dialog header="Questions" [(visible)]="displayBasic2" [style]="{width: '50vw'}" [baseZIndex]="10000">
+	<div>
+		<app-card-test *ngFor="let one of test" [testPrerequis]="one" ></app-card-test>
+	</div>
+
+
+
+
+    <!-- <h3 [style]="{height: '50px'}">Question 1</h3>
+    <h3 [style]="{height: '50px'}">C'est quoi JAVA?</h3>
+<div class="p-field-radiobutton">
+	<p-radioButton name="city" value="Chicago" [(ngModel)]="city" ></p-radioButton>
+	<label for="city1">Chicago</label>
+</div>
+<div class="p-field-radiobutton">
+	<p-radioButton name="city" value="Los Angeles" [(ngModel)]="city" inputId="city2"></p-radioButton>
+	<label for="city2">Los Angeles</label>
+</div>
+<div class="p-field-radiobutton">
+	<p-radioButton name="city" value="New York" [(ngModel)]="city" inputId="city3"></p-radioButton>
+	<label for="city3">New York</label>
+</div>
+<div class="p-field-radiobutton">
+	<p-radioButton name="city" value="San Francisco" [(ngModel)]="city" inputId="city4"></p-radioButton>
+	<label for="city4">San Francisco</label>
+</div>
+<h3 [style]="{height: '50px'}">Question 2</h3>
+<h3 [style]="{height: '50px'}">C'est quoi Angular?</h3>
+<div class="p-field-radiobutton">
+<p-radioButton name="city" value="Chicago" [(ngModel)]="city2" inputId="city1"></p-radioButton>
+<label for="city1">Chicago</label>
+</div>
+<div class="p-field-radiobutton">
+<p-radioButton name="city" value="Los Angeles" [(ngModel)]="city2" inputId="city2"></p-radioButton>
+<label for="city2">Los Angeles</label>
+</div>
+<div class="p-field-radiobutton">
+<p-radioButton name="city" value="New York" [(ngModel)]="city2" inputId="city3"></p-radioButton>
+<label for="city3">New York</label>
+</div>
+<div class="p-field-radiobutton">
+<p-radioButton name="city" value="San Francisco" [(ngModel)]="city2" inputId="city4"></p-radioButton>
+<label for="city4">San Francisco</label>
+</div> -->
+    
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayBasic2=false" label="Valider" class="p-button-text"></p-button>
+        <p-button icon="pi pi-times" (click)="displayBasic2=false" label="Annuler"></p-button>
+    </ng-template>
+</p-dialog>

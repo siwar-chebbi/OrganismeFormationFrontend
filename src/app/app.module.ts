@@ -18,7 +18,7 @@ import { PageInscriptionSessionComponent } from './pages/page-inscription-sessio
 import { InscriptionSessionComponent } from './components/inscription-session/inscription-session.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenubarModule } from 'primeng/menubar';
-import { MenuItemContent, MenuModule } from 'primeng/menu';
+import { MenuModule } from 'primeng/menu';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -32,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
+import { EvaluationComponent } from './components/evaluation/evaluation.component';
 import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
 import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
@@ -44,6 +45,11 @@ import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-f
 import {ListboxModule} from 'primeng/listbox';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {PasswordModule} from 'primeng/password';
+import { DialogModule } from 'primeng/dialog';
+import { TestPrerequisComponent } from './components/test-prerequis/test-prerequis.component';
+import { CardTestComponent } from './components/card-test/card-test.component';
+import { CalendarModule } from 'primeng/calendar';
+
 
 @NgModule({
   declarations: [
@@ -67,12 +73,16 @@ import {PasswordModule} from 'primeng/password';
     FormResponsableComponent,
     HeaderNavbarComponent,
     FormParticipantComponent,
+    EvaluationComponent,
     FormFormateurComponent,
     PageConnexionComponent,
     FormConnexionComponent,
     FormEvaluationComponent,
     ListeSessionComponent,
-    PageFormEvaluationComponent
+    PageFormEvaluationComponent,
+    TestPrerequisComponent,
+    CardTestComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -88,13 +98,16 @@ import {PasswordModule} from 'primeng/password';
     InputTextModule,
     InputNumberModule,
     InputTextareaModule,
-    DropdownModule, 
+    DropdownModule,
     ButtonModule,
     BrowserAnimationsModule,
     RadioButtonModule,
     ListboxModule,
     MultiSelectModule,
-    PasswordModule
+    PasswordModule,
+    DialogModule,
+    RadioButtonModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

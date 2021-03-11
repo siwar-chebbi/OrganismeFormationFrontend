@@ -1,1 +1,2 @@
-<app-form-evaluation></app-form-evaluation>
+<app-evaluation (mail)="onEvaluation($event)"></app-evaluation>
+<app-form-evaluation *ngIf="listeSessions !=null" [listNumSession]="listeSessions"></app-form-evaluation>

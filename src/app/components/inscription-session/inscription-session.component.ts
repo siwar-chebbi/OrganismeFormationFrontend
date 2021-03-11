@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Session } from 'src/app/models/Session';
 import { HttpBilanParticipantSessionService } from 'src/app/services/http-bilan-participant-session.service';
@@ -22,16 +22,16 @@ export class InscriptionSessionComponent implements OnInit {
     private fb: FormBuilder,
     private route:ActivatedRoute) { 
     this.formInscriptionSession = this.fb.group({
-      idParticipant: [1],
+      idParticipant: [localStorage.getItem("id")],
       idSession: [this.route.snapshot.params.id],
       coordonneeParticipant: this.fb.group({
-        codePostal: [""],
-        mail: [""],
-        numeroVoie: [""],
-        pays: [""],
-        telephone: [""],
-        typeVoie: [""],
-        ville: [""]
+        codePostal: ["",Validators.required],
+        mail: ["",Validators.required],
+        numeroVoie: ["",Validators.required],
+        pays: ["",Validators.required],
+        telephone: ["",Validators.required],
+        typeVoie: ["",Validators.required],
+        ville: ["",Validators.required]
       }),
       entreprise: this.fb.group({
         siret:[""],
@@ -53,8 +53,9 @@ export class InscriptionSessionComponent implements OnInit {
   }
 
   onSubmit(){
+
     this.valueForm = this.formInscriptionSession.value;
-    if(this.valueForm.coordonneeEntreprise == null){
+    if(this.valueForm.entreprise.siret==="" && this.valueForm.entreprise.nom==="" ){
       this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe( reponse => {
         this.valeurInscription = reponse;
       });
@@ -69,5 +70,6 @@ export class InscriptionSessionComponent implements OnInit {
         this.isInscrit = true;
       }
     }
+ 
   }
 }

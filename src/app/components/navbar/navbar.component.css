@@ -4,7 +4,12 @@
     border: none;
     border-radius: 0px;
 }
-
+::ng-deep .p-menubar {
+    flex-direction: column;
+}
+::ng-deep .p-menuitem {
+    margin: 0 10vh;
+}
 ::ng-deep .p-menuitem-text{
     color: white !important;
 }
