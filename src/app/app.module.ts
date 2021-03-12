@@ -52,6 +52,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import {ToastModule} from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
 
 
 @NgModule({
@@ -86,6 +87,7 @@ import { RippleModule } from 'primeng/ripple';
     TestPrerequisComponent,
     CardTestComponent,
     PageInscriptionComponent,
+    PageAproposComponent,
     
   ],
   imports: [

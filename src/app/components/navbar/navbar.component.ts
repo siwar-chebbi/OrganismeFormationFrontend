@@ -75,6 +75,9 @@ export class NavbarComponent implements OnInit {
                                       {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'},
                                       {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'}]
             })
-        }               
+        }
+        
+        /*** Menu A Propos (toujours en dernier) ***/
+        this.items.push({label: 'À propos', styleClass: 'menu-button', url: '/apropos'});
     }
 }
