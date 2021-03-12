@@ -1,29 +1,29 @@
 <form [formGroup]="formParticipant" (ngSubmit)="onSubmit()">
     <div class="participant-session-id">
         <div class="p-d-flex p-jc-center p-p-4">
-            <span class="header-form">Inscription</span>
+            <span class="header-form">Inscription :</span>
          </div>
          <div class="p-field p-grid">
-            <label for="civilite" class="p-col-fixed">Civilite</label>
+            <label for="civilite" class="p-col-fixed">Civilite :</label>
             <div>
                 <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
                 <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="nom" class="p-col-fixed">Nom </label>
+            <label for="nom" class="p-col-fixed">Nom :</label>
             <div class="p-col">
-                <input id="nom" type="text" pInputText required formControlName="nom"> 
+                <input id="nom" type="text" pInputText required formControlName="nom" placeholder="Entrez votre nom"> 
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="prenom" class="p-col-fixed">Prenom </label>
+            <label for="prenom" class="p-col-fixed">Prenom :</label>
             <div class="p-col">
-                <input id="prenom" type="text" pInputText required formControlName="prenom"> 
+                <input id="prenom" type="text" pInputText required formControlName="prenom" placeholder="Entrez votre prenom"> 
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="dateNaissance" class="p-col-fixed">Date de naissance </label>
+            <label for="dateNaissance" class="p-col-fixed">Date de naissance :</label>
             <div class="p-col">
                 <input id="dateNaissance" type="date" pInputText formControlName="dateNaissance"> 
             </div>
@@ -32,15 +32,15 @@
             <label id="doublon">Cet identifiant est déjà utilisé</label>
         </div>
         <div class="p-field p-grid">
-            <label for="identifiant" class="p-col-fixed">Identifiant </label>
+            <label for="identifiant" class="p-col-fixed">Identifiant :</label>
             <div class="p-col">
-                <input id="identifiant" type="text" pInputText required formControlName="identifiant"> 
+                <input id="identifiant" type="text" pInputText required formControlName="identifiant" placeholder="Entrez votre identifiant"> 
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="mdp" class="p-col-fixed">Mot de passe </label>
+            <label for="mdp" class="p-col-fixed">Mot de passe :</label>
             <div class="p-col">
-                <input id="mdp" type="password" pInputText required formControlName="mdp">
+                <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Entrez votre mot de passe">
             </div>
         </div>
         <div class="p-d-flex p-jc-center">

@@ -20,11 +20,14 @@ button:hover {
 }
 label{
     width: 20vh;
+    font-weight: bold;
 }
 .p-radiobutton-label {
     width: 10vh;
+    font-weight: normal;
 }
 .header-form {
     font-size: 24px;
     font-weight: bold;
+    color: #f5a11d;
 }

@@ -1,57 +1,57 @@
 <form [formGroup]="formResponsable" (ngSubmit)="onSubmit()">
     <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Ajouter un responsable</span>
+        <span class="header-form">Ajouter un responsable :</span>
      </div>
      <div class="p-field p-grid">
-        <label for="civilite" class="p-col-fixed">Civilite </label>
+        <label for="civilite" class="p-col-fixed">Civilite :</label>
         <div class="p-col">
             <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
             <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="nom" class="p-col-fixed">Nom</label>
+        <label for="nom" class="p-col-fixed">Nom :</label>
         <div class="p-col">            
-            <input id="nom" type="text" pInputText required formControlName="nom"> 
+            <input id="nom" type="text" pInputText required formControlName="nom" placeholder="Entrez un nom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prenom" class="p-col-fixed">Prenom</label>
+        <label for="prenom" class="p-col-fixed">Prenom :</label>
         <div class="p-col">            
-            <input id="prenom" type="text" pInputText required formControlName="prenom"> 
+            <input id="prenom" type="text" pInputText required formControlName="prenom" placeholder="Entrez un prénom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="role" class="p-col-fixed">Role</label>
+        <label for="role" class="p-col-fixed">Role :</label>
         <div class="p-col">            
-            <input id="role" type="text" pInputText formControlName="role"> 
+            <input id="role" type="text" pInputText formControlName="role" placeholder="Saisir le role"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="mail" class="p-col-fixed">Mail</label>
+        <label for="mail" class="p-col-fixed">Mail :</label>
         <div class="p-col">            
-            <input id="mail" type="text" pInputText formControlName="mail"> 
+            <input id="mail" type="text" pInputText formControlName="mail" placeholder="Saisir un mail"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="telephone" class="p-col-fixed">Telephone</label>
+        <label for="telephone" class="p-col-fixed">Telephone :</label>
         <div class="p-col">            
-            <input id="telephone" type="text" pInputText formControlName="telephone"> 
+            <input id="telephone" type="text" pInputText formControlName="telephone" placeholder="Entrez un numéro"> 
         </div>
     </div>
     <div *ngIf="doublon()">
         <label id="doublon">Cet identifiant est déjà utilisé</label>
     </div>
     <div class="p-field p-grid">
-        <label for="identifiant" class="p-col-fixed">Identifiant </label>
+        <label for="identifiant" class="p-col-fixed">Identifiant :</label>
         <div class="p-col">
-            <input id="identifiant" type="text" pInputText required formControlName="identifiant"> 
+            <input id="identifiant" type="text" pInputText required formControlName="identifiant" placeholder="Saisir un identifiant"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="mdp" class="p-col-fixed">Mot de passe </label>
+        <label for="mdp" class="p-col-fixed">Mot de passe :</label>
         <div class="p-col">
-            <input id="mdp" type="password" pInputText required formControlName="mdp">
+            <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Saisir un mot de passe">
         </div>
     </div>
 
