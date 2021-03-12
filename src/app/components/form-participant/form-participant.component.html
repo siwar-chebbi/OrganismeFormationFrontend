@@ -43,6 +43,12 @@
                 <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Entrez votre mot de passe">
             </div>
         </div>
+        <div class="p-field p-grid">
+            <p>
+                Vous avez déja un compte ? <a class="lien-connexion" routerLink="/connexion"> Connectez-vous</a>
+            </p>
+            
+        </div>
         <div class="p-d-flex p-jc-center">
             <button pButton type="submit" label="Ajouter un participant" [disabled]="formParticipant.invalid"></button>
         </div>
