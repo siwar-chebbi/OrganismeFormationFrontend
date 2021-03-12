@@ -4,6 +4,7 @@
     border: none;
     border-radius: 0px;
 }
+
 ::ng-deep .p-menubar {
     flex-direction: column;
 }
@@ -28,4 +29,21 @@
 ::ng-deep .pi-angle-down, 
 ::ng-deep .pi-angle-right {
     color: white !important;
+}
+
+/*** Style Responsable ***/
+
+::ng-deep .nav-barResponsable{
+    background-color: #003e5a !important;
+    color: #f5a11d !important;
+    border: none;
+    border-radius: 0px;
+}
+
+::ng-deep .nav-barResponsable .menu-button {
+    background-color:  #003e5a !important;
+}
+
+::ng-deep .nav-barResponsable .menu-button:hover{
+    background-color: #f5a11d !important;
 }

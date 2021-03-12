@@ -80,4 +80,8 @@ export class NavbarComponent implements OnInit {
         /*** Menu A Propos (toujours en dernier) ***/
         this.items.push({label: 'À propos', styleClass: 'menu-button', url: '/apropos'});
     }
+
+    isResponsable(){
+        return localStorage.getItem("idResponsable") != null;
+    }
 }
