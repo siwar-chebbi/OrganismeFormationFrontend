@@ -13,7 +13,7 @@ export class FormationHttpService {
     return this.httpClient.get<Formation[]>("http://localhost:8080/formations");
   }
   findById(id:number) {
-    return this.httpClient.get<Formation[]>(`http://localhost:8080/formations/${id}`);
+    return this.httpClient.get<Formation>(`http://localhost:8080/formations/${id}`);
   }
 
   findAllById(id:Number) {

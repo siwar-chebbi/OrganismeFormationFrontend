@@ -9,7 +9,8 @@
     </div>
     <div *ngIf="isAuth()">
         <div>
-            <label>Bonjour {{utilisateur}} </label>
+            <label *ngIf="utilisateur==null"> Bonjour</label>
+            <label *ngIf="utilisateur!=null"> Bonjour {{utilisateur}} </label>
         </div>
         <div>
             <p-button styleClass='menu-button' (onClick)="deconnexion()">Déconnexion</p-button>

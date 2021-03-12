@@ -10,10 +10,10 @@
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="float-input" class="p-col-fixed">Date de début</label>
-
-        <div class="p-field p-col-12 p-md-4">
-            <p-calendar [(ngModel)]="date4" [minDate]="minDate" [readonlyInput]="true" inputId="min-max" formControlName="dateDebut"></p-calendar>
+        <label for="min-max" class="p-col-fixed">Date de début</label>
+        <div class="p-col">
+            <p-calendar placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" [(ngModel)]="date4" [minDate]="minDate" [showIcon]="true" [readonlyInput]="true" inputId="min-max" formControlName="dateDebut">
+            </p-calendar>
         </div>
     </div>
     <div class="p-field p-grid">

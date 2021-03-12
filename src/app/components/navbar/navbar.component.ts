@@ -18,7 +18,6 @@ export class NavbarComponent implements OnInit {
     themes: Theme[] = [];
     sousMenuTheme: MenuItem[] = [];
     menuGestionnaire: MenuItem[] = [];
-    isAdmin: boolean;
 
     constructor(private domaineHttp: DomaineHttpService, private themeHttp: ThemeHttpService) { }
 
@@ -64,10 +63,8 @@ export class NavbarComponent implements OnInit {
             }
         ];
 
-        /*** Menu Gestionnaire ***/
-       this.isAdmin = true;
-        //this.isAdmin = localStorage.getItem("idResponsable")!=null;
-        if (this.isAdmin){
+        /*** Menu Gestionnaire pour Responsable ***/
+        if (this.isResponsable()){
             this.items.push({label: 'Gestionnaire',
                              styleClass: 'menu-button',
                              items: [ {label: 'Ajouter une formation', url:`/formFormation`, styleClass: 'menu-button'},
@@ -76,12 +73,24 @@ export class NavbarComponent implements OnInit {
                                       {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'}]
             })
         }
-        
+
+        /*** Menu Gestionnaire pour un Participant ***/
+        if (this.isParticipant()){
+            this.items.push({ label: 'Evaluer une session',
+                              styleClass:'menu-button',
+                              url: 'formEvaluation'
+            })
+        }
+     
         /*** Menu A Propos (toujours en dernier) ***/
         this.items.push({label: 'À propos', styleClass: 'menu-button', url: '/apropos'});
     }
 
+    /*** Fonctions pour savoir si un Responsable ou un Participant est connecté ***/
     isResponsable(){
         return localStorage.getItem("idResponsable") != null;
     }
+    isParticipant(){
+        return localStorage.getItem("idParticipant") != null;
+    }    
 }

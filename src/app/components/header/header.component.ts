@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   deconnexion(){
     this.supprimerLocalStorage();
     this.router.navigate(['accueil']);
+    window.location.reload();
   }
 
   supprimerLocalStorage(){

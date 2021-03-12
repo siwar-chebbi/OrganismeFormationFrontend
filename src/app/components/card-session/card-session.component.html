@@ -1,4 +1,4 @@
-<div class="p-ml-4 p-mb-4 p-mr-4 card-session">
+<div class="p-ml-4 p-mb-4 p-mr-4" [ngClass]="!voirSession ? 'session':'card-session'">
     <p-card>
         <ng-template pTemplate="header">
             <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
@@ -9,24 +9,27 @@
                 </div>
             </div>
         </ng-template>
-        <p><span class="meta-donnee">Date de début: </span> {{session?.dateDebut | date }}</p> 
-        <p><span class="meta-donnee">Date de fin: </span>{{session?.dateFin | date }}</p> 
-        <p><span class="meta-donnee">Durée la session: </span>{{session?.duree}} jours</p> 
-        <div *ngIf="!voirSession">
-            <p><span class="meta-donnee">Le titre de la formation: </span>{{sessionDetails?.titreFormation}}</p> 
-            <p><span class="meta-donnee">Le contenu de la formation : </span>{{sessionDetails?.contenuFormation}}</p> 
-            <p><span class="meta-donnee">Themes de la session: </span></p>
-            <ul class="liste-themes">
-                <li *ngFor="let theme of sessionDetails.themes"> {{theme}} </li>
-            </ul>
-            <p><span class="meta-donnee">Le lieu de la session: </span>{{sessionDetails?.lieu}}</p> 
-            <p><span class="meta-donnee">Le prix de la session: </span>{{sessionDetails?.prix}}€</p> 
+        <div class="p-d-flex p-flex-column p-jc-center">
+            <div *ngIf="!voirSession">
+                <div>
+                    <span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Cette session abordera le(s) theme(s) de: </span>
+                    <span class="liste-themes" *ngFor="let theme of sessionDetails?.themes">{{theme}} </span>
+                </div>
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le contenu de la formation : </span>{{sessionDetails?.contenuFormation}}</p> 
+            </div>
+            <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de début: </span>{{session?.dateDebut | date}}</p> 
+            <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de fin: </span>{{session?.dateFin | date}}</p> 
+            <p  *ngIf="voirSession"><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Durée la session: </span>{{session?.duree}} jours</p> 
+            <div *ngIf="!voirSession">
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le lieu de la session: </span>{{sessionDetails?.lieu}}</p> 
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le prix de la session: </span>{{sessionDetails?.prix}}€</p> 
+            </div>
         </div>
         <ng-template pTemplate="footer">
                 <div *ngIf="voirSession">
                     <button pButton type="button"(click)="consulterSession()" label="Consulter la session"></button>
                 </div>
-                <div *ngIf="!voirSession">
+                <div class="p-d-flex p-jc-center" *ngIf="!voirSession">
                     <button pButton type="button" (click)="onInscriptionSession()" label="S'inscrire à la session"></button>
                 </div>
         </ng-template>
