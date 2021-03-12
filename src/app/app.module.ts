@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -53,8 +53,14 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
 import {ToastModule} from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
 
+import { registerLocaleData } from '@angular/common';
+
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     CardFormationComponent,
@@ -121,7 +127,7 @@ import { RippleModule } from 'primeng/ripple';
     RippleModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: "fr-FR"}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

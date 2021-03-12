@@ -75,6 +75,14 @@ export class NavbarComponent implements OnInit {
                                       {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'},
                                       {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'}]
             })
-        }               
+        }
+        this.isAdmin = localStorage.getItem("idParticipant")!=null;
+        if (this.isAdmin ){
+            this.items.push({ label: 'Evaluer une session',
+                              styleClass:'menu-button',
+                              url: 'formEvaluation'
+
+            })
+        }
     }
 }

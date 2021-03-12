@@ -12,7 +12,7 @@ button:hover {
     background-color: #f5a11d !important;
     border: #f5a11d 2px solid !important;
 }
-.p-dropdown, .p-multiselect, .p-inputtext, .p-inputtextarea {
+.p-dropdown, .p-multiselect, .p-inputtext, .p-inputtextarea, .p-calendar {
     width: 100% !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
