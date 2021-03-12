@@ -12,6 +12,10 @@
     flex-direction: column;   
     width: fit-content;
 }
+.titre-lien{
+    font-weight: bold;
+    text-decoration: underline;
+}
 .footer-lien {
     color: white;
     text-decoration: none;
