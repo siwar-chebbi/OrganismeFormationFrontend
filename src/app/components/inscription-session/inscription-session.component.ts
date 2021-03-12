@@ -71,7 +71,6 @@ export class InscriptionSessionComponent implements OnInit {
           }
         });
         if (this.valeurInscription != null ) {
-          console.log(this.valeurInscription)
           if(this.valeurInscription.existeDeja){
             this.isInscrit=false
           }else {
