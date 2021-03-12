@@ -13,6 +13,7 @@ import { PageInscriptionSessionComponent } from './pages/page-inscription-sessio
 import { PageSessionComponent } from './pages/page-session/page-session.component';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
 
 const routes: Routes = [
   {path:"", component:AccueilComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:"connexion", component: PageConnexionComponent},
   {path:"formEvaluation", component: PageFormEvaluationComponent},
   {path:"inscription", component: PageInscriptionComponent},
+  {path: "apropos", component: PageAproposComponent},
   {path:"404", component:Erreur404Component},
   {path:"**", redirectTo:"404"}
 ];

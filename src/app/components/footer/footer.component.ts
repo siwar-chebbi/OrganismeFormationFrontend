@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isResponsable(){
+    return localStorage.getItem("idResponsable") != null;
+  }
+
 }

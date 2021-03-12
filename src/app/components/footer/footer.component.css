@@ -7,6 +7,17 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.footer-containerResponsable {
+    width: 100%;
+    background-color: #003e5a !important;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .footer-plan-site{
     display: flex;
     flex-direction: column;   
