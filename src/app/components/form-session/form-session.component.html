@@ -1,67 +1,69 @@
-<form [formGroup]="formSession" (ngSubmit)="onSubmit()">
-    <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Créer une session</span>
-    </div>
-    <div class="p-field p-grid">
-        <label for="numero" class="p-col-fixed">Numero : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <input id="numero" type="number" pInputText formControlName="numero" required
-            placeholder="Saisir le numero de la session">
+<p-card styleClass="p-pl-3 p-pr-3">
+    <form class="form-container" [formGroup]="formSession" (ngSubmit)="onSubmit()">
+        <div class="p-d-flex p-jc-center p-pb-4">
+            <span class="header-form">Créer une session</span>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="min-max" class="p-col-fixed">Date de début : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <p-calendar placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" required
-            [(ngModel)]="date4" [minDate]="minDate" [showIcon]="true" [readonlyInput]="true" 
-            inputId="min-max" formControlName="dateDebut">
-            </p-calendar>
+        <div class="p-field p-grid">
+            <label for="numero" class="p-col-fixed">Numero : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <input id="numero" type="number" pInputText required formControlName="numero" 
+                placeholder="Saisir le numero de la session">
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="Duree" class="p-col-fixed">Duree : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <input id="Duree" type="number" pInputText formControlName="duree" required
-            placeholder="Entrez le duree de la session">
+        <div class="p-field p-grid">
+            <label for="min-max" class="p-col-fixed">Date de début : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <p-calendar placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" 
+                [(ngModel)]="date4" [minDate]="minDate" [showIcon]="true" [readonlyInput]="true" required
+                inputId="min-max" formControlName="dateDebut">
+                </p-calendar>
+            </div>
         </div>
-    </div>
-
-    <div class="p-field p-grid">
-        <label for="prixHT" class="p-col-fixed">PrixHT : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <input id="prixHT" type="number" pInputText formControlName="prixHT" required
-            placeholder="Le prix en € de la session">
+        <div class="p-field p-grid">
+            <label for="Duree" class="p-col-fixed">Duree : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <input id="Duree" type="number" pInputText formControlName="duree" required 
+                placeholder="Entrez le duree de la session">
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="selectedFormation" class="p-col-fixed">Formation : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <p-dropdown id="formation" [options]="formations" [(ngModel)]="selectedFormation" scrollHeight="400px"
-                optionLabel="titre" [filter]="true" filterBy="titre" resetFilterOnHide="true"
-                placeholder="Sélectionnez une formation" required formControlName="idFormation">
-
-                <ng-template let-formation pTemplate="formations">
-                    {{formation.titre}}
-                </ng-template>
-            </p-dropdown>
-
+    
+        <div class="p-field p-grid">
+            <label for="prixHT" class="p-col-fixed">PrixHT : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <input id="prixHT" type="number" pInputText formControlName="prixHT" required
+                placeholder="Le prix en € de la session">
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="selectedLieu" class="p-col-fixed">Lieu : <div class="obligatoire p-ml-1">*</div></label>
-        <div class="p-col">
-            <p-dropdown id="lieu" [options]="lieux" [(ngModel)]="selectedLieu" scrollHeight="400px"
-                optionLabel="nom" [filter]="true" filterBy="nom" resetFilterOnHide="true"
-                placeholder="Sélectionnez un lieu" required formControlName="idLieu">
-
-                <ng-template let-lieu pTemplate="Lieux">
-                    {{lieu.nom}}
-                </ng-template>
-            </p-dropdown>
-
+        <div class="p-field p-grid">
+            <label for="selectedFormation" class="p-col-fixed">Formation : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <p-dropdown inputId="selectedFormation" [options]="formations" [(ngModel)]="selectedFormation" scrollHeight="400px"
+                    optionLabel="titre" [filter]="true" filterBy="titre" resetFilterOnHide="true" required
+                    placeholder="Sélectionnez une formation" required formControlName="idFormation">
+    
+                    <ng-template let-formation pTemplate="formations">
+                        {{formation.titre}}
+                    </ng-template>
+                </p-dropdown>
+    
+            </div>
         </div>
-    </div>
-    <div class="p-d-flex p-jc-center">
-        <button pButton type="submit" label="Ajouter la session" [disabled]="formSession.invalid"></button>
-    </div>
-</form>
+        <div class="p-field p-grid">
+            <label for="selectedLieu" class="p-col-fixed">Lieu : <div class="obligatoire p-ml-1">*</div></label>
+            <div class="p-col">
+                <p-dropdown inputId="selectedLieu" [options]="lieux" [(ngModel)]="selectedLieu" scrollHeight="400px"
+                    optionLabel="nom" [filter]="true" filterBy="nom" resetFilterOnHide="true" required
+                    placeholder="Sélectionnez un lieu" required formControlName="idLieu">
+    
+                    <ng-template let-lieu pTemplate="Lieux">
+                        {{lieu.nom}}
+                    </ng-template>
+                </p-dropdown>
+    
+            </div>
+        </div>
+        <div class="p-d-flex p-jc-center">
+            <button pButton type="submit" label="Ajouter la session" [disabled]="formSession.invalid"></button>
+        </div>
+    </form>
+</p-card>

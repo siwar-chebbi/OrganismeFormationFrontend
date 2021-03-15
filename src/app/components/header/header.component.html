@@ -9,11 +9,10 @@
     </div>
     <div *ngIf="isAuth()">
         <div>
-            <label *ngIf="utilisateur==null"> Bonjour</label>
-            <label *ngIf="utilisateur!=null"> Bonjour {{utilisateur}} </label>
+            <label *ngIf="utilisateur!=null"> {{utilisateur}} </label>
         </div>
         <div>
-            <p-button styleClass='menu-button' (onClick)="deconnexion()">Déconnexion</p-button>
+            <button pButton type="button" class="bouton-deconnexion" [class]="isResponsable() ? 'menu-button-responsable': 'menu-button'" label="Déconnexion" (click)="deconnexion()"></button>
         </div>       
     </div>   
 </header>

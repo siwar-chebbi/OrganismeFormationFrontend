@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Session } from 'src/app/models/Session';
 import { HttpBilanParticipantSessionService } from 'src/app/services/http-bilan-participant-session.service';
 import {MessageService} from 'primeng/api';
@@ -18,6 +18,7 @@ export class InscriptionSessionComponent implements OnInit {
   isInscrit: Boolean = false;
   valeurInscription: any;
   valueForm: any;
+  isEntreprise: Boolean = false;
 
 
   constructor(
@@ -25,7 +26,8 @@ export class InscriptionSessionComponent implements OnInit {
     private messageService : MessageService,
     private primengConfig: PrimeNGConfig,
     private fb: FormBuilder,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    private router: Router) {
     this.formInscriptionSession = this.fb.group({
       idParticipant: [localStorage.getItem("idParticipant")],
       idSession: [this.route.snapshot.params.id],
@@ -59,47 +61,50 @@ export class InscriptionSessionComponent implements OnInit {
   }
 
   onSubmit(event: boolean) {
-    if (event) {
-      this.valueForm = this.formInscriptionSession.value;
-      if (this.valueForm.entreprise.siret === "" && this.valueForm.entreprise.nom === "") {
-        this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe(reponse => {
-          this.valeurInscription = reponse;
-          if(this.valeurInscription.existeDeja){
-            this.showWarn()
-          }else{
-            this.showSuccess()
+    if((localStorage.getItem("idParticipant")) != null){
+      if (event) {
+        this.valueForm = this.formInscriptionSession.value;
+        if (this.valueForm.entreprise.siret === "" && this.valueForm.entreprise.nom === "") {
+          this.httpBilanService.saveParticulier(this.formInscriptionSession.value).subscribe(reponse => {
+            this.valeurInscription = reponse;
+            if(this.valeurInscription.existeDeja){
+              this.showWarn()
+            }else{
+              this.showSuccess()
+            }
+          });
+          if (this.valeurInscription != null ) {
+            if(this.valeurInscription.existeDeja){
+              this.isInscrit=false
+            }else {
+              this.isInscrit = true;
+            }
+           
           }
-        });
-        if (this.valeurInscription != null ) {
-          if(this.valeurInscription.existeDeja){
-            this.isInscrit=false
-          }else {
-            this.isInscrit = true;
+        } else {
+          this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe(reponse => {
+            this.valeurInscription = reponse;
+            if(this.valeurInscription.existeDeja){
+              this.showWarn()
+            }else{
+              this.showSuccess()
+            }
+          });
+          if (this.valeurInscription != null) {
+            if(this.valeurInscription.existeDeja){
+              this.isInscrit=false
+            }else {
+              this.isInscrit = true;
+            }
           }
-         
         }
-      } else {
-        this.httpBilanService.saveEntreprise(this.formInscriptionSession.value).subscribe(reponse => {
-          this.valeurInscription = reponse;
-          if(this.valeurInscription.existeDeja){
-            this.showWarn()
-          }else{
-            this.showSuccess()
-          }
-        });
-        if (this.valeurInscription != null) {
-          if(this.valeurInscription.existeDeja){
-            this.isInscrit=false
-          }else {
-            this.isInscrit = true;
-          }
-        }
+        
+      }else {
+        this.showError()
       }
-      
-    }else {
-      this.showError()
+    } else {
+      this.router.navigate(['inscription']);
     }
-
   }
 
 onReject() {
@@ -121,6 +126,10 @@ showError() {
 
 showWarn() {
   this.messageService.add({severity:'warn', summary: 'Warn', detail: 'Vous êtes déjà inscrit'});
+}
+
+onEntreprise(){
+  this.isEntreprise = !this.isEntreprise;
 }
 
 }

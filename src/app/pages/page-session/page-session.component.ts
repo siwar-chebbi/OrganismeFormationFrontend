@@ -25,7 +25,6 @@ export class PageSessionComponent implements OnInit {
 
       this.httpSession.findDetailsById(this.idSession).subscribe(details => {
         this.sessionDetails = details;
-        console.log(this.sessionDetails);
       })
       this.voirSession = false
     });

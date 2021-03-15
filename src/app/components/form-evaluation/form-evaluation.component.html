@@ -1,88 +1,91 @@
-<form [formGroup]="formulaireEvaluation" (ngSubmit)="evaluer()">
-    <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Evaluer une session</span>
-     </div>
-    <div class="p-field p-grid">
-        <label for="numero" class="p-col-fixed" >Liste de vos sessions :</label>
-        <div class="p-col">
-            <p-dropdown placeholder="Sélectionnez une formation" required [options]="listNumSession" [(ngModel)]="selectedNumSession" optionLabel="titre" optionValue="idBilan" formControlName="session"></p-dropdown> 
+<p-card styleClass="p-pl-3 p-pr-3">
+    <form class="form-container" [formGroup]="formulaireEvaluation" (ngSubmit)="evaluer()">
+    
+        <div class="p-d-flex p-jc-center p-pb-4">
+            <span class="header-form">Evaluer une session</span>
+         </div>
+        <div class="p-field p-grid">
+            <label for="numero" class="p-col-fixed label-evaluation" >Liste de vos sessions :</label>
+            <div class="p-col">
+                <p-dropdown inputId="numero" placeholder="Sélectionnez une formation" required [options]="listNumSession" [(ngModel)]="selectedNumSession" optionLabel="titre" optionValue="idBilan" formControlName="session"></p-dropdown> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="accueil" class="p-col-fixed">Qualité de l'accueil :</label>
-        <div class="p-col">
-            <input id="accueil" type="number" pInputText formControlName="accueil" placeholder="Notez la qualité de l'accueil"> 
+        <div class="p-field p-grid">
+            <label for="accueil" class="p-col-fixed label-evaluation">Qualité de l'accueil :</label>
+            <div class="p-col">
+                <input id="accueil" type="number" pInputText formControlName="accueil" placeholder="Notez la qualité de l'accueil"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="annimation" class="p-col-fixed">Qualité D'animation :</label>
-        <div class="p-col">
-            <input id="annimation" type="number" pInputText formControlName="animation" placeholder="Notez la qualité d'animation"> 
+        <div class="p-field p-grid">
+            <label for="annimation" class="p-col-fixed label-evaluation">Qualité D'animation :</label>
+            <div class="p-col">
+                <input id="annimation" type="number" pInputText formControlName="animation" placeholder="Notez la qualité d'animation"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="contenu" class="p-col-fixed">Qualité du contenu :</label>
-        <div class="p-col">
-            <input id="contenu" type="number" pInputText formControlName="contenu" placeholder="Notez la qualité du contenu"> 
+        <div class="p-field p-grid">
+            <label for="contenu" class="p-col-fixed label-evaluation">Qualité du contenu :</label>
+            <div class="p-col">
+                <input id="contenu" type="number" pInputText formControlName="contenu" placeholder="Notez la qualité du contenu"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="disponibilite" class="p-col-fixed">Disponibilité du formateur :</label>
-        <div class="p-col">
-            <input id="disponibilite" type="number" pInputText formControlName="disponibilite" placeholder="Notez la disponibilité du formateur"> 
+        <div class="p-field p-grid">
+            <label for="disponibilite" class="p-col-fixed label-evaluation">Disponibilité du formateur :</label>
+            <div class="p-col">
+                <input id="disponibilite" type="number" pInputText formControlName="disponibilite" placeholder="Notez la disponibilité du formateur"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="environnement" class="p-col-fixed">Qualité de l'environnement :</label>
-        <div class="p-col">
-            <input id="environnement" type="number" pInputText formControlName="environnement" placeholder="Notez la qualité de l'environnement"> 
+        <div class="p-field p-grid">
+            <label for="environnement" class="p-col-fixed label-evaluation">Qualité de l'environnement :</label>
+            <div class="p-col">
+                <input id="environnement" type="number" pInputText formControlName="environnement" placeholder="Notez la qualité de l'environnement"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="maitrise" class="p-col-fixed">Maitrise du sujet :</label>
-        <div class="p-col">
-            <input id="maitrise" type="number" pInputText formControlName="maitrise" placeholder="Notez la maitrise du formateur"> 
+        <div class="p-field p-grid">
+            <label for="maitrise" class="p-col-fixed label-evaluation">Maitrise du sujet :</label>
+            <div class="p-col">
+                <input id="maitrise" type="number" pInputText formControlName="maitrise" placeholder="Notez la maitrise du formateur"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="pedagogie" class="p-col-fixed">Pédagogie du formateur :</label>
-        <div class="p-col">
-            <input id="pedagogie" type="number" pInputText formControlName="pedagogie" placeholder="Notez la pédagogie du formateur"> 
+        <div class="p-field p-grid">
+            <label for="pedagogie" class="p-col-fixed label-evaluation">Pédagogie du formateur :</label>
+            <div class="p-col">
+                <input id="pedagogie" type="number" pInputText formControlName="pedagogie" placeholder="Notez la pédagogie du formateur"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="prerequis" class="p-col-fixed">Aviez vous les prérequis :</label>
-        <div class="p-col">
-            <p-radioButton label="Oui" value="true" formControlName="prerequis"></p-radioButton>
-            <p-radioButton label="Non" value="false" formControlName="prerequis"></p-radioButton>
+        <div class="p-field p-grid">
+            <label for="prerequis" class="p-col-fixed label-evaluation">Aviez vous les prérequis :</label>
+            <div class="p-col">
+                <p-radioButton label="Oui" value="true" formControlName="prerequis"></p-radioButton>
+                <p-radioButton label="Non" value="false" formControlName="prerequis"></p-radioButton>
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="recommandation" class="p-col-fixed" >Vous recommandez cette formation :</label>
-        <div class="p-col">
-            <input id="recommandation" type="number" pInputText formControlName="recommandation" placeholder="Recommandez vous cette formation"> 
+        <div class="p-field p-grid">
+            <label for="recommandation" class="p-col-fixed label-evaluation" >Vous recommandez cette formation :</label>
+            <div class="p-col">
+                <input id="recommandation" type="number" pInputText formControlName="recommandation" placeholder="Recommandez vous cette formation"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="reponse" class="p-col-fixed">Qualité de réponse :</label>
-        <div class="p-col">
-            <input id="reponse" type="number" pInputText formControlName="reponse" placeholder="Notez les réponses du formateur"> 
+        <div class="p-field p-grid">
+            <label for="reponse" class="p-col-fixed label-evaluation">Qualité de réponse :</label>
+            <div class="p-col">
+                <input id="reponse" type="number" pInputText formControlName="reponse" placeholder="Notez les réponses du formateur"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="satisfaction" class="p-col-fixed">Votre satisfaction :</label>
-        <div class="p-col">
-            <input id="satisfaction" type="number" pInputText formControlName="satisfaction" placeholder="Votre satisfaction"> 
+        <div class="p-field p-grid">
+            <label for="satisfaction" class="p-col-fixed label-evaluation">Votre satisfaction :</label>
+            <div class="p-col">
+                <input id="satisfaction" type="number" pInputText formControlName="satisfaction" placeholder="Votre satisfaction"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="souhait" class="p-col-fixed">Autre souhait de formation :</label>
-        <div class="p-col">
-            <p-radioButton label="Oui" value="true" formControlName="souhait"></p-radioButton>
-            <p-radioButton label="Non" value="false" formControlName="souhait"></p-radioButton>
+        <div class="p-field p-grid">
+            <label for="souhait" class="p-col-fixed label-evaluation">Autre souhait de formation :</label>
+            <div class="p-col">
+                <p-radioButton label="Oui" value="true" formControlName="souhait"></p-radioButton>
+                <p-radioButton label="Non" value="false" formControlName="souhait"></p-radioButton>
+            </div>
         </div>
-    </div>
-    <div class="p-d-flex p-jc-center">
-        <button pButton type="submit" label="Terminer votre évaluation" [disabled]="formulaireEvaluation.invalid"></button>
-    </div>
-</form>
+        <div class="p-d-flex p-jc-center">
+            <button pButton type="submit" label="Terminer votre évaluation" [disabled]="formulaireEvaluation.invalid"></button>
+        </div>
+    </form>
+</p-card>
