@@ -18,7 +18,6 @@ export class CardSessionComponent implements OnInit {
   constructor(private router:Router, private routerParam:ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.sessionDetails);
   }
   
   consulterSession() {
