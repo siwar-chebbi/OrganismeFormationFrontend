@@ -4,7 +4,7 @@
             <span class="header-form">Créer une formation</span>
          </div>
         <div class="p-field p-grid">
-            <label for="titre" class="p-col-fixed">Titre :</label>
+            <label for="titre" class="p-col-fixed">Titre : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">
                 <input id="titre" type="text" pInputText required formControlName="titre" 
                 placeholder="Renseignez un titre">
@@ -13,21 +13,24 @@
         <div class="p-field p-grid">
             <label for="contenu" class="p-col-fixed">Contenu :</label>
             <div class="p-col">
-                <textarea id="contenu" rows="3" pInputTextarea autoResize="autoResize" formControlName="contenu" placeholder="Décrire la formation"></textarea>
+                <textarea id="contenu" rows="3" pInputTextarea autoResize="autoResize" 
+                formControlName="contenu" placeholder="Décrire la formation"></textarea>
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="idTheme" class="p-col-fixed">Theme :</label>
+            <label for="idTheme" class="p-col-fixed">Theme : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">
-                <p-multiSelect inputId="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
-                    optionLabel="nom" display="chip" required formControlName="idTheme"></p-multiSelect>
+                <p-multiSelect inputId="idTheme" [options]="themes" [(ngModel)]="selectedThemes" 
+                defaultLabel="Sélectionnez un thème" optionLabel="nom" display="chip" required 
+                formControlName="idTheme"></p-multiSelect>
             </div>
         </div>
     
         <div class="p-field p-grid">
-            <label for="selectedResponsable" class="p-col-fixed">Responsable :</label>
+            <label for="selectedResponsable" class="p-col-fixed">Responsable : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">
-                <p-dropdown inputId="selectedResponsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
+                <p-dropdown inputId="selectedResponsable" [options]="responsables" 
+                [(ngModel)]="selectedResponsable" scrollHeight="400px"
                     optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
                     placeholder="Sélectionnez un responsable" required formControlName="idResponsable">
                     <ng-template let-responsable pTemplate="responsables">
@@ -41,23 +44,26 @@
         <div class="p-field p-grid">
             <label for="logiciel" class="p-col-fixed">Logiciel :</label>
             <div class="p-col">
-                <input id="logiciel" type="text" pInputText formControlName="logiciel" placeholder="Renseignez les logiciel">
+                <input id="logiciel" type="text" pInputText formControlName="logiciel" 
+                placeholder="Renseignez les logiciel">
             </div>
         </div>
         <div class="p-field p-grid">
             <label for="support" class="p-col-fixed">Support :</label>
             <div class="p-col">
-                <input id="support" type="text" pInputText formControlName="support" placeholder="Saisir les supports">
+                <input id="support" type="text" pInputText formControlName="support" 
+                placeholder="Saisir les supports">
             </div>
         </div>
         <div class="p-field p-grid">
             <label for="numero" class="p-col-fixed">Numero :</label>
             <div class="p-col">
-                <input id="numero" type="number" pInputText formControlName="numero" placeholder="Saisir le numéro de la formation">
+                <input id="numero" type="number" pInputText formControlName="numero" 
+                placeholder="Saisir le numéro de la formation">
             </div>
         </div>
         <div class="p-d-flex p-jc-center">
-            <button pButton type="submit" label="Ajouter la formation"[disabled]="formFormation.invalid"></button>
+            <button pButton type="submit" label="Ajouter la formation" [disabled]="formFormation.invalid"></button>
         </div>
     </form>
 </p-card>

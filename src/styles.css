@@ -37,6 +37,10 @@ label{
     font-weight: bold;
     color: #f5a11d;
 }
+
+.obligatoire{
+    color: red;
+}
 .pi{
     color: white !important;
 }

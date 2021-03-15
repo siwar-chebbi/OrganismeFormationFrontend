@@ -11,15 +11,17 @@
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="nom" class="p-col-fixed">Nom :</label>
+            <label for="nom" class="p-col-fixed">Nom : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">            
-                <input id="nom" type="text" pInputText required formControlName="nom" placeholder="Entrez un nom"> 
+                <input id="nom" type="text" pInputText required formControlName="nom" 
+                placeholder="Entrez un nom"> 
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="prenom" class="p-col-fixed">Prenom :</label>
+            <label for="prenom" class="p-col-fixed">Prenom : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">            
-                <input id="prenom" type="text" pInputText required formControlName="prenom" placeholder="Entrez un prénom"> 
+                <input id="prenom" type="text" pInputText required formControlName="prenom" 
+                placeholder="Entrez un prénom"> 
             </div>
         </div>
         <div class="p-field p-grid">
@@ -37,22 +39,25 @@
         <div class="p-field p-grid">
             <label for="telephone" class="p-col-fixed">Telephone :</label>
             <div class="p-col">            
-                <input id="telephone" type="text" pInputText formControlName="telephone" placeholder="Entrez un numéro"> 
+                <input id="telephone" type="text" pInputText formControlName="telephone" 
+                placeholder="Entrez un numéro"> 
             </div>
         </div>
         <div *ngIf="doublon()">
             <label id="doublon">Cet identifiant est déjà utilisé</label>
         </div>
         <div class="p-field p-grid">
-            <label for="identifiant" class="p-col-fixed">Identifiant :</label>
+            <label for="identifiant" class="p-col-fixed">Identifiant : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">
-                <input id="identifiant" type="text" pInputText required formControlName="identifiant" placeholder="Saisir un identifiant"> 
+                <input id="identifiant" type="text" pInputText required formControlName="identifiant" 
+                placeholder="Saisir un identifiant"> 
             </div>
         </div>
         <div class="p-field p-grid">
-            <label for="mdp" class="p-col-fixed">Mot de passe :</label>
+            <label for="mdp" class="p-col-fixed">Mot de passe : <div class="obligatoire p-ml-1">*</div></label>
             <div class="p-col">
-                <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Saisir un mot de passe">
+                <input id="mdp" type="password" pInputText required formControlName="mdp" 
+                placeholder="Saisir un mot de passe">
             </div>
         </div>
     
