@@ -13,8 +13,12 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (this.isAuth)
-      this.utilisateur = localStorage.getItem("civilite") + " " + localStorage.getItem("nom")
+    if (this.isAuth){
+      const civilite = localStorage.getItem("civilite")
+      const nom = localStorage.getItem("nom");
+      this.utilisateur =  (civilite?"Bonjour " + civilite:"") + " " + (nom?nom:"")
+    }
+      
   }
 
   isAuth(){
@@ -23,8 +27,7 @@ export class HeaderComponent implements OnInit {
 
   deconnexion(){
     this.supprimerLocalStorage();
-    this.router.navigate(['accueil']);
-    window.location.reload();
+    window.location.assign('accueil');
   }
 
   supprimerLocalStorage(){
@@ -35,5 +38,7 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('idResponsable');
     localStorage.removeItem('prenom');
   }
-
+  isResponsable(){
+    return localStorage.getItem("idResponsable") != null;
+  }
 }

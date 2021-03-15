@@ -32,7 +32,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderNavbarComponent } from './pages/header-navbar/header-navbar.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { FormParticipantComponent } from './components/form-participant/form-participant.component';
-import { EvaluationComponent } from './components/evaluation/evaluation.component';
 import { FormFormateurComponent } from './components/form-formateur/form-formateur.component';
 import { PageConnexionComponent } from './pages/page-connexion/page-connexion.component';
 import { FormConnexionComponent } from './components/form-connexion/form-connexion.component';
@@ -42,21 +41,21 @@ import { FormEvaluationComponent } from './components/form-evaluation/form-evalu
 import { ListeSessionComponent } from './components/liste-session/liste-session.component';
 import { StepsModule } from 'primeng/steps';
 import { PageFormEvaluationComponent } from './pages/page-form-evaluation/page-form-evaluation.component';
-import {ListboxModule} from 'primeng/listbox';
-import {MultiSelectModule} from 'primeng/multiselect';
-import {PasswordModule} from 'primeng/password';
+import { ListboxModule } from 'primeng/listbox';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { PasswordModule } from 'primeng/password';
 import { DialogModule } from 'primeng/dialog';
 import { TestPrerequisComponent } from './components/test-prerequis/test-prerequis.component';
 import { CardTestComponent } from './components/card-test/card-test.component';
 import { CalendarModule } from 'primeng/calendar';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
-import {ToastModule} from 'primeng/toast';
+import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
-import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
 
 import { registerLocaleData } from '@angular/common';
 
 import localeFr from '@angular/common/locales/fr';
+import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
 
 registerLocaleData(localeFr);
 
@@ -83,7 +82,6 @@ registerLocaleData(localeFr);
     FormResponsableComponent,
     HeaderNavbarComponent,
     FormParticipantComponent,
-    EvaluationComponent,
     FormFormateurComponent,
     PageConnexionComponent,
     FormConnexionComponent,
@@ -93,7 +91,7 @@ registerLocaleData(localeFr);
     TestPrerequisComponent,
     CardTestComponent,
     PageInscriptionComponent,
-    PageAproposComponent,
+    PageAproposComponent
     
   ],
   imports: [

@@ -23,9 +23,8 @@ export class HttpSessionService {
   findById(id:number){
     return this.httpClient.get<Session>(`http://localhost:8080/sessions/${id}`);
   }
-  findSessionsByMailParticipant(mail: string){
-    const params = new HttpParams().append('mail',mail);
-    return this.httpClient.get<any>(`http://localhost:8080/sessions/mail`, {params: params});
+  findSessionsByParticipantId(id: number){
+    return this.httpClient.get<any>(`http://localhost:8080/sessions/participant/${id}`);
   }
   save(session: Session) {
     return this.httpClient.post<Session>('http://localhost:8080/sessions', session);

@@ -21,8 +21,6 @@ export class CardFormationComponent implements OnInit {
   }
 
   onAccesSession(){
-    console.log(this.formation)
-    this.router.navigate([`formations/${this.formation.id}/sessions`])
-
+    this.router.navigate([`formations/${this.formation.id}/sessions`]);
   }
 }

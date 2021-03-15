@@ -8,19 +8,21 @@ import { HttpSessionService } from 'src/app/services/http-Session.service';
   styleUrls: ['./page-form-evaluation.component.css']
 })
 export class PageFormEvaluationComponent implements OnInit {
-
+  id: number;
   mail:string ="";
   listeSessions:IdentifiantEvaluation;
   constructor(
     private httpSessionService: HttpSessionService) { }
 
   ngOnInit(): void {
-  }
-
-  onEvaluation(mail:string){
-    this.httpSessionService.findSessionsByMailParticipant(mail)
+    this.id = +localStorage.getItem("idParticipant");
+    this.httpSessionService.findSessionsByParticipantId(this.id)
     .subscribe( reponse => {
       this.listeSessions = reponse;
+      console.log(reponse)
     })
+  }
+
+  onEvaluation(){
   }
 }
