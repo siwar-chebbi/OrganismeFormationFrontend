@@ -3,7 +3,8 @@
         <span class="header-form">Créer une formation</span>
      </div>
     <div class="p-field p-grid">
-        <label for="titre" class="p-col-fixed">Titre :</label>
+                
+        <label for="titre" class="p-col-fixed">Titre : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
             <input id="titre" type="text" pInputText required formControlName="titre" 
             placeholder="Renseignez un titre">
@@ -16,7 +17,7 @@
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="idTheme" class="p-col-fixed">Theme :</label>
+        <label for="idTheme" class="p-col-fixed">Theme : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
             <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
                 optionLabel="nom" display="chip" required formControlName="idTheme"></p-multiSelect>
@@ -24,7 +25,7 @@
     </div>
 
     <div class="p-field p-grid">
-        <label for="selectedResponsable" class="p-col-fixed">Responsable :</label>
+        <label for="selectedResponsable" class="p-col-fixed">Responsable : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
             <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
                 optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"

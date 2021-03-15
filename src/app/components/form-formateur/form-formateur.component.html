@@ -3,24 +3,27 @@
         <span class="header-form">Ajouter un formateur</span>
      </div>
     <div class="p-field p-grid">
-        <label for="nom" class="p-col-fixed"  >Nom :</label>
+        <label for="nom" class="p-col-fixed"  >Nom : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
-            <input id="nom" type="text" pInputText formControlName="nom" placeholder="Saisir un nom"> 
+            <input id="nom" type="text" pInputText formControlName="nom" required
+            placeholder="Saisir un nom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="prenom" class="p-col-fixed" >Prenom :</label>
+        <label for="prenom" class="p-col-fixed" >Prenom : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
-            <input id="prenom" type="text" pInputText formControlName="prenom" placeholder="Saisir un prénom"> 
+            <input id="prenom" type="text" pInputText formControlName="prenom" required
+            placeholder="Saisir un prénom"> 
         </div>
     </div>
     <div class="p-field p-grid">
-        <label for="mail" class="p-col-fixed" >Mail :</label>
+        <label for="mail" class="p-col-fixed" >Mail : <div class="obligatoire p-ml-1">*</div></label>
         <div class="p-col">
-            <input id="mail" type="mail" pInputText formControlName="mail" placeholder="Sasir un mail"> 
+            <input id="mail" type="mail" pInputText formControlName="mail" required
+            placeholder="Sasir un mail"> 
         </div>
     </div>
     <div class="p-d-flex p-jc-center">
-        <button pButton type="submit" label="Ajouter ce formateur"></button>
+        <button pButton type="submit" label="Ajouter ce formateur" [disabled]="formFormateur.invalid"></button>
     </div>
 </form>
