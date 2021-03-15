@@ -61,9 +61,15 @@
                             <input id="mail" type="email" pInputText required formControlName="mail" placeholder="Votre mail">
                         </div>
                     </div>
+                    <div class="p-field p-grid">
+                        <label for="isEntreprise" class="p-col-fixed" >J'ai une entreprise : </label>
+                        <div class="p-col">
+                            <p-inputSwitch (click)="onEntreprise()"></p-inputSwitch>
+                        </div>
+                    </div>
                 </div>
             </p-card>
-            <p-card styleClass="p-pl-3 p-pr-3">
+            <p-card *ngIf="isEntreprise" styleClass="p-pl-3 p-pr-3">
                 <div class="entreprise" formGroupName=entreprise>
                     <div class="p-mb-4"> 
                         <h3 class="header-form">Votre enreprise (facultatif)</h3>

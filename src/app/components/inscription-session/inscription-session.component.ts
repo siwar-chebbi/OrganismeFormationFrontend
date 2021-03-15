@@ -18,6 +18,7 @@ export class InscriptionSessionComponent implements OnInit {
   isInscrit: Boolean = false;
   valeurInscription: any;
   valueForm: any;
+  isEntreprise: Boolean = false;
 
 
   constructor(
@@ -104,8 +105,6 @@ export class InscriptionSessionComponent implements OnInit {
     } else {
       this.router.navigate(['inscription']);
     }
-    
-
   }
 
 onReject() {
@@ -127,6 +126,10 @@ showError() {
 
 showWarn() {
   this.messageService.add({severity:'warn', summary: 'Warn', detail: 'Vous êtes déjà inscrit'});
+}
+
+onEntreprise(){
+  this.isEntreprise = !this.isEntreprise;
 }
 
 }

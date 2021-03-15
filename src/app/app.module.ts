@@ -51,6 +51,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 import { registerLocaleData } from '@angular/common';
 
@@ -126,6 +127,7 @@ registerLocaleData(localeFr);
     ButtonModule,
     RippleModule,
     FormsModule,
+    InputSwitchModule
 
   ],
   providers: [{provide: LOCALE_ID, useValue: "fr-FR"}],
