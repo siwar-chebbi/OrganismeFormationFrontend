@@ -32,7 +32,7 @@
         <div class="p-field p-grid">
             <label for="selectedFormation" class="p-col-fixed">Formation :</label>
             <div class="p-col">
-                <p-dropdown id="formation" [options]="formations" [(ngModel)]="selectedFormation" scrollHeight="400px"
+                <p-dropdown inputId="selectedFormation" [options]="formations" [(ngModel)]="selectedFormation" scrollHeight="400px"
                     optionLabel="titre" [filter]="true" filterBy="titre" resetFilterOnHide="true"
                     placeholder="Sélectionnez une formation" required formControlName="idFormation">
     
@@ -46,7 +46,7 @@
         <div class="p-field p-grid">
             <label for="selectedLieu" class="p-col-fixed">Lieu :</label>
             <div class="p-col">
-                <p-dropdown id="lieu" [options]="lieux" [(ngModel)]="selectedLieu" scrollHeight="400px"
+                <p-dropdown inputId="selectedLieu" [options]="lieux" [(ngModel)]="selectedLieu" scrollHeight="400px"
                     optionLabel="nom" [filter]="true" filterBy="nom" resetFilterOnHide="true"
                     placeholder="Sélectionnez un lieu" required formControlName="idLieu">
     
