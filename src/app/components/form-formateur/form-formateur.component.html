@@ -1,26 +1,28 @@
-<form [formGroup]="formFormateur" (ngSubmit)="onSubmit()">
-    <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Ajouter un formateur</span>
-     </div>
-    <div class="p-field p-grid">
-        <label for="nom" class="p-col-fixed"  >Nom :</label>
-        <div class="p-col">
-            <input id="nom" type="text" pInputText formControlName="nom" placeholder="Saisir un nom"> 
+<p-card styleClass="p-pl-3 p-pr-3">
+    <form class="form-container" [formGroup]="formFormateur" (ngSubmit)="onSubmit()">
+        <div class="p-d-flex p-jc-center p-pb-4">
+            <span class="header-form">Ajouter un formateur</span>
+         </div>
+        <div class="p-field p-grid">
+            <label for="nom" class="p-col-fixed"  >Nom :</label>
+            <div class="p-col">
+                <input id="nom" type="text" pInputText formControlName="nom" placeholder="Saisir un nom"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="prenom" class="p-col-fixed" >Prenom :</label>
-        <div class="p-col">
-            <input id="prenom" type="text" pInputText formControlName="prenom" placeholder="Saisir un prénom"> 
+        <div class="p-field p-grid">
+            <label for="prenom" class="p-col-fixed" >Prenom :</label>
+            <div class="p-col">
+                <input id="prenom" type="text" pInputText formControlName="prenom" placeholder="Saisir un prénom"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="mail" class="p-col-fixed" >Mail :</label>
-        <div class="p-col">
-            <input id="mail" type="mail" pInputText formControlName="mail" placeholder="Sasir un mail"> 
+        <div class="p-field p-grid">
+            <label for="mail" class="p-col-fixed" >Mail :</label>
+            <div class="p-col">
+                <input id="mail" type="mail" pInputText formControlName="mail" placeholder="Sasir un mail"> 
+            </div>
         </div>
-    </div>
-    <div class="p-d-flex p-jc-center">
-        <button pButton type="submit" label="Ajouter ce formateur"></button>
-    </div>
-</form>
+        <div class="p-d-flex p-jc-center">
+            <button pButton type="submit" label="Ajouter ce formateur"></button>
+        </div>
+    </form>
+</p-card>

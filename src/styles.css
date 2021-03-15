@@ -21,6 +21,9 @@ button:hover {
     -moz-appearance: none !important;
     appearance: none !important;
 }
+.form-container {
+    width: 100vh;
+}
 label{
     width: 20vh;
     font-weight: bold;

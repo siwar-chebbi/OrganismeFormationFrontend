@@ -1,28 +1,30 @@
-<form [formGroup]="formConnexion" (ngSubmit)="connexion()" *ngIf="isAuth()==false">
-    <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Connexion</span>
-     </div>
-    <div *ngIf="erreurConnexion()">
-        <label id="erreurCnx">Identifiant ou mot de passe invalide</label>
-    </div>
-    <div class="p-field p-grid">
-        <label for="identifiant" class="p-col-fixed">Identifiant :</label>
-        <div class="p-col">
-            <input id="identifiant" type="text" pInputText formControlName="identifiant" placeholder="Saisissez votre identifiant"> 
+<p-card styleClass="p-pl-3 p-pr-3">
+    <form [formGroup]="formConnexion" (ngSubmit)="connexion()" *ngIf="isAuth()==false">
+        <div class="p-d-flex p-jc-center p-pb-4">
+            <span class="header-form">Connexion</span>
+         </div>
+        <div *ngIf="erreurConnexion()">
+            <label id="erreurCnx">Identifiant ou mot de passe invalide</label>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="mdp" class="p-col-fixed">Mot de passe : </label>
-        <div class="p-col">
-            <input id="mdp" type="password" pInputText formControlName="mdp" placeholder="Saisir votre mot de passe"> 
+        <div class="p-field p-grid">
+            <label for="identifiant" class="p-col-fixed">Identifiant :</label>
+            <div class="p-col">
+                <input id="identifiant" type="text" pInputText formControlName="identifiant" placeholder="Saisissez votre identifiant"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-       <p>
-        Vous n'avez pas de compte ? <a class="lien-connexion" routerLink="/inscription"> Créer un compte </a>
-       </p> 
-    </div>
-    <div class="p-d-flex p-jc-center">
-        <button pButton type="submit" label="Se connecter"></button>
-    </div>
-</form>
+        <div class="p-field p-grid">
+            <label for="mdp" class="p-col-fixed">Mot de passe : </label>
+            <div class="p-col">
+                <input id="mdp" type="password" pInputText formControlName="mdp" placeholder="Saisir votre mot de passe"> 
+            </div>
+        </div>
+        <div class="p-field p-grid">
+           <p>
+            Vous n'avez pas de compte ? <a class="lien-connexion" routerLink="/inscription"> Créer un compte </a>
+           </p> 
+        </div>
+        <div class="p-d-flex p-jc-center">
+            <button pButton type="submit" label="Se connecter"></button>
+        </div>
+    </form>
+</p-card>

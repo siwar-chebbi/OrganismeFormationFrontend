@@ -1,61 +1,63 @@
-<form [formGroup]="formResponsable" (ngSubmit)="onSubmit()">
-    <div class="p-d-flex p-jc-center p-p-4">
-        <span class="header-form">Ajouter un responsable :</span>
-     </div>
-     <div class="p-field p-grid">
-        <label for="civilite" class="p-col-fixed">Civilite :</label>
-        <div class="p-col">
-            <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
-            <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
+<p-card styleClass="p-pl-3 p-pr-3">
+    <form class="form-container" [formGroup]="formResponsable" (ngSubmit)="onSubmit()">
+        <div class="p-d-flex p-jc-center p-pb-4">
+            <span class="header-form">Ajouter un responsable :</span>
+         </div>
+         <div class="p-field p-grid">
+            <label for="civilite" class="p-col-fixed">Civilite :</label>
+            <div class="p-col p-d-flex p-flex-row">
+                <p-radioButton label="Homme" value="true" formControlName="civilite"></p-radioButton>
+                <p-radioButton label="Femme" value="false" formControlName="civilite"></p-radioButton>
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="nom" class="p-col-fixed">Nom :</label>
-        <div class="p-col">            
-            <input id="nom" type="text" pInputText required formControlName="nom" placeholder="Entrez un nom"> 
+        <div class="p-field p-grid">
+            <label for="nom" class="p-col-fixed">Nom :</label>
+            <div class="p-col">            
+                <input id="nom" type="text" pInputText required formControlName="nom" placeholder="Entrez un nom"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="prenom" class="p-col-fixed">Prenom :</label>
-        <div class="p-col">            
-            <input id="prenom" type="text" pInputText required formControlName="prenom" placeholder="Entrez un prénom"> 
+        <div class="p-field p-grid">
+            <label for="prenom" class="p-col-fixed">Prenom :</label>
+            <div class="p-col">            
+                <input id="prenom" type="text" pInputText required formControlName="prenom" placeholder="Entrez un prénom"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="role" class="p-col-fixed">Role :</label>
-        <div class="p-col">            
-            <input id="role" type="text" pInputText formControlName="role" placeholder="Saisir le role"> 
+        <div class="p-field p-grid">
+            <label for="role" class="p-col-fixed">Role :</label>
+            <div class="p-col">            
+                <input id="role" type="text" pInputText formControlName="role" placeholder="Saisir le role"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="mail" class="p-col-fixed">Mail :</label>
-        <div class="p-col">            
-            <input id="mail" type="text" pInputText formControlName="mail" placeholder="Saisir un mail"> 
+        <div class="p-field p-grid">
+            <label for="mail" class="p-col-fixed">Mail :</label>
+            <div class="p-col">            
+                <input id="mail" type="text" pInputText formControlName="mail" placeholder="Saisir un mail"> 
+            </div>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="telephone" class="p-col-fixed">Telephone :</label>
-        <div class="p-col">            
-            <input id="telephone" type="text" pInputText formControlName="telephone" placeholder="Entrez un numéro"> 
+        <div class="p-field p-grid">
+            <label for="telephone" class="p-col-fixed">Telephone :</label>
+            <div class="p-col">            
+                <input id="telephone" type="text" pInputText formControlName="telephone" placeholder="Entrez un numéro"> 
+            </div>
         </div>
-    </div>
-    <div *ngIf="doublon()">
-        <label id="doublon">Cet identifiant est déjà utilisé</label>
-    </div>
-    <div class="p-field p-grid">
-        <label for="identifiant" class="p-col-fixed">Identifiant :</label>
-        <div class="p-col">
-            <input id="identifiant" type="text" pInputText required formControlName="identifiant" placeholder="Saisir un identifiant"> 
+        <div *ngIf="doublon()">
+            <label id="doublon">Cet identifiant est déjà utilisé</label>
         </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="mdp" class="p-col-fixed">Mot de passe :</label>
-        <div class="p-col">
-            <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Saisir un mot de passe">
+        <div class="p-field p-grid">
+            <label for="identifiant" class="p-col-fixed">Identifiant :</label>
+            <div class="p-col">
+                <input id="identifiant" type="text" pInputText required formControlName="identifiant" placeholder="Saisir un identifiant"> 
+            </div>
         </div>
-    </div>
-
-    <div class="p-d-flex p-jc-center">
-        <button pButton pRipple type="submit" label="Ajouter un responsable" [disabled]="formResponsable.invalid"></button>
-    </div>
-</form>
+        <div class="p-field p-grid">
+            <label for="mdp" class="p-col-fixed">Mot de passe :</label>
+            <div class="p-col">
+                <input id="mdp" type="password" pInputText required formControlName="mdp" placeholder="Saisir un mot de passe">
+            </div>
+        </div>
+    
+        <div class="p-d-flex p-jc-center">
+            <button pButton pRipple type="submit" label="Ajouter un responsable" [disabled]="formResponsable.invalid"></button>
+        </div>
+    </form>
+</p-card>
