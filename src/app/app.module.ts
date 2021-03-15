@@ -127,7 +127,8 @@ registerLocaleData(localeFr);
     ToastModule,
     ButtonModule,
     RippleModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [{provide: LOCALE_ID, useValue: "fr-FR"}],
   bootstrap: [AppComponent]
