@@ -19,7 +19,7 @@
         <div class="p-field p-grid">
             <label for="idTheme" class="p-col-fixed">Theme :</label>
             <div class="p-col">
-                <p-multiSelect id="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
+                <p-multiSelect inputId="idTheme" [options]="themes" [(ngModel)]="selectedThemes" defaultLabel="Sélectionnez un thème"
                     optionLabel="nom" display="chip" required formControlName="idTheme"></p-multiSelect>
             </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="p-field p-grid">
             <label for="selectedResponsable" class="p-col-fixed">Responsable :</label>
             <div class="p-col">
-                <p-dropdown id="responsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
+                <p-dropdown inputId="selectedResponsable" [options]="responsables" [(ngModel)]="selectedResponsable" scrollHeight="400px"
                     optionLabel="nom" [filter]="true" filterBy="nom,prenom" resetFilterOnHide="true"
                     placeholder="Sélectionnez un responsable" required formControlName="idResponsable">
                     <ng-template let-responsable pTemplate="responsables">
