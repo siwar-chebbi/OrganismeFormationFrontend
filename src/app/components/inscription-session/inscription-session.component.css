@@ -5,40 +5,10 @@
 .form-input {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    padding: 15px;
 }
-
-.participant-session-id{
-    margin: 15px;
-}
-
-.coordonnee-participant{
-    margin: 15px;
-}
-.entreprise{
-    margin: 15px;
-}
-.coordonnee-entreprise{
-    margin: 15px;;
-}
-
 .form-button{
-    margin: auto;
-    padding: auto;
+    margin: 20px auto 0 auto;
 }
 .retour-inscription{
     text-align: center;
-}
-
-button {
-    min-width: 10rem;
-    margin-right: .5rem;
-}
-
-@media screen and (max-width: 960px) {
-    button {
-        width: 100%;
-        margin-bottom: .5rem;
-    }
 }
