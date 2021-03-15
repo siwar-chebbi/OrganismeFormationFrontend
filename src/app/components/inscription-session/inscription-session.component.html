@@ -15,7 +15,7 @@
     <div class="form-container-inscription">
         <div class="form-input">
             <p-card styleClass="p-pl-3 p-pr-3 p-mb-3">
-                <div class="coordonnee-participant" formGroupName=coordonneeParticipant>
+                <div formGroupName=coordonneeParticipant>
                     <div class="p-mb-4">     
                         <h3 class="header-form">Vos coordonnées</h3>
                     </div>
@@ -64,7 +64,7 @@
                 </div>
             </p-card>
             <p-card styleClass="p-pl-3 p-pr-3">
-                <div class="entreprise" formGroupName=entreprise>
+                <div formGroupName=entreprise>
                     <div class="p-mb-4"> 
                         <h3 class="header-form">Votre enreprise (facultatif)</h3>
                     </div>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="coordonnee-entreprise" formGroupName=coordonneeEntreprise>
+                <div formGroupName=coordonneeEntreprise>
                     <div class="p-mb-4"> 
                         <h3 class="header-form">Coordonnees de votre entreprise (facultatif)</h3>
                     </div>
@@ -132,11 +132,6 @@
         </div>
         <div class="form-button">
             <app-test-prerequis (submitEvent)="onSubmit($event)"></app-test-prerequis>
-        </div>
-        <div class="retour-inscription" *ngIf="isInscrit">
-            <p> {{valeurInscription.nomParticipant}} {{valeurInscription.prenomParticipant}} votre inscription
-                à la session est prise en compte, votre code d'evaluation est : {{valeurInscription.numeroSessionEval}}
-            </p>
         </div>
     </div>
 </form>
