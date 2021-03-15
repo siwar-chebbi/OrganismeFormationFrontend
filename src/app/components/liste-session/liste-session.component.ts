@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Session } from 'src/app/models/Session';
 
 @Component({
@@ -11,10 +12,12 @@ export class ListeSessionComponent implements OnInit {
   @Input() sessions :Session [] = [];
   voirSession:boolean = true;
   @Input() idFormation:number;
-
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  retourAccueil(){
+    this.router.navigate(['accueil']);
+  }
 }

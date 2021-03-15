@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Formation } from 'src/app/models/Formation';
 import { FormationHttpService } from 'src/app/services/formation-http.service';
 
@@ -12,7 +13,9 @@ export class ListeFormationComponent implements OnInit {
   @Input() idFormation:Number;
   @Input() formations: Formation[] = [];
 
-  constructor(private formationService: FormationHttpService) { }
+  constructor(
+    private formationService: FormationHttpService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +24,9 @@ export class ListeFormationComponent implements OnInit {
     this.formations = this.formations
     .filter(
       uneFormation => uneFormation.id !== formation.id);
-
   }
-
+  
+  retourAccueil(){
+    this.router.navigate(['accueil']);
+  }
 }

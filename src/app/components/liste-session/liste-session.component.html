@@ -1,3 +1,8 @@
 <div class="p-d-flex p-flex-row p-jc-center p-ai-center p-flex-wrap">
     <app-card-session *ngFor="let session of sessions" [session]="session" [idFormation]="idFormation"></app-card-session>
+    <div *ngIf="[sessions.length] == 0">Aucune session disponible pour cette formation pour le moment
+        <div class="p-d-flex p-jc-center p-pt-4">
+            <p-button  (click)="retourAccueil()">Retour à l'accueil </p-button>
+        </div>
+    </div>
 </div>
