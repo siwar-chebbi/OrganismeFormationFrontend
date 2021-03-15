@@ -1,11 +1,6 @@
-.form-container-inscription{
-    display: flex;
-    flex-direction: column;
-}
-.form-input {
-    display: flex;
-    flex-direction: column;
-}
 .form-button{
     margin: 20px auto 0 auto;
+}
+.label-inscription-session{
+    width: 30vh;
 }
