@@ -76,9 +76,9 @@ export class NavbarComponent implements OnInit {
 
         /*** Menu Gestionnaire pour un Participant ***/
         if (this.isParticipant()){
-            this.items.push({ label: 'Evaluer une session',
-                              styleClass:'menu-button',
-                              url: 'formEvaluation'
+            this.items.push({label: 'Mon Compte',
+                             styleClass: 'menu-button',
+                             items: [{label:'Evaluer une session', styleClass:'menu-button', url: 'formEvaluation'}]
             })
         }
      
