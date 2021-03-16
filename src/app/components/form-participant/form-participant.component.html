@@ -28,7 +28,11 @@
             <div class="p-field p-grid">
                 <label for="dateNaissance" class="p-col-fixed">Date de naissance :</label>
                 <div class="p-col">
-                    <input id="dateNaissance" type="date" pInputText formControlName="dateNaissance"> 
+                    <p-calendar placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" 
+                        formControlName="dateNaissance" [showIcon]="true" [readonlyInput]="true" required
+                        inputId="min-max" inputId="dateNaissance">
+                    </p-calendar>
+                    <!-- <input id="dateNaissance" type="date" pInputText >  -->
                 </div>
             </div>
             <div *ngIf="doublon()">
