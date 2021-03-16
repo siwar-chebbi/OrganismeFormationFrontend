@@ -25,8 +25,15 @@ export class CardSessionComponent implements OnInit {
   }
 
   onInscriptionSession(){
-    this.router.navigate([`/inscription-session/`, this.session.id]);
+    if((localStorage.getItem("idParticipant")) != null){
+      this.router.navigate([`/inscription-session/`, this.session.id]);
+    } 
+    else {
+      alert("Vous devez être connecté avant de vous inscrire à une session.");
+      this.router.navigate(['connexion']);
+    }    
   }
+
   goBack(){
     this.idFormation = this.routerParam.snapshot.params.idFormation;
     this.router.navigate([`formations/${this.idFormation}/sessions`]);

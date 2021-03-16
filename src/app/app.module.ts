@@ -52,9 +52,7 @@ import { PageInscriptionComponent } from './pages/page-inscription/page-inscript
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
 import {InputSwitchModule} from 'primeng/inputswitch';
-
 import { registerLocaleData } from '@angular/common';
-
 import localeFr from '@angular/common/locales/fr';
 import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
 
@@ -128,7 +126,6 @@ registerLocaleData(localeFr);
     RippleModule,
     FormsModule,
     InputSwitchModule
-
   ],
   providers: [{provide: LOCALE_ID, useValue: "fr-FR"}],
   bootstrap: [AppComponent]

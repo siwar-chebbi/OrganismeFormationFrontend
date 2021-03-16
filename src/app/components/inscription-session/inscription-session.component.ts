@@ -70,7 +70,8 @@ export class InscriptionSessionComponent implements OnInit {
             if(this.valeurInscription.existeDeja){
               this.showWarn()
             }else{
-              this.showSuccess()
+              this.showSuccess();
+              setTimeout(() => {this.router.navigate(['accueil']);}, 3000);
             }
           });
           if (this.valeurInscription != null ) {
@@ -87,7 +88,8 @@ export class InscriptionSessionComponent implements OnInit {
             if(this.valeurInscription.existeDeja){
               this.showWarn()
             }else{
-              this.showSuccess()
+              this.showSuccess();
+              setTimeout(() => {this.router.navigate(['accueil']);}, 3000);
             }
           });
           if (this.valeurInscription != null) {

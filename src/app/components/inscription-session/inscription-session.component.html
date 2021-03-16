@@ -16,29 +16,33 @@
         <div class="p-d-flex p-flex-column">
             <p-card styleClass="p-pl-3 p-pr-3 p-mb-3">
                 <div formGroupName=coordonneeParticipant>
-                    <div class="p-mb-4">     
+                    <div class="p-d-flex p-jc-center p-mb-4">     
                         <h3 class="header-form">Vos coordonnées</h3>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="numeroVoie" class="p-col-fixed label-inscription-session" >Numero :</label>
+                        <label for="numeroVoie" class="p-col-fixed label-inscription-session" >
+                            Numéro : <div class="obligatoire p-ml-1">*</div></label>
                         <div class="p-col">
                             <input id="numeroVoie" type="number" pInputText required formControlName="numeroVoie" placeholder="Sasir votre numéro">
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="typeVoie" class="p-col-fixed label-inscription-session" >Type et nom de voie :</label>
+                        <label for="typeVoie" class="p-col-fixed label-inscription-session" >
+                            Type et nom de voie : <div class="obligatoire p-ml-1">*</div></label>
                         <div class="p-col">
                             <input id="typeVoie" type="text" pInputText required formControlName="typeVoie" placeholder="Ex : Rue, Avenu">
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="codePostal" class="p-col-fixed label-inscription-session" >Code poste :</label>
+                        <label for="codePostal" class="p-col-fixed label-inscription-session" >
+                            Code postal : <div class="obligatoire p-ml-1">*</div></label>
                         <div class="p-col">
                             <input id="codePostal" type="number" pInputText required formControlName="codePostal" placeholder="Entrer votre code postal">
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="ville" class="p-col-fixed label-inscription-session" >Ville :</label>
+                        <label for="ville" class="p-col-fixed label-inscription-session" >
+                            Ville : <div class="obligatoire p-ml-1">*</div></label>
                         <div class="p-col">
                             <input id="ville" type="text" pInputText required formControlName="ville" placeholder="Saisir votre ville">
                         </div>
@@ -50,13 +54,14 @@
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="telephone" class="p-col-fixed label-inscription-session" >Telephone :</label>
+                        <label for="telephone" class="p-col-fixed label-inscription-session" >Téléphone :</label>
                         <div class="p-col">
                             <input id="telephone" type="text" pInputText required formControlName="telephone" placeholder="Numéro de téléphone">
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="mail" class="p-col-fixed label-inscription-session" >Mail :</label>
+                        <label for="mail" class="p-col-fixed label-inscription-session" >
+                            Mail : <div class="obligatoire p-ml-1">*</div></label>
                         <div class="p-col">
                             <input id="mail" type="email" pInputText required formControlName="mail" placeholder="Votre mail">
                         </div>
@@ -71,8 +76,8 @@
             </p-card>
             <p-card *ngIf="isEntreprise" styleClass="p-pl-3 p-pr-3">
                 <div formGroupName=entreprise>
-                    <div class="p-mb-4"> 
-                        <h3 class="header-form">Votre enreprise (facultatif)</h3>
+                    <div class="p-d-flex p-jc-center p-mb-4"> 
+                        <h3 class="header-form">Votre entreprise</h3>
                     </div>
                     <div class="p-field p-grid">
                         <label for="siret" class="p-col-fixed label-inscription-session" >Siret :</label>
@@ -88,11 +93,11 @@
                     </div>
                 </div>
                 <div formGroupName=coordonneeEntreprise>
-                    <div class="p-mb-4"> 
-                        <h3 class="header-form">Coordonnees de votre entreprise (facultatif)</h3>
+                    <div class="p-d-flex p-jc-center p-mb-4"> 
+                        <h3 class="header-form">Coordonnées de votre entreprise</h3>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="numeroVoieEntreprise" class="p-col-fixed label-inscription-session" >Numero :</label>
+                        <label for="numeroVoieEntreprise" class="p-col-fixed label-inscription-session" >Numéro :</label>
                         <div class="p-col">
                             <input id="numeroVoieEntreprise" type="number" pInputText formControlName="numeroVoie" placeholder="Le numéro de l'entreprise">
                         </div>
@@ -104,7 +109,7 @@
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="codePostalEntreprise" class="p-col-fixed label-inscription-session" >Code poste :</label>
+                        <label for="codePostalEntreprise" class="p-col-fixed label-inscription-session" >Code postal :</label>
                         <div class="p-col">
                             <input id="codePostalEntreprise" type="number" pInputText formControlName="codePostal" placeholder="Code postal de l'entreprise">
                         </div>
@@ -122,7 +127,7 @@
                         </div>
                     </div>
                     <div class="p-field p-grid">
-                        <label for="telephoneEntreprise" class="p-col-fixed label-inscription-session" >Telephone :</label>
+                        <label for="telephoneEntreprise" class="p-col-fixed label-inscription-session" >Téléphone :</label>
                         <div class="p-col">
                             <input id="telephoneEntreprise" type="text" pInputText formControlName="telephone" placeholder="Numéro de téléphone de l'entreprise">
                         </div>
