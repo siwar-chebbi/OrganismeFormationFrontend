@@ -50,5 +50,5 @@
 }
 .pi:hover {
     cursor: pointer;
-    color:#f5a11d;
+    color:#f5a11d !important;
 }

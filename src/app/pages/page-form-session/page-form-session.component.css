@@ -1,0 +1,4 @@
+::ng-deep .pi-chevron-right,
+::ng-deep .pi-chevron-left{
+    color: white !important;
+}

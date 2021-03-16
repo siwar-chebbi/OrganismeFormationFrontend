@@ -1,8 +1,15 @@
-#accueil-img{
-    width: 100%;
+.accueil-img {
+/* width: 100vh !important; */
+background: url("../../../assets/images/Accueil3.jpg");
+background-repeat: no-repeat;
+background-position: center;
+height: 60vh;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 #titreAccueil{
-    text-align: center;
     color: orange;
 }
