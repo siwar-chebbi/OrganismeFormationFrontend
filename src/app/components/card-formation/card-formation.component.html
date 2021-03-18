@@ -5,27 +5,25 @@
                 <h3 class="card-header p-pl-4">Formation {{formation.numero}}</h3>
             </div>
         </ng-template>
-
-        <!-- Après -->
         <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
             <div>
-                <label class="meta-donnee">Titre: </label> 
+                <span class="meta-donnee">Titre :</span> 
             </div>
             <div>
                 <p>{{formation.titre}}</p> 
             </div>            
         </div>
-        <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
+        <div class="p-d-flex p-jc-between p-pt-3">
             <div>
-                <label class="meta-donnee">Contenu: </label> 
+                <span class="meta-donnee">Contenu:</span> 
             </div>
             <div>
-                <p>{{formation.contenu}}</p> 
+                <p class="texte-justifier">{{formation.contenu}}</p> 
             </div>            
         </div>
         <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
             <div>
-                <label class="meta-donnee">Logiciel: </label> 
+                <span class="meta-donnee">Logiciel :</span> 
             </div>
             <div>
                 <p>{{formation.logiciel}}</p> 
@@ -33,21 +31,12 @@
         </div>
         <div class="p-d-flex p-jc-between p-ai-center p-pt-3">
             <div>
-                <label class="meta-donnee">Support: </label> 
+                <span class="meta-donnee">Support :</span> 
             </div>
             <div>
                 <p>{{formation.support}}</p> 
             </div>            
         </div>
-        <!-- Après -->
-
-        <!-- Avant -->
-        <p><span class="meta-donnee">Titre: </span> {{formation.titre}}</p> 
-        <p><span class="meta-donnee">Contenu: </span>{{formation.contenu}}</p> 
-        <p><span class="meta-donnee">Logiciel: </span>{{formation.logiciel}}</p> 
-        <p><span class="meta-donnee">Support: </span>{{formation.support}}</p>
-         <!--Avant  -->
-
         <ng-template pTemplate="footer">
             <button class="p-mr-4" pButton type="button"(click)="onAccesSession()" label="Accéder aux sessions"></button>
         </ng-template>

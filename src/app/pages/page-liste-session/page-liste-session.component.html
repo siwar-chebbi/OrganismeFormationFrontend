@@ -1,2 +1,2 @@
-<h4 class="titre-formation">Sessions pour la formation {{formation?.titre}}</h4>
-<app-liste-session [sessions]="sessions" [idFormation]="idFormation"></app-liste-session>
+<h4 class="titre-formation" *ngIf="formation?.titre != null">Sessions pour la formation {{formation?.titre}}</h4>
+<app-liste-session *ngIf="formation?.titre != null" [sessions]="sessions" [idFormation]="idFormation"></app-liste-session>

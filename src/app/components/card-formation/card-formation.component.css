@@ -5,7 +5,7 @@
     font-weight: bold;
 }
 .card-session {
-    width: 50vh;
+    width: 60vh;
     text-align: center;
 } 
 ::ng-deep .pi-angle-left {
@@ -14,4 +14,8 @@
 ::ng-deep .pi-angle-left:hover {
     color: #1b9cd9 !important;
     cursor: pointer;
+}
+.texte-justifier{
+    text-align: justify;
+    padding-left: 20px;
 }

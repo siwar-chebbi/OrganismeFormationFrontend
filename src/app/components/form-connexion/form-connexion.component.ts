@@ -62,6 +62,7 @@ export class FormConnexionComponent implements OnInit {
       localStorage.setItem("nom", this.participant.nom);
       localStorage.setItem("prenom", this.participant.prenom);
       this.formConnexion.reset();
+      this.router.navigate(['accueil']);
       window.location.assign('accueil');
     } else if (this.isResponsable==true){
       localStorage.setItem("connexion", "true");
@@ -70,6 +71,7 @@ export class FormConnexionComponent implements OnInit {
       localStorage.setItem("nom", this.responsable.nom);
       localStorage.setItem("prenom", this.responsable.prenom);
       this.formConnexion.reset();
+      this.router.navigate(['accueil']);
       window.location.assign('accueil');
     }
     else {

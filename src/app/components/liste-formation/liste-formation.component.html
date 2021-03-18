@@ -1,5 +1,5 @@
 <div class="p-d-flex p-flex-row p-jc-center p-ai-center p-flex-wrap">
-    <app-card-formation *ngFor="let one of formations" [formation]="one" (delete)= "onDeleteFormation(one)"></app-card-formation>
+    <app-card-formation *ngFor="let one of formations" [formation]="one"></app-card-formation>
     <div *ngIf="[formations.length] == 0">Aucune formation disponible pour ce thème pour le moment
         <div class="p-d-flex p-jc-center p-pt-4">
             <p-button  (click)="retourAccueil()">Retour à l'accueil </p-button>

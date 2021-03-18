@@ -19,12 +19,6 @@ export class ListeFormationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onDeleteFormation(formation:Formation){
-    this.formationService.delete(formation.id).subscribe();
-    this.formations = this.formations
-    .filter(
-      uneFormation => uneFormation.id !== formation.id);
-  }
   
   retourAccueil(){
     this.router.navigate(['accueil']);

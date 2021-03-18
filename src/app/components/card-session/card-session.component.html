@@ -12,17 +12,20 @@
         <div class="p-d-flex p-flex-column p-jc-center">
             <div *ngIf="!voirSession">
                 <div>
-                    <span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Cette session abordera le(s) theme(s) de: </span>
+                    <span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Thème(s) abordé(s) :</span>
                     <span class="liste-themes" *ngFor="let theme of sessionDetails?.themes">{{theme}} </span>
                 </div>
-                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le contenu de la formation : </span>{{sessionDetails?.contenuFormation}}</p> 
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Contenu de la formation :</span>{{sessionDetails?.contenuFormation}}</p> 
             </div>
-            <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de début: </span>{{session?.dateDebut | date}}</p> 
-            <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de fin: </span>{{session?.dateFin | date}}</p> 
-            <p  *ngIf="voirSession"><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Durée la session: </span>{{session?.duree}} jours</p> 
+            <p [ngClass]="!voirSession ? '':'p-d-flex p-jc-between p-pt-3'"><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de début :</span>{{session?.dateDebut | date}}</p> 
+            <p [ngClass]="!voirSession ? '':'p-d-flex p-jc-between p-pt-3'"><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Date de fin :</span>{{session?.dateFin | date}}</p> 
+            <div *ngIf="voirSession" class="p-d-flex p-jc-between p-pt-3">
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Durée de la session :</span></p>
+                <p>{{session?.duree}} jours</p> 
+            </div>
             <div *ngIf="!voirSession">
-                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le lieu de la session: </span>{{sessionDetails?.lieu}}</p> 
-                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Le prix de la session: </span>{{sessionDetails?.prix}}€</p> 
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Lieu de la session :</span>{{sessionDetails?.lieu}}</p> 
+                <p><span [ngClass]="!voirSession ? 'session-donnee':'meta-donnee'">Prix de la session :</span>{{sessionDetails?.prix}}€</p> 
             </div>
         </div>
         <ng-template pTemplate="footer">

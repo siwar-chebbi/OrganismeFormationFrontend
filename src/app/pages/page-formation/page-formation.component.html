@@ -1,2 +1,2 @@
-<h4 class="titre-formation"> Formations {{theme?.nom}}</h4>
-<app-liste-formation [formations]="formations" [idFormation]="id"></app-liste-formation>
+<h4 class="titre-formation" *ngIf="theme?.nom != null"> Formations {{theme?.nom}}</h4>
+<app-liste-formation *ngIf="theme?.nom != null" [formations]="formations" [idFormation]="id"></app-liste-formation>
