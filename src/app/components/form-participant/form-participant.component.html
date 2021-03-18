@@ -29,6 +29,7 @@
                 <label for="dateNaissance" class="p-col-fixed">Date de naissance :</label>
                 <div class="p-col">
                     <p-calendar placeholder="dd/mm/yyyy" dateFormat="dd/mm/yy" 
+                        [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2021"
                         formControlName="dateNaissance" [showIcon]="true" [readonlyInput]="true" required
                         inputId="min-max" inputId="dateNaissance">
                     </p-calendar>
@@ -59,7 +60,7 @@
                 
             </div>
             <div class="p-d-flex p-jc-center">
-                <button pButton type="submit" label="Ajouter un participant" [disabled]="formParticipant.invalid"></button>
+                <button pButton type="submit" label="S'inscrire" [disabled]="formParticipant.invalid"></button>
             </div>
         </div>
     </form>
