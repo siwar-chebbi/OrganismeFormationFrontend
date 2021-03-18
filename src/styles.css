@@ -41,3 +41,7 @@ label{
 .obligatoire{
     color: red;
 }
+.texte-justifier{
+    text-align: justify;
+    padding-left: 20px;
+}
