@@ -68,8 +68,8 @@ export class NavbarComponent implements OnInit {
             this.items.push({label: 'Gestionnaire',
                              styleClass: 'menu-button',
                              items: [ {label: 'Ajouter une formation', url:`/formFormation`, styleClass: 'menu-button'},
-                                      {label: 'Ajouter un responsable', url:`/formResponsable`, styleClass: 'menu-button'},
                                       {label: 'Ajouter une session', url:`/formSession`, styleClass: 'menu-button'},
+                                      {label: 'Ajouter un responsable', url:`/formResponsable`, styleClass: 'menu-button'},
                                       {label: 'Ajouter un formateur', url:`/formFormateur`, styleClass: 'menu-button'}]
             })
         }

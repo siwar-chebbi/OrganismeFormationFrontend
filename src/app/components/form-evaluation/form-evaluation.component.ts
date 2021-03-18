@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BilanSessionParticipant } from 'src/app/models/BilanSessionParticipant';
 import { IdentifiantEvaluation } from 'src/app/models/IdentitfiantEvaluation';
 import { HttpEvaluationService } from 'src/app/services/http-evaluation.service';
@@ -15,7 +16,7 @@ export class FormEvaluationComponent implements OnInit {
   @Input() listNumSession:IdentifiantEvaluation [] = [];
   selectedNumSession: IdentifiantEvaluation;
 
-  constructor(private formulaire:FormBuilder, private evaluationService:HttpEvaluationService) {
+  constructor(private formulaire:FormBuilder, private evaluationService:HttpEvaluationService, private router:Router) {
     this.formulaireEvaluation = this.formulaire.group({
       session:[],
       accueil: [],
@@ -55,5 +56,7 @@ export class FormEvaluationComponent implements OnInit {
     
     this.evaluationService.saveEvaluation(bilanSessionFormation).subscribe();
     this.formulaireEvaluation.reset(); 
+    alert('Merci de votre évalutation.');
+    this.router.navigate(['/accueil'])
   }
 }
